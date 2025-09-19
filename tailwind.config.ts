@@ -13,6 +13,19 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+      },
+      backgroundImage: {
+        'sky-gradient': 'var(--sky-gradient)',
+        'cloud-gradient': 'var(--cloud-gradient)',
+        'horizon-gradient': 'var(--horizon-gradient)',
+      },
+      boxShadow: {
+        'sky': 'var(--sky-shadow)',
+        'cloud': 'var(--cloud-shadow)', 
+        'elevation': 'var(--elevation-shadow)',
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -65,25 +78,44 @@ export default {
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        "float": {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-12px)" },
+        },
+        "float-delayed": {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-8px)" },
+        },
+        "fade-in-up": {
+          "0%": { 
+            opacity: "0",
+            transform: "translateY(24px)" 
           },
-          to: {
-            height: "0",
+          "100%": { 
+            opacity: "1",
+            transform: "translateY(0)" 
           },
+        },
+        "gentle-bounce": {
+          "0%, 20%, 53%, 80%, 100%": { transform: "translateY(0)" },
+          "40%, 43%": { transform: "translateY(-8px)" },
+          "70%": { transform: "translateY(-4px)" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "float": "float var(--float-duration) var(--gentle-bounce) infinite",
+        "float-delayed": "float-delayed calc(var(--float-duration) * 1.2) var(--gentle-bounce) infinite 2s",
+        "fade-in-up": "fade-in-up 0.6s ease-out",
+        "gentle-bounce": "gentle-bounce 2s ease-in-out infinite",
       },
     },
   },
