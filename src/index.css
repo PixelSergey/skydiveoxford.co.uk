@@ -8,35 +8,56 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
+    /* Sky-inspired color system */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 221 39% 11%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 221 39% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 221 39% 11%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Sky blue primary - main brand color */
+    --primary: 204 94% 94%;
+    --primary-foreground: 221 39% 11%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Cloud white secondary */
+    --secondary: 210 40% 98%;
+    --secondary-foreground: 221 39% 11%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Subtle sky tones */
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Aviation accent - deeper sky blue */
+    --accent: 204 100% 97%;
+    --accent-foreground: 221 39% 11%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 204 94% 94%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Sky gradients and effects */
+    --sky-gradient: linear-gradient(135deg, hsl(204 100% 86%) 0%, hsl(0 0% 100%) 100%);
+    --cloud-gradient: linear-gradient(180deg, hsl(0 0% 100% / 0.8) 0%, hsl(204 100% 97% / 0.4) 100%);
+    --horizon-gradient: linear-gradient(180deg, hsl(204 100% 86%) 0%, hsl(0 0% 100%) 60%);
+    
+    /* Aviation shadows */
+    --sky-shadow: 0 4px 20px hsl(204 100% 86% / 0.25);
+    --cloud-shadow: 0 8px 32px hsl(204 100% 86% / 0.15);
+    --elevation-shadow: 0 12px 48px hsl(204 100% 86% / 0.2);
+
+    /* Animations */
+    --float-duration: 6s;
+    --gentle-bounce: cubic-bezier(0.4, 0, 0.6, 1);
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
