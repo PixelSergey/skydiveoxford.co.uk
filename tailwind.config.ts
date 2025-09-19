@@ -15,7 +15,6 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        hero: ['Oswald', 'system-ui', 'sans-serif'],
       },
       backgroundImage: {
         'sky-gradient': 'var(--sky-gradient)',
@@ -159,18 +158,6 @@ export default {
             opacity: "1"
           },
         },
-        "hero-glow": {
-          "0%, 100%": { 
-            textShadow: "0 0 20px hsl(var(--primary) / 0.5), 0 0 40px hsl(var(--primary) / 0.3)",
-          },
-          "50%": { 
-            textShadow: "0 0 30px hsl(var(--primary) / 0.8), 0 0 60px hsl(var(--primary) / 0.4)",
-          },
-        },
-        "hero-float": {
-          "0%, 100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-8px)" },
-        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -184,8 +171,6 @@ export default {
         "skydive-center": "skydive-center var(--skydive-duration) linear infinite var(--skydive-delay-3)",
         "airplane-cross": "airplane-cross var(--airplane-duration) linear",
         "airplane-cross-reverse": "airplane-cross-reverse var(--airplane-duration) linear",
-        "hero-glow": "hero-glow 3s ease-in-out infinite",
-        "hero-float": "hero-float 4s ease-in-out infinite",
       },
     },
   },
