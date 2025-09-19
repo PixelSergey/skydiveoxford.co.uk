@@ -45,11 +45,6 @@ const Hero = () => {
             Join the Oxford Skydiving Club for free
           </Button>
         </div>
-        
-        {/* Decorative elements */}
-        <div className="absolute -bottom-20 left-1/2 transform -translate-x-1/2 opacity-30">
-          <div className="w-1 h-16 bg-gradient-to-b from-primary-foreground/60 to-transparent animate-gentle-bounce" />
-        </div>
       </div>
     </section>
   );
