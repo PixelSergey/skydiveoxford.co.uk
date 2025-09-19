@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import airplaneImg from "@/assets/airplane.png";
 import parachuteImg from "@/assets/parachute.png";
 
-interface SkydiverPositions {
+interface SkydiverConfig {
   startY: number;
   startX: number;
   duration: number;
@@ -10,44 +10,70 @@ interface SkydiverPositions {
 
 const SkydiverAnimation = () => {
   const [activeAirplane, setActiveAirplane] = useState<'left-to-right' | 'right-to-left' | null>(null);
-  const [skydiverPositions, setSkydiverPositions] = useState<{
-    left: SkydiverPositions;
-    right: SkydiverPositions;
-    center: SkydiverPositions;
+  const [activeSkydivers, setActiveSkydivers] = useState<{
+    left: SkydiverConfig | null;
+    right: SkydiverConfig | null;
+    center: SkydiverConfig | null;
   }>({
-    left: { startY: -80, startX: 0, duration: 8 },
-    right: { startY: -30, startX: 0, duration: 8 },
-    center: { startY: -120, startX: 0, duration: 8 }
+    left: null,
+    right: null,
+    center: null
   });
 
-  const generateRandomPositions = () => {
-    return {
-      left: {
-        startY: Math.random() * -100 - 50, // Between -50px and -150px
-        startX: Math.random() * 100 - 50,   // Between -50px and +50px
-        duration: Math.random() * 4 + 6     // Between 6s and 10s
-      },
-      right: {
-        startY: Math.random() * -100 - 50,
-        startX: Math.random() * 100 - 50,
-        duration: Math.random() * 4 + 6
-      },
-      center: {
-        startY: Math.random() * -100 - 50,
-        startX: Math.random() * 100 - 50,
-        duration: Math.random() * 4 + 6
-      }
-    };
-  };
+  const generateRandomSkydiver = (): SkydiverConfig => ({
+    startY: Math.random() * -100 - 50, // Between -50px and -150px
+    startX: Math.random() * 100 - 50,   // Between -50px and +50px
+    duration: Math.random() * 4 + 6     // Between 6s and 10s
+  });
 
   useEffect(() => {
-    // Set initial random positions
-    setSkydiverPositions(generateRandomPositions());
+    const scheduleNextSkydivers = () => {
+      // Deploy skydivers every 10 seconds
+      setTimeout(() => {
+        // Generate random configurations for all three skydivers
+        const newSkydivers = {
+          left: generateRandomSkydiver(),
+          right: generateRandomSkydiver(),
+          center: generateRandomSkydiver()
+        };
+        
+        console.log('Deploying skydivers with configs:', newSkydivers); // Debug log
+        setActiveSkydivers(newSkydivers);
+        
+        // Find the longest animation duration to know when to clear and schedule next
+        const maxDuration = Math.max(
+          newSkydivers.left.duration,
+          newSkydivers.right.duration,
+          newSkydivers.center.duration
+        );
+        
+        // Clear skydivers after animations complete, then schedule next deployment
+        setTimeout(() => {
+          setActiveSkydivers({ left: null, right: null, center: null });
+          scheduleNextSkydivers();
+        }, maxDuration * 1000);
+      }, 10000);
+    };
 
-    // Update positions every 10 seconds (slowest possible animation duration)
-    const positionInterval = setInterval(() => {
-      setSkydiverPositions(generateRandomPositions());
-    }, 10000);
+    // Start first deployment immediately
+    const initialSkydivers = {
+      left: generateRandomSkydiver(),
+      right: generateRandomSkydiver(),
+      center: generateRandomSkydiver()
+    };
+    setActiveSkydivers(initialSkydivers);
+    
+    // Schedule the clearing and next deployment
+    const maxDuration = Math.max(
+      initialSkydivers.left.duration,
+      initialSkydivers.right.duration,
+      initialSkydivers.center.duration
+    );
+    
+    setTimeout(() => {
+      setActiveSkydivers({ left: null, right: null, center: null });
+      scheduleNextSkydivers();
+    }, maxDuration * 1000);
 
     const scheduleNextAirplane = () => {
       // Random delay between 10-15 seconds before showing airplane
@@ -69,49 +95,51 @@ const SkydiverAnimation = () => {
 
     // Start the first airplane immediately with its own delay
     scheduleNextAirplane();
-
-    return () => {
-      clearInterval(positionInterval);
-    };
   }, []);
 
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none z-5">
       {/* Skydiver 1 - Falls to the left */}
-      <div 
-        className="absolute left-1/4 animate-skydive-left"
-        style={{
-          '--start-y': `${skydiverPositions.left.startY}px`,
-          '--start-x': `${skydiverPositions.left.startX}px`,
-          '--duration': `${skydiverPositions.left.duration}s`
-        } as React.CSSProperties}
-      >
-        <img src={parachuteImg} alt="Parachute" className="w-8 h-8" />
-      </div>
+      {activeSkydivers.left && (
+        <div 
+          className="absolute left-1/4 animate-skydive-left"
+          style={{
+            '--start-y': `${activeSkydivers.left.startY}px`,
+            '--start-x': `${activeSkydivers.left.startX}px`,
+            '--duration': `${activeSkydivers.left.duration}s`
+          } as React.CSSProperties}
+        >
+          <img src={parachuteImg} alt="Parachute" className="w-8 h-8" />
+        </div>
+      )}
       
       {/* Skydiver 2 - Falls to the right */}
-      <div 
-        className="absolute left-2/3 animate-skydive-right"
-        style={{
-          '--start-y': `${skydiverPositions.right.startY}px`,
-          '--start-x': `${skydiverPositions.right.startX}px`,
-          '--duration': `${skydiverPositions.right.duration}s`
-        } as React.CSSProperties}
-      >
-        <img src={parachuteImg} alt="Parachute" className="w-8 h-8" />
-      </div>
+      {activeSkydivers.right && (
+        <div 
+          className="absolute left-2/3 animate-skydive-right"
+          style={{
+            '--start-y': `${activeSkydivers.right.startY}px`,
+            '--start-x': `${activeSkydivers.right.startX}px`,
+            '--duration': `${activeSkydivers.right.duration}s`
+          } as React.CSSProperties}
+        >
+          <img src={parachuteImg} alt="Parachute" className="w-8 h-8" />
+        </div>
+      )}
       
       {/* Skydiver 3 - Falls straight down */}
-      <div 
-        className="absolute left-1/2 animate-skydive-center"
-        style={{
-          '--start-y': `${skydiverPositions.center.startY}px`,
-          '--start-x': `${skydiverPositions.center.startX}px`,
-          '--duration': `${skydiverPositions.center.duration}s`
-        } as React.CSSProperties}
-      >
-        <img src={parachuteImg} alt="Parachute" className="w-8 h-8" />
-      </div>
+      {activeSkydivers.center && (
+        <div 
+          className="absolute left-1/2 animate-skydive-center"
+          style={{
+            '--start-y': `${activeSkydivers.center.startY}px`,
+            '--start-x': `${activeSkydivers.center.startX}px`,
+            '--duration': `${activeSkydivers.center.duration}s`
+          } as React.CSSProperties}
+        >
+          <img src={parachuteImg} alt="Parachute" className="w-8 h-8" />
+        </div>
+      )}
       
       {/* Dynamic airplane with random delays */}
       {activeAirplane === 'left-to-right' && (
