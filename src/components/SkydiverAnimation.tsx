@@ -20,12 +20,12 @@ const SkydiverAnimation = () => {
       </div>
       
       {/* Airplane 1 - Flies left to right */}
-      <div className="absolute top-24 left-0 animate-airplane-cross">
+      <div className="absolute top-24 animate-airplane-cross" style={{ left: '-120px' }}>
         <img src={airplaneImg} alt="Airplane" className="w-12 h-12" />
       </div>
       
       {/* Airplane 2 - Flies right to left (mirrored) */}
-      <div className="absolute top-32 left-0 animate-airplane-cross-reverse">
+      <div className="absolute top-32 animate-airplane-cross-reverse" style={{ left: 'calc(100vw + 120px)' }}>
         <img src={airplaneImg} alt="Airplane" className="w-12 h-12" />
       </div>
     </div>
