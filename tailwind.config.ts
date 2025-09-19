@@ -110,7 +110,7 @@ export default {
         },
         "skydive-left": {
           "0%": { 
-            transform: "translateY(-50px) translateX(0px) rotate(0deg)",
+            transform: "translateY(-80px) translateX(0px) rotate(0deg)",
             opacity: "1"
           },
           "100%": { 
@@ -120,7 +120,7 @@ export default {
         },
         "skydive-right": {
           "0%": { 
-            transform: "translateY(-50px) translateX(0px) rotate(0deg)",
+            transform: "translateY(-30px) translateX(0px) rotate(0deg)",
             opacity: "1"
           },
           "100%": { 
@@ -130,7 +130,7 @@ export default {
         },
         "skydive-center": {
           "0%": { 
-            transform: "translateY(-50px) translateX(0px) rotate(0deg)",
+            transform: "translateY(-120px) translateX(0px) rotate(0deg)",
             opacity: "1"
           },
           "100%": { 
