@@ -124,16 +124,3 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
-
-/* Cloud shape variations using clip-path for more realistic cloud shapes */
-.cloud-shape-1 {
-  clip-path: ellipse(70% 100% at 30% 50%);
-}
-
-.cloud-shape-2 {
-  clip-path: ellipse(80% 90% at 50% 60%);
-}
-
-.cloud-shape-3 {
-  clip-path: ellipse(90% 80% at 40% 50%);
-}
