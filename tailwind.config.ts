@@ -108,6 +108,26 @@ export default {
           "40%, 43%": { transform: "translateY(-8px)" },
           "70%": { transform: "translateY(-4px)" },
         },
+        "skydive-left": {
+          "0%": { 
+            transform: "translate(0, -50px) rotate(0deg)",
+            opacity: "1"
+          },
+          "100%": { 
+            transform: "translate(-200px, 100vh) rotate(-15deg)",
+            opacity: "0"
+          }
+        },
+        "skydive-right": {
+          "0%": { 
+            transform: "translate(0, -50px) rotate(0deg)",
+            opacity: "1"
+          },
+          "100%": { 
+            transform: "translate(200px, 100vh) rotate(15deg)",
+            opacity: "0"
+          }
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -116,6 +136,8 @@ export default {
         "float-delayed": "float-delayed calc(var(--float-duration) * 1.2) var(--gentle-bounce) infinite 2s",
         "fade-in-up": "fade-in-up 0.6s ease-out",
         "gentle-bounce": "gentle-bounce 2s ease-in-out infinite",
+        "skydive-left": "skydive-left 8s linear",
+        "skydive-right": "skydive-right 8s linear",
       },
     },
   },
