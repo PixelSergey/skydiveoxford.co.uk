@@ -55,8 +55,9 @@ All colors MUST be HSL.
     --skydive-delay-3: 20s;
     
     /* Airplane animation timings */
-    --airplane-duration: 15s;
-    --airplane-delay: 25s;
+    --airplane-duration: 8s;
+    --airplane-delay-1: 25s;
+    --airplane-delay-2: 55s;
     
     /* Aviation shadows */
     --sky-shadow: 0 4px 20px hsl(204 100% 86% / 0.25);
