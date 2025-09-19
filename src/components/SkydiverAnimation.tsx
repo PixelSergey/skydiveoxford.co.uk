@@ -19,8 +19,13 @@ const SkydiverAnimation = () => {
         <img src={parachuteImg} alt="Parachute" className="w-8 h-8" />
       </div>
       
-      {/* Single airplane - Flies across the screen */}
-      <div className="absolute top-24 animate-airplane-cross">
+      {/* Airplane 1 - Flies left to right */}
+      <div className="absolute top-24 left-0 animate-airplane-cross">
+        <img src={airplaneImg} alt="Airplane" className="w-12 h-12" />
+      </div>
+      
+      {/* Airplane 2 - Flies right to left (mirrored) */}
+      <div className="absolute top-32 left-0 animate-airplane-cross-reverse">
         <img src={airplaneImg} alt="Airplane" className="w-12 h-12" />
       </div>
     </div>
