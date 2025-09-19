@@ -25,7 +25,12 @@ const Hero = () => {
       
       {/* Content */}
       <div className="relative z-10 text-center px-6 sm:px-8 max-w-4xl mx-auto w-full">
-        <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-primary-foreground mb-4 sm:mb-6 animate-fade-in-up leading-tight">
+        <h1 className="font-hero text-4xl sm:text-5xl md:text-7xl font-bold text-transparent bg-gradient-to-r bg-clip-text mb-4 sm:mb-6 animate-hero-float leading-tight tracking-wider uppercase" 
+            style={{ 
+              backgroundImage: 'var(--hero-gradient)', 
+              textShadow: 'var(--hero-text-shadow)',
+              WebkitTextStroke: '1px rgba(255,255,255,0.3)'
+            }}>
           Oxford Skydiving Club
         </h1>
         
