@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Instagram } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,8 +9,8 @@ const Navigation = () => {
   const navItems = [
     { name: "Intro days", href: "#intro" },
     { name: "About skydiving", href: "#about" },
-    { name: "Safety", href: "#safety" },
     { name: "Membership", href: "#membership" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
@@ -17,21 +18,42 @@ const Navigation = () => {
       <div className="container mx-auto px-4 sm:px-6 py-4 max-w-7xl">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="text-lg sm:text-xl font-semibold text-primary-foreground truncate">
+          <Link 
+            to="/" 
+            className="text-lg sm:text-xl font-semibold text-primary-foreground truncate hover:text-primary transition-colors duration-200"
+          >
             Oxford Skydiving Club
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-muted-foreground hover:text-primary-foreground transition-colors duration-200 font-medium"
-              >
-                {item.name}
-              </a>
+              item.href.startsWith('#') ? (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="text-muted-foreground hover:text-primary-foreground transition-colors duration-200 font-medium"
+                >
+                  {item.name}
+                </a>
+              ) : (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className="text-muted-foreground hover:text-primary-foreground transition-colors duration-200 font-medium"
+                >
+                  {item.name}
+                </Link>
+              )
             ))}
+            <a 
+              href="https://instagram.com/oxfordskydiving" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary-foreground transition-colors duration-200"
+            >
+              <Instagram className="h-5 w-5" />
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -50,15 +72,36 @@ const Navigation = () => {
           <div className="md:hidden mt-4 pb-4 border-t border-border/50 pt-4">
             <div className="flex flex-col space-y-3">
               {navItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-muted-foreground hover:text-primary-foreground transition-colors duration-200 font-medium py-2"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.name}
-                </a>
+                item.href.startsWith('#') ? (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="text-muted-foreground hover:text-primary-foreground transition-colors duration-200 font-medium py-2"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.name}
+                  </a>
+                ) : (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className="text-muted-foreground hover:text-primary-foreground transition-colors duration-200 font-medium py-2"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                )
               ))}
+              <a 
+                href="https://instagram.com/oxfordskydiving" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary-foreground transition-colors duration-200 py-2 flex items-center gap-2"
+                onClick={() => setIsOpen(false)}
+              >
+                <Instagram className="h-5 w-5" />
+                Instagram
+              </a>
             </div>
           </div>
         )}
