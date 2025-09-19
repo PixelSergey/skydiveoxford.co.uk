@@ -30,7 +30,7 @@ const Hero = () => {
         </h1>
         
         <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 sm:mb-12 animate-fade-in-up max-w-2xl mx-auto font-light px-2">
-          The most extreme sports society at the University
+          The university's most extreme sports society
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center animate-fade-in-up px-2">
