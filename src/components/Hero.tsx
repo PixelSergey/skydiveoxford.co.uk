@@ -26,7 +26,7 @@ const Hero = () => {
         </h1>
         
         <p className="text-xl md:text-2xl text-muted-foreground mb-12 animate-fade-in-up max-w-2xl mx-auto font-light">
-          Discover the ultimate freedom and join Oxford's most adventurous community
+          Join the most extreme sports society at the University of Oxford
         </p>
         
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-up">
