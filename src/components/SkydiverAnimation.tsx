@@ -52,7 +52,7 @@ const SkydiverAnimation = () => {
           setActiveSkydivers({ left: null, right: null, center: null });
           scheduleNextSkydivers();
         }, maxDuration * 1000);
-      }, 5000);
+      }, 3000);
     };
 
     // Start first deployment immediately
