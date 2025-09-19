@@ -48,6 +48,12 @@ All colors MUST be HSL.
     --cloud-gradient: linear-gradient(180deg, hsl(0 0% 100% / 0.9) 0%, hsl(204 100% 97% / 0.6) 50%, hsl(0 0% 100% / 0.3) 100%);
     --horizon-gradient: linear-gradient(180deg, hsl(204 100% 86%) 0%, hsl(204 100% 88%) 40%, hsl(0 0% 100%) 80%);
     
+    /* Skydiver animation timings */
+    --skydive-duration: 8s;
+    --skydive-delay-1: 3s;
+    --skydive-delay-2: 12s;
+    --skydive-delay-3: 20s;
+    
     /* Aviation shadows */
     --sky-shadow: 0 4px 20px hsl(204 100% 86% / 0.25);
     --cloud-shadow: 0 8px 32px hsl(204 100% 86% / 0.15);
