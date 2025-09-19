@@ -141,17 +141,21 @@ export default {
         "airplane-cross": {
           "0%": { 
             transform: "translateX(-120px) translateY(0px)",
-            opacity: "0"
-          },
-          "5%": { 
-            opacity: "1"
-          },
-          "95%": { 
             opacity: "1"
           },
           "100%": { 
-            transform: "translateX(calc(100vw + 120px)) translateY(-30px)",
-            opacity: "0"
+            transform: "translateX(calc(100vw + 120px)) translateY(0px)",
+            opacity: "1"
+          },
+        },
+        "airplane-cross-reverse": {
+          "0%": { 
+            transform: "translateX(calc(100vw + 120px)) translateY(0px) scaleX(-1)",
+            opacity: "1"
+          },
+          "100%": { 
+            transform: "translateX(-120px) translateY(0px) scaleX(-1)",
+            opacity: "1"
           },
         },
       },
@@ -165,7 +169,8 @@ export default {
         "skydive-left": "skydive-left var(--skydive-duration) linear infinite var(--skydive-delay-1)",
         "skydive-right": "skydive-right var(--skydive-duration) linear infinite var(--skydive-delay-2)",
         "skydive-center": "skydive-center var(--skydive-duration) linear infinite var(--skydive-delay-3)",
-        "airplane-cross": "airplane-cross var(--airplane-duration) ease-in-out infinite var(--airplane-delay)",
+        "airplane-cross": "airplane-cross var(--airplane-duration) linear infinite var(--airplane-delay-1)",
+        "airplane-cross-reverse": "airplane-cross-reverse var(--airplane-duration) linear infinite var(--airplane-delay-2)",
       },
     },
   },
