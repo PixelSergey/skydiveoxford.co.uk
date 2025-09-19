@@ -37,7 +37,7 @@ const Navigation = () => {
               </Link>
             ))}
             <a 
-              href="https://instagram.com/oxfordskydiving" 
+              href="https://instagram.com/skydiveoxford" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary-foreground transition-colors duration-200"
