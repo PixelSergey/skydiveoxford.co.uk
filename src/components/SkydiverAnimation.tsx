@@ -7,7 +7,7 @@ const SkydiverAnimation = () => {
 
   useEffect(() => {
     const scheduleNextAirplane = () => {
-      // Random delay between 10-15 seconds
+      // Random delay between 10-15 seconds before showing airplane
       const delay = Math.random() * 5000 + 10000;
       
       setTimeout(() => {
@@ -23,11 +23,8 @@ const SkydiverAnimation = () => {
       }, delay);
     };
 
-    // Start the first airplane after initial delay
-    const initialDelay = Math.random() * 5000 + 10000; // 10-15 seconds
-    setTimeout(() => {
-      scheduleNextAirplane();
-    }, initialDelay);
+    // Start the first airplane immediately with its own delay
+    scheduleNextAirplane();
   }, []);
 
   return (
