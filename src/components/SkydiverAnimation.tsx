@@ -5,6 +5,7 @@ import parachuteImg from "@/assets/parachute.png";
 interface SkydiverPositions {
   startY: number;
   startX: number;
+  duration: number;
 }
 
 const SkydiverAnimation = () => {
@@ -14,24 +15,27 @@ const SkydiverAnimation = () => {
     right: SkydiverPositions;
     center: SkydiverPositions;
   }>({
-    left: { startY: -80, startX: 0 },
-    right: { startY: -30, startX: 0 },
-    center: { startY: -120, startX: 0 }
+    left: { startY: -80, startX: 0, duration: 8 },
+    right: { startY: -30, startX: 0, duration: 8 },
+    center: { startY: -120, startX: 0, duration: 8 }
   });
 
   const generateRandomPositions = () => {
     return {
       left: {
         startY: Math.random() * -100 - 50, // Between -50px and -150px
-        startX: Math.random() * 100 - 50   // Between -50px and +50px
+        startX: Math.random() * 100 - 50,   // Between -50px and +50px
+        duration: Math.random() * 4 + 6     // Between 6s and 10s
       },
       right: {
         startY: Math.random() * -100 - 50,
-        startX: Math.random() * 100 - 50
+        startX: Math.random() * 100 - 50,
+        duration: Math.random() * 4 + 6
       },
       center: {
         startY: Math.random() * -100 - 50,
-        startX: Math.random() * 100 - 50
+        startX: Math.random() * 100 - 50,
+        duration: Math.random() * 4 + 6
       }
     };
   };
@@ -40,10 +44,10 @@ const SkydiverAnimation = () => {
     // Set initial random positions
     setSkydiverPositions(generateRandomPositions());
 
-    // Update positions every 8 seconds (animation duration)
+    // Update positions every 10 seconds (max animation duration)
     const positionInterval = setInterval(() => {
       setSkydiverPositions(generateRandomPositions());
-    }, 8000);
+    }, 10000);
 
     const scheduleNextAirplane = () => {
       // Random delay between 10-15 seconds before showing airplane
@@ -78,7 +82,8 @@ const SkydiverAnimation = () => {
         className="absolute left-1/4 animate-skydive-left"
         style={{
           '--start-y': `${skydiverPositions.left.startY}px`,
-          '--start-x': `${skydiverPositions.left.startX}px`
+          '--start-x': `${skydiverPositions.left.startX}px`,
+          '--duration': `${skydiverPositions.left.duration}s`
         } as React.CSSProperties}
       >
         <img src={parachuteImg} alt="Parachute" className="w-8 h-8" />
@@ -89,7 +94,8 @@ const SkydiverAnimation = () => {
         className="absolute left-2/3 animate-skydive-right"
         style={{
           '--start-y': `${skydiverPositions.right.startY}px`,
-          '--start-x': `${skydiverPositions.right.startX}px`
+          '--start-x': `${skydiverPositions.right.startX}px`,
+          '--duration': `${skydiverPositions.right.duration}s`
         } as React.CSSProperties}
       >
         <img src={parachuteImg} alt="Parachute" className="w-8 h-8" />
@@ -100,7 +106,8 @@ const SkydiverAnimation = () => {
         className="absolute left-1/2 animate-skydive-center"
         style={{
           '--start-y': `${skydiverPositions.center.startY}px`,
-          '--start-x': `${skydiverPositions.center.startX}px`
+          '--start-x': `${skydiverPositions.center.startX}px`,
+          '--duration': `${skydiverPositions.center.duration}s`
         } as React.CSSProperties}
       >
         <img src={parachuteImg} alt="Parachute" className="w-8 h-8" />
