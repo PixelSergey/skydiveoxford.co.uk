@@ -1,9 +1,12 @@
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 import CloudBackground from "./CloudBackground";
 import SkydiverAnimation from "./SkydiverAnimation";
 import skyBackground from "@/assets/sky-background.jpg";
 
 const Hero = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background image */}
@@ -36,6 +39,7 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center animate-fade-in-up px-2">
           <Button 
             size="lg" 
+            onClick={() => navigate('/intro')}
             className="bg-primary hover:bg-primary/90 text-primary-foreground border-2 border-primary-foreground/30 hover:border-primary-foreground/50 w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold shadow-sky hover:shadow-elevation transition-all duration-300 hover:scale-105"
           >
             Learn to skydive
@@ -44,6 +48,7 @@ const Hero = () => {
           <Button 
             size="lg" 
             variant="outline" 
+            onClick={() => navigate('/members')}
             className="border-2 border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold backdrop-blur-sm transition-all duration-300 hover:scale-105"
           >
             Join the club for free
