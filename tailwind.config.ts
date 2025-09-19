@@ -108,6 +108,36 @@ export default {
           "40%, 43%": { transform: "translateY(-8px)" },
           "70%": { transform: "translateY(-4px)" },
         },
+        "skydive-left": {
+          "0%": { 
+            transform: "translateY(-50px) translateX(0px) rotate(0deg)",
+            opacity: "1"
+          },
+          "100%": { 
+            transform: "translateY(100vh) translateX(-60px) rotate(-15deg)",
+            opacity: "0.3"
+          },
+        },
+        "skydive-right": {
+          "0%": { 
+            transform: "translateY(-50px) translateX(0px) rotate(0deg)",
+            opacity: "1"
+          },
+          "100%": { 
+            transform: "translateY(100vh) translateX(60px) rotate(15deg)",
+            opacity: "0.3"
+          },
+        },
+        "skydive-center": {
+          "0%": { 
+            transform: "translateY(-50px) translateX(0px) rotate(0deg)",
+            opacity: "1"
+          },
+          "100%": { 
+            transform: "translateY(100vh) translateX(0px) rotate(0deg)",
+            opacity: "0.3"
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -116,6 +146,9 @@ export default {
         "float-delayed": "float-delayed calc(var(--float-duration) * 1.2) var(--gentle-bounce) infinite 2s",
         "fade-in-up": "fade-in-up 0.6s ease-out",
         "gentle-bounce": "gentle-bounce 2s ease-in-out infinite",
+        "skydive-left": "skydive-left var(--skydive-duration) linear infinite var(--skydive-delay-1)",
+        "skydive-right": "skydive-right var(--skydive-duration) linear infinite var(--skydive-delay-2)",
+        "skydive-center": "skydive-center var(--skydive-duration) linear infinite var(--skydive-delay-3)",
       },
     },
   },
