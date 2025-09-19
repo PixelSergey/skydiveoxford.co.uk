@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import CloudBackground from "./CloudBackground";
+import SkydiverAnimation from "./SkydiverAnimation";
 import skyBackground from "@/assets/sky-background.jpg";
 
 const Hero = () => {
@@ -18,6 +19,9 @@ const Hero = () => {
       
       {/* Animated cloud elements */}
       <CloudBackground />
+      
+      {/* Animated skydivers */}
+      <SkydiverAnimation />
       
       {/* Content */}
       <div className="relative z-10 text-center px-6 sm:px-8 max-w-4xl mx-auto w-full">
