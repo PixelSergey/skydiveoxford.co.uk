@@ -13,6 +13,7 @@ const SkydiverAnimation = () => {
       setTimeout(() => {
         // Randomly choose direction
         const direction = Math.random() > 0.5 ? 'left-to-right' : 'right-to-left';
+        console.log('Airplane direction:', direction); // Debug log
         setActiveAirplane(direction);
         
         // Animation duration is 8 seconds, then reset and schedule next
@@ -46,13 +47,13 @@ const SkydiverAnimation = () => {
       
       {/* Dynamic airplane with random delays */}
       {activeAirplane === 'left-to-right' && (
-        <div className="absolute top-24 animate-airplane-cross" style={{ left: '-120px' }}>
+        <div className="absolute top-24 left-0 animate-airplane-cross">
           <img src={airplaneImg} alt="Airplane" className="w-12 h-12" />
         </div>
       )}
       
       {activeAirplane === 'right-to-left' && (
-        <div className="absolute top-32 animate-airplane-cross-reverse" style={{ left: 'calc(100vw + 120px)' }}>
+        <div className="absolute top-32 left-0 animate-airplane-cross-reverse">
           <img src={airplaneImg} alt="Airplane" className="w-12 h-12" />
         </div>
       )}
