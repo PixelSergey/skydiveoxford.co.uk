@@ -42,12 +42,27 @@ const SkydiverAnimation = () => {
 
   useEffect(() => {
     // Set initial random positions
-    setSkydiverPositions(generateRandomPositions());
+    const initialPositions = generateRandomPositions();
+    setSkydiverPositions(initialPositions);
 
-    // Update positions every 10 seconds (max animation duration)
-    const positionInterval = setInterval(() => {
-      setSkydiverPositions(generateRandomPositions());
-    }, 10000);
+    const scheduleNextCycle = (positions: typeof initialPositions) => {
+      // Find the maximum duration among all skydivers
+      const maxDuration = Math.max(
+        positions.left.duration,
+        positions.right.duration,
+        positions.center.duration
+      );
+
+      // Wait for all animations to complete, then start next cycle
+      setTimeout(() => {
+        const newPositions = generateRandomPositions();
+        setSkydiverPositions(newPositions);
+        scheduleNextCycle(newPositions);
+      }, maxDuration * 1000); // Convert to milliseconds
+    };
+
+    // Start the cycle with initial positions
+    scheduleNextCycle(initialPositions);
 
     const scheduleNextAirplane = () => {
       // Random delay between 10-15 seconds before showing airplane
@@ -69,10 +84,6 @@ const SkydiverAnimation = () => {
 
     // Start the first airplane immediately with its own delay
     scheduleNextAirplane();
-
-    return () => {
-      clearInterval(positionInterval);
-    };
   }, []);
 
   return (
