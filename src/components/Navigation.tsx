@@ -7,9 +7,9 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { name: "Intro days", href: "#intro" },
-    { name: "About skydiving", href: "#about" },
-    { name: "Membership", href: "#membership" },
+    { name: "Intro days", href: "/intro" },
+    { name: "About skydiving", href: "/about" },
+    { name: "Membership", href: "/members" },
     { name: "Contact", href: "/contact" },
   ];
 
@@ -28,23 +28,13 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              item.href.startsWith('#') ? (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-muted-foreground hover:text-primary-foreground transition-colors duration-200 font-medium"
-                >
-                  {item.name}
-                </a>
-              ) : (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className="text-muted-foreground hover:text-primary-foreground transition-colors duration-200 font-medium"
-                >
-                  {item.name}
-                </Link>
-              )
+              <Link
+                key={item.name}
+                to={item.href}
+                className="text-muted-foreground hover:text-primary-foreground transition-colors duration-200 font-medium"
+              >
+                {item.name}
+              </Link>
             ))}
             <a 
               href="https://instagram.com/oxfordskydiving" 
@@ -72,25 +62,14 @@ const Navigation = () => {
           <div className="md:hidden mt-4 pb-4 border-t border-border/50 pt-4">
             <div className="flex flex-col space-y-3">
               {navItems.map((item) => (
-                item.href.startsWith('#') ? (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="text-muted-foreground hover:text-primary-foreground transition-colors duration-200 font-medium py-2"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {item.name}
-                  </a>
-                ) : (
-                  <Link
-                    key={item.name}
-                    to={item.href}
-                    className="text-muted-foreground hover:text-primary-foreground transition-colors duration-200 font-medium py-2"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
-                )
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className="text-muted-foreground hover:text-primary-foreground transition-colors duration-200 font-medium py-2"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.name}
+                </Link>
               ))}
               <a 
                 href="https://instagram.com/skydiveoxford" 
