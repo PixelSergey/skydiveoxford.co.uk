@@ -3,17 +3,27 @@ const SkydiverAnimation = () => {
     <div className="absolute inset-0 overflow-hidden pointer-events-none z-5">
       {/* Skydiver 1 - Falls to the left */}
       <div className="absolute left-1/4 animate-skydive-left">
-        <div className="text-2xl">🪂</div>
+        <div className="text-3xl">🪂</div>
       </div>
       
       {/* Skydiver 2 - Falls to the right */}
       <div className="absolute left-2/3 animate-skydive-right">
-        <div className="text-2xl">🪂</div>
+        <div className="text-3xl">🪂</div>
       </div>
       
       {/* Skydiver 3 - Falls straight down */}
       <div className="absolute left-1/2 animate-skydive-center">
-        <div className="text-2xl">🪂</div>
+        <div className="text-3xl">🪂</div>
+      </div>
+      
+      {/* Airplane 1 - Flies left to right */}
+      <div className="absolute top-20 animate-airplane-left-to-right">
+        <div className="text-2xl">✈️</div>
+      </div>
+      
+      {/* Airplane 2 - Flies right to left */}
+      <div className="absolute top-32 animate-airplane-right-to-left">
+        <div className="text-2xl">✈️</div>
       </div>
     </div>
   );
