@@ -45,8 +45,8 @@ All colors MUST be HSL.
 
     /* Sky gradients and effects */
     --sky-gradient: linear-gradient(135deg, hsl(204 100% 86%) 0%, hsl(0 0% 100%) 100%);
-    --cloud-gradient: linear-gradient(180deg, hsl(0 0% 100% / 0.8) 0%, hsl(204 100% 97% / 0.4) 100%);
-    --horizon-gradient: linear-gradient(180deg, hsl(204 100% 86%) 0%, hsl(0 0% 100%) 60%);
+    --cloud-gradient: linear-gradient(180deg, hsl(0 0% 100% / 0.9) 0%, hsl(204 100% 97% / 0.6) 50%, hsl(0 0% 100% / 0.3) 100%);
+    --horizon-gradient: linear-gradient(180deg, hsl(204 100% 86%) 0%, hsl(204 100% 88%) 40%, hsl(0 0% 100%) 80%);
     
     /* Aviation shadows */
     --sky-shadow: 0 4px 20px hsl(204 100% 86% / 0.25);
@@ -122,5 +122,33 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  /* Cloud shape classes */
+  .cloud-shape-1 {
+    clip-path: ellipse(100% 60% at 50% 50%);
+    border-radius: 100px 100px 60px 60px;
+  }
+  
+  .cloud-shape-2 {
+    clip-path: ellipse(80% 70% at 40% 50%);
+    border-radius: 80px 120px 50px 90px;
+  }
+  
+  .cloud-shape-3 {
+    clip-path: ellipse(90% 50% at 60% 50%);
+    border-radius: 120px 80px 70px 40px;
+  }
+  
+  .cloud-shape-4 {
+    clip-path: ellipse(85% 65% at 30% 50%);
+    border-radius: 90px 110px 45px 75px;
+  }
+  
+  .cloud-shape-5 {
+    clip-path: ellipse(95% 55% at 70% 50%);
+    border-radius: 110px 70px 80px 50px;
   }
 }
