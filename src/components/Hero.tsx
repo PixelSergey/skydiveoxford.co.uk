@@ -32,7 +32,7 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-up">
           <Button 
             size="lg" 
-            className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold shadow-sky hover:shadow-elevation transition-all duration-300 hover:scale-105"
+            className="bg-primary hover:bg-primary/90 text-primary-foreground border-2 border-primary-foreground/30 hover:border-primary-foreground/50 px-8 py-4 text-lg font-semibold shadow-sky hover:shadow-elevation transition-all duration-300 hover:scale-105"
           >
             Learn to Skydive
           </Button>
