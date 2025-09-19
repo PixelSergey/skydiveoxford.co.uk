@@ -46,7 +46,7 @@ const Hero = () => {
             variant="outline" 
             className="border-2 border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold backdrop-blur-sm transition-all duration-300 hover:scale-105"
           >
-            Join the Oxford Skydiving Club for free
+            Join the club for free
           </Button>
         </div>
       </div>
