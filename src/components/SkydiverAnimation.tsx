@@ -77,8 +77,9 @@ const SkydiverAnimation = () => {
       <div 
         className="absolute left-1/4 animate-skydive-left"
         style={{
-          transform: `translateY(${skydiverPositions.left.startY}px) translateX(${skydiverPositions.left.startX}px)`
-        }}
+          '--start-y': `${skydiverPositions.left.startY}px`,
+          '--start-x': `${skydiverPositions.left.startX}px`
+        } as React.CSSProperties}
       >
         <img src={parachuteImg} alt="Parachute" className="w-8 h-8" />
       </div>
@@ -87,8 +88,9 @@ const SkydiverAnimation = () => {
       <div 
         className="absolute left-2/3 animate-skydive-right"
         style={{
-          transform: `translateY(${skydiverPositions.right.startY}px) translateX(${skydiverPositions.right.startX}px)`
-        }}
+          '--start-y': `${skydiverPositions.right.startY}px`,
+          '--start-x': `${skydiverPositions.right.startX}px`
+        } as React.CSSProperties}
       >
         <img src={parachuteImg} alt="Parachute" className="w-8 h-8" />
       </div>
@@ -97,8 +99,9 @@ const SkydiverAnimation = () => {
       <div 
         className="absolute left-1/2 animate-skydive-center"
         style={{
-          transform: `translateY(${skydiverPositions.center.startY}px) translateX(${skydiverPositions.center.startX}px)`
-        }}
+          '--start-y': `${skydiverPositions.center.startY}px`,
+          '--start-x': `${skydiverPositions.center.startX}px`
+        } as React.CSSProperties}
       >
         <img src={parachuteImg} alt="Parachute" className="w-8 h-8" />
       </div>
