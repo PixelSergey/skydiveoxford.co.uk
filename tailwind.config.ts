@@ -15,7 +15,6 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        'vast': ['Vast MX', 'system-ui', 'sans-serif'],
       },
       backgroundImage: {
         'sky-gradient': 'var(--sky-gradient)',
