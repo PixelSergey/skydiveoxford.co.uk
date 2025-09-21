@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import CloudBackground from "@/components/CloudBackground";
 import { Button } from "@/components/ui/button";
+import { Calendar } from "lucide-react";
 import skyBackground from "@/assets/sky-background.jpg";
 
 const Intro = () => {
@@ -33,7 +34,10 @@ const Intro = () => {
             <div className="bg-card/80 backdrop-blur-sm rounded-lg p-8 border border-border/50 text-center">
               <h2 className="text-3xl font-bold text-foreground mb-4">Next Intro Day</h2>
               <p className="text-xl text-foreground mb-6">Friday, December 15th, 2024</p>
-              <Button size="lg" className="mb-6">Sign up now</Button>
+              <Button variant="outline" size="lg" className="mb-6 px-8 py-4 text-lg">
+                <Calendar className="mr-2 h-5 w-5" />
+                Sign up now
+              </Button>
               <p className="text-sm text-muted-foreground">
                 Please read the information below before signing up to the intro day
               </p>
