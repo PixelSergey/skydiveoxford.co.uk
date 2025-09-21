@@ -37,13 +37,14 @@ const Members = () => {
           <Card className="mb-8 bg-background/90 backdrop-blur-sm">
             <CardContent className="p-8">
               <h2 className="text-2xl font-bold text-foreground mb-6 text-center">📝 Membership Application</h2>
-              <div className="space-y-6">
-                <p className="text-foreground text-center">
-                  Memberships for the 2025-2026 academic year are currently free. You must be a current student or a member of faculty at the University of Oxford to apply. Apply to be a member by filling out this form:
-                </p>
-                
-                <div className="flex flex-col md:flex-row items-center justify-center gap-8">
-                  <div className="flex justify-center">
+               <div className="flex flex-col md:flex-row items-center gap-8">
+                {/* Left side - Text and Button */}
+                <div className="flex-1 space-y-4">
+                  <p className="text-foreground">
+                    Memberships for the 2025-2026 academic year are currently free. You must be a current student or a member of faculty at the University of Oxford to apply. Apply to be a member by filling out this form:
+                  </p>
+                  
+                  <div className="flex justify-start">
                     <Button
                       asChild
                       variant="outline"
@@ -60,18 +61,19 @@ const Members = () => {
                       </a>
                     </Button>
                   </div>
-                  
-                  <div className="flex flex-col items-center space-y-2">
-                    <div className="bg-white p-4 rounded-2xl shadow-lg">
-                      <QRCode
-                        size={128}
-                        style={{ height: "auto", maxWidth: "100%", width: "100%" }}
-                        value={applicationFormUrl}
-                        viewBox={`0 0 256 256`}
-                      />
-                    </div>
-                    <p className="text-sm text-muted-foreground">Scan to apply</p>
+                </div>
+                
+                {/* Right side - QR Code */}
+                <div className="flex flex-col items-center justify-center space-y-2 md:min-h-[120px]">
+                  <div className="bg-white p-4 rounded-2xl shadow-lg">
+                    <QRCode
+                      size={128}
+                      style={{ height: "auto", maxWidth: "100%", width: "100%" }}
+                      value={applicationFormUrl}
+                      viewBox={`0 0 256 256`}
+                    />
                   </div>
+                  <p className="text-sm text-muted-foreground">Scan to apply</p>
                 </div>
               </div>
             </CardContent>
