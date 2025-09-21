@@ -37,15 +37,19 @@ const Contact = () => {
             <CardContent className="p-8">
               <h2 className="text-2xl font-bold text-foreground mb-6 text-center">🪂 Oxford Skydiving Club</h2>
               <div className="space-y-4">
-                <p className="text-foreground text-center">
-                  For general questions and contacts, email{" "}
-                  <a 
-                    href="mailto:info@skydiveoxford.co.uk" 
-                    className="text-blue-700 hover:text-blue-800 hover:underline font-medium break-all"
+                <div className="text-foreground text-center space-y-4">
+                  <p>For general questions and contacts:</p>
+                  <Button
+                    asChild
+                    variant="outline"
+                    size="sm"
+                    className="inline-flex items-center space-x-2"
                   >
-                    info@skydiveoxford.co.uk
-                  </a>
-                </p>
+                    <a href="mailto:info@skydiveoxford.co.uk">
+                      <span>info@skydiveoxford.co.uk</span>
+                    </a>
+                  </Button>
+                </div>
                 <div className="text-foreground text-center">
                   <span className="mr-2">Follow us on Instagram:</span>
                   <Button
@@ -69,7 +73,7 @@ const Contact = () => {
           </Card>
 
           {/* Committee Section */}
-          <Card className="bg-background/90 backdrop-blur-sm">
+          <Card className="mb-8 bg-background/90 backdrop-blur-sm">
             <CardContent className="p-8">
               <h2 className="text-2xl font-bold text-foreground mb-8 text-center">👥 Committee</h2>
               <div className="grid gap-6">
@@ -79,17 +83,40 @@ const Contact = () => {
                     <AvatarImage src={sergeyImage} alt="Sergey Ichtchenko" />
                     <AvatarFallback>SI</AvatarFallback>
                   </Avatar>
-                  <div>
+                  <div className="flex flex-col items-start space-y-2">
                     <h3 className="text-xl font-semibold text-foreground">President</h3>
                     <p className="text-lg text-foreground">Sergey Ichtchenko</p>
-                    <a 
-                      href="mailto:president@skydiveoxford.co.uk" 
-                      className="text-blue-700 hover:text-blue-800 hover:underline break-all"
+                    <Button
+                      asChild
+                      variant="outline"
+                      size="sm"
+                      className="inline-flex items-center"
                     >
-                      president@skydiveoxford.co.uk
-                    </a>
+                      <a href="mailto:president@skydiveoxford.co.uk">
+                        <span>president@skydiveoxford.co.uk</span>
+                      </a>
+                    </Button>
                   </div>
                 </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Membership Section */}
+          <Card className="bg-background/90 backdrop-blur-sm">
+            <CardContent className="p-8">
+              <div className="text-center space-y-4">
+                <p className="text-lg text-foreground">Join the club:</p>
+                <Button
+                  asChild
+                  variant="default"
+                  size="lg"
+                  className="inline-flex items-center"
+                >
+                  <a href="/members">
+                    <span>Membership form</span>
+                  </a>
+                </Button>
               </div>
             </CardContent>
           </Card>
