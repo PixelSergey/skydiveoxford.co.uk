@@ -196,10 +196,14 @@ const About = () => {
                   For the last 20 years, the fatality rate in skydiving has been around 0.7 per 100,000 jumps.
                   Light injuries, such as spraining an ankle, occur at a rate of less than 1 in 2500 jumps.
                 </p>
-                <p className="mb-4">
+                <p className="mb-6">
                   This means that you're more likely to die driving a car or being struck by lightning than jumping out of a plane!
-                  Remember this quote: "Once you've driven to the airport, the most dangerous part of your skydiving day is already done".
                 </p>
+                <blockquote className="border-l-4 border-primary/50 bg-card/40 backdrop-blur-sm p-6 my-6 italic text-lg">
+                  <p className="text-foreground mb-2">
+                    "Once you've driven to the airport, the most dangerous part of your skydiving day is already done"
+                  </p>
+                </blockquote>
                 <h3 className="text-xl font-semibold mt-6 mb-3">What if my parachute doesn't open?</h3>
                 <p className="mb-4">
                   When skydiving, you always have two parachutes: the main and the reserve.
