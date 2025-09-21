@@ -41,7 +41,7 @@ const Contact = () => {
                   For general questions and contacts, email{" "}
                   <a 
                     href="mailto:info@skydiveoxford.co.uk" 
-                    className="text-blue-700 hover:text-blue-800 hover:underline font-medium"
+                    className="text-blue-700 hover:text-blue-800 hover:underline font-medium break-all"
                   >
                     info@skydiveoxford.co.uk
                   </a>
@@ -84,7 +84,7 @@ const Contact = () => {
                     <p className="text-lg text-foreground">Sergey Ichtchenko</p>
                     <a 
                       href="mailto:president@skydiveoxford.co.uk" 
-                      className="text-blue-700 hover:text-blue-800 hover:underline"
+                      className="text-blue-700 hover:text-blue-800 hover:underline break-all"
                     >
                       president@skydiveoxford.co.uk
                     </a>
