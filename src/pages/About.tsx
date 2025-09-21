@@ -30,31 +30,41 @@ const About = () => {
           {/* Table of Contents */}
           <div className="bg-card/80 backdrop-blur-sm rounded-lg p-6 mb-12 border border-border/50">
             <h2 className="text-xl font-semibold text-foreground mb-4">On this page...</h2>
-            <nav className="space-y-2">
-              <button 
-                onClick={() => document.getElementById('learn-to-skydive')?.scrollIntoView({ behavior: 'smooth' })}
-                className="block text-left text-primary hover:text-primary/80 transition-colors"
-              >
-                How do I learn to skydive?
-              </button>
-              <button 
-                onClick={() => document.getElementById('is-skydiving-safe')?.scrollIntoView({ behavior: 'smooth' })}
-                className="block text-left text-primary hover:text-primary/80 transition-colors"
-              >
-                Is skydiving safe?
-              </button>
-              <button 
-                onClick={() => document.getElementById('is-skydiving-expensive')?.scrollIntoView({ behavior: 'smooth' })}
-                className="block text-left text-primary hover:text-primary/80 transition-colors"
-              >
-                Is skydiving expensive?
-              </button>
-              <button 
-                onClick={() => document.getElementById('faqs')?.scrollIntoView({ behavior: 'smooth' })}
-                className="block text-left text-primary hover:text-primary/80 transition-colors"
-              >
-                FAQs
-              </button>
+            <nav>
+              <ul className="list-disc list-inside space-y-2 ml-4">
+                <li>
+                  <button 
+                    onClick={() => document.getElementById('learn-to-skydive')?.scrollIntoView({ behavior: 'smooth' })}
+                    className="text-foreground hover:text-foreground/80 transition-colors underline"
+                  >
+                    How do I learn to skydive?
+                  </button>
+                </li>
+                <li>
+                  <button 
+                    onClick={() => document.getElementById('is-skydiving-safe')?.scrollIntoView({ behavior: 'smooth' })}
+                    className="text-foreground hover:text-foreground/80 transition-colors underline"
+                  >
+                    Is skydiving safe?
+                  </button>
+                </li>
+                <li>
+                  <button 
+                    onClick={() => document.getElementById('is-skydiving-expensive')?.scrollIntoView({ behavior: 'smooth' })}
+                    className="text-foreground hover:text-foreground/80 transition-colors underline"
+                  >
+                    Is skydiving expensive?
+                  </button>
+                </li>
+                <li>
+                  <button 
+                    onClick={() => document.getElementById('faqs')?.scrollIntoView({ behavior: 'smooth' })}
+                    className="text-foreground hover:text-foreground/80 transition-colors underline"
+                  >
+                    FAQs
+                  </button>
+                </li>
+              </ul>
             </nav>
           </div>
 
