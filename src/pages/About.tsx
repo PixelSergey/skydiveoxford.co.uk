@@ -205,7 +205,7 @@ const About = () => {
                   When skydiving, you always have two parachutes: the main and the reserve.
                   Most routine opening problems (line twists, closed end cells, slider remaining up) can be dealt with easily by yourself, and you will learn to do so in ground school.
                   However, if you have a full parachute malfunction, you will always be able to cut away your main canopy and deploy your reserve canopy using two emergency handles on the front of your parachute.
-                  You will train to do this and other emergency drills very thoroughly during your ground school.
+                  You will also train to do this and other emergency drills very thoroughly during your ground school.
                 </p>
                 <p className="mb-4">
                   During your training, your parachutes will be packed by professional packers, making any malfunctions very unlikely.
@@ -219,7 +219,7 @@ const About = () => {
                 <h3 className="text-xl font-semibold mt-6 mb-3">What if I faint?</h3>
                 <p className="mb-4">
                   If you faint or are otherwise unable to open your parachute, there is a final safety feature: the Automatic Activation Device (AAD).
-                  This is a small explosive placed in your parachute that will physically open your reserve parachute if you do not do it yourself in time.
+                  This is a small explosive placed in your rig that will physically open your reserve parachute if you do not do it yourself in time.
                   The CYPRES AAD devices we use have never failed since they were invented in 1991.
                 </p>
                 <h3 className="text-xl font-semibold mt-6 mb-3">Other safety details:</h3>
