@@ -30,26 +30,8 @@ const Members = () => {
             Membership
           </h1>
           
-          {/* Membership Benefits Section */}
-          <Card className="mb-8 bg-background/90 backdrop-blur-sm">
-            <CardContent className="p-8">
-              <h2 className="text-2xl font-bold text-foreground mb-6 text-center">🪂 Membership Benefits</h2>
-              <div className="space-y-4">
-                <p className="text-foreground">
-                  As a member of the Oxford Skydiving Club, you will get the following:
-                </p>
-                <ul className="list-disc list-inside space-y-2 text-foreground">
-                  <li>Access to skydiving intro days</li>
-                  <li>Access to the group chat</li>
-                  <li>A subscription to the mailing list</li>
-                  <li>To be a part of the coolest society in Oxford!</li>
-                </ul>
-              </div>
-            </CardContent>
-          </Card>
-
           {/* Membership Application Section */}
-          <Card className="bg-background/90 backdrop-blur-sm">
+          <Card className="mb-8 bg-background/90 backdrop-blur-sm">
             <CardContent className="p-8">
               <h2 className="text-2xl font-bold text-foreground mb-6 text-center">📝 Membership Application</h2>
               <div className="space-y-6">
@@ -73,6 +55,24 @@ const Members = () => {
                     </a>
                   </Button>
                 </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Membership Benefits Section */}
+          <Card className="bg-background/90 backdrop-blur-sm">
+            <CardContent className="p-8">
+              <h2 className="text-2xl font-bold text-foreground mb-6 text-center">⭐ Membership Benefits</h2>
+              <div className="space-y-4">
+                <p className="text-foreground">
+                  As a member of the Oxford Skydiving Club, you will get the following:
+                </p>
+                <ul className="list-disc list-inside space-y-2 text-foreground">
+                  <li>Access to skydiving intro days</li>
+                  <li>Access to the group chat</li>
+                  <li>A subscription to the mailing list</li>
+                  <li>To be a part of the coolest society in Oxford!</li>
+                </ul>
               </div>
             </CardContent>
           </Card>
