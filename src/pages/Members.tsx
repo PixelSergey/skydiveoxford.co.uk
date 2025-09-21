@@ -37,7 +37,7 @@ const Members = () => {
           <Card className="mb-8 bg-background/90 backdrop-blur-sm">
             <CardContent className="p-8">
               <h2 className="text-2xl font-bold text-foreground mb-6 text-center">📝 Membership Application</h2>
-               <div className="flex flex-col md:flex-row items-center gap-8">
+               <div className="flex flex-col md:flex-row items-center justify-center gap-8">
                 {/* Left side - Text and Button */}
                 <div className="max-w-md space-y-4">
                   <p className="text-foreground">
