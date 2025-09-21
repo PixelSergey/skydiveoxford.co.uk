@@ -3,9 +3,12 @@ import CloudBackground from "@/components/CloudBackground";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { FileText } from "lucide-react";
+import QRCode from "react-qr-code";
 import skyBackground from "@/assets/sky-background.jpg";
 
 const Members = () => {
+  const applicationFormUrl = "https://forms.gle/nwSbX9bQR3d72QuYA";
+  
   return (
     <div className="min-h-screen relative overflow-hidden">
       <Navigation />
@@ -38,22 +41,37 @@ const Members = () => {
                 <p className="text-foreground text-center">
                   Memberships for the 2025-2026 academic year are currently free. You must be a current student or a member of faculty at the University of Oxford to apply. Apply to be a member by filling out this form:
                 </p>
-                <div className="flex justify-center">
-                  <Button
-                    asChild
-                    variant="outline"
-                    size="lg"
-                    className="flex items-center space-x-2"
-                  >
-                    <a 
-                      href="https://forms.gle/nwSbX9bQR3d72QuYA" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
+                
+                <div className="flex flex-col md:flex-row items-center justify-center gap-8">
+                  <div className="flex justify-center">
+                    <Button
+                      asChild
+                      variant="outline"
+                      size="lg"
+                      className="flex items-center space-x-2"
                     >
-                      <FileText className="h-4 w-4" />
-                      <span>Application form</span>
-                    </a>
-                  </Button>
+                      <a 
+                        href={applicationFormUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
+                        <FileText className="h-4 w-4" />
+                        <span>Application form</span>
+                      </a>
+                    </Button>
+                  </div>
+                  
+                  <div className="flex flex-col items-center space-y-2">
+                    <div className="bg-white p-4 rounded-2xl shadow-lg">
+                      <QRCode
+                        size={128}
+                        style={{ height: "auto", maxWidth: "100%", width: "100%" }}
+                        value={applicationFormUrl}
+                        viewBox={`0 0 256 256`}
+                      />
+                    </div>
+                    <p className="text-sm text-muted-foreground">Scan to apply</p>
+                  </div>
                 </div>
               </div>
             </CardContent>
