@@ -75,7 +75,7 @@ const About = () => {
               <div className="space-y-6">
                 <div>
                   <h3 className="text-xl font-semibold text-foreground mb-2">Is skydiving awesome?</h3>
-                  <p className="text-foreground">Hell yeah it is</p>
+                  <p className="text-foreground">Hell yeah it is 🔥🔥🔥</p>
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-foreground mb-2">Do I have to do any tandem jumps?</h3>
