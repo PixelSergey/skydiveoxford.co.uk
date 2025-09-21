@@ -201,7 +201,8 @@ const About = () => {
                 </p>
                 <blockquote className="border-l-4 border-primary/50 bg-card/40 backdrop-blur-sm p-6 my-6 italic text-lg">
                   <p className="text-foreground mb-2">
-                    "Once you've driven to the airport, the most dangerous part of your skydiving day is already done"
+                    "Once you've driven to the airport, the most dangerous part of your skydiving day is already done" <br/>
+                    -- Conventional skydiver wisdom
                   </p>
                 </blockquote>
                 <h3 className="text-xl font-semibold mt-6 mb-3">What if my parachute doesn't open?</h3>
