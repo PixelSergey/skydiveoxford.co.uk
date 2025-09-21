@@ -3,7 +3,7 @@ import CloudBackground from "@/components/CloudBackground";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Instagram } from "lucide-react";
+import { Instagram, Mail, Users } from "lucide-react";
 import skyBackground from "@/assets/sky-background.jpg";
 import sergeyImage from "@/assets/sergey.jpg";
 
@@ -39,12 +39,17 @@ const Contact = () => {
               <div className="space-y-4">
                 <p className="text-foreground text-center">
                   For general questions and contacts, email{" "}
-                  <a 
-                    href="mailto:info@skydiveoxford.co.uk" 
-                    className="text-blue-700 hover:text-blue-800 hover:underline font-medium break-all"
+                  <Button
+                    asChild
+                    variant="outline"
+                    size="sm"
+                    className="inline-flex items-center space-x-2"
                   >
-                    info@skydiveoxford.co.uk
-                  </a>
+                    <a href="mailto:info@skydiveoxford.co.uk">
+                      <Mail className="h-4 w-4" />
+                      <span>info@skydiveoxford.co.uk</span>
+                    </a>
+                  </Button>
                 </p>
                 <div className="text-foreground text-center">
                   <span className="mr-2">Follow us on Instagram:</span>
@@ -61,6 +66,20 @@ const Contact = () => {
                     >
                       <Instagram className="h-4 w-4" />
                       <span>@skydiveoxford</span>
+                    </a>
+                  </Button>
+                </div>
+                <div className="text-foreground text-center">
+                  <span className="mr-2">Join us as a member:</span>
+                  <Button
+                    asChild
+                    variant="outline"
+                    size="sm"
+                    className="inline-flex items-center space-x-2"
+                  >
+                    <a href="/members">
+                      <Users className="h-4 w-4" />
+                      <span>Membership form</span>
                     </a>
                   </Button>
                 </div>
