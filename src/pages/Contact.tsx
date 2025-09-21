@@ -35,7 +35,7 @@ const Contact = () => {
           {/* Oxford Skydiving Club Section */}
           <Card className="mb-8 bg-background/90 backdrop-blur-sm">
             <CardContent className="p-8">
-              <h2 className="text-2xl font-bold text-foreground mb-6 text-center">📞 Oxford Skydiving Club</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-6 text-center">🪂 Oxford Skydiving Club</h2>
               <div className="space-y-4">
                 <p className="text-foreground text-center">
                   For general questions and contacts, email{" "}
