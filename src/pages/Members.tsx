@@ -54,7 +54,7 @@ const Members = () => {
               <h2 className="text-2xl font-bold text-foreground mb-6 text-center">📝 Membership Application</h2>
               <div className="space-y-6">
                 <p className="text-foreground text-center">
-                  Memberships for the 2025-2026 academic year are currently free. Apply to be a member by filling out this form:
+                  Memberships for the 2025-2026 academic year are currently free. You must be a current student or a member of faculty at the University of Oxford to apply. Apply to be a member by filling out this form:
                 </p>
                 <div className="flex justify-center">
                   <Button
@@ -63,7 +63,11 @@ const Members = () => {
                     size="lg"
                     className="flex items-center space-x-2"
                   >
-                    <a href="#" onClick={(e) => e.preventDefault()}>
+                    <a 
+                      href="https://forms.gle/nwSbX9bQR3d72QuYA" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
                       <FileText className="h-4 w-4" />
                       <span>Application form</span>
                     </a>
