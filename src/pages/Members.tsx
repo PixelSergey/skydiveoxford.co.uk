@@ -52,17 +52,16 @@ const Members = () => {
           <Card className="bg-background/90 backdrop-blur-sm">
             <CardContent className="p-8">
               <h2 className="text-2xl font-bold text-foreground mb-6 text-center">📝 Membership Application</h2>
-              <div className="space-y-4">
-                <p className="text-foreground">
-                  Memberships for the 2025-2026 academic year are currently free.
+              <div className="space-y-6">
+                <p className="text-foreground text-center">
+                  Memberships for the 2025-2026 academic year are currently free. Apply to be a member by filling out this form:
                 </p>
-                <div className="text-foreground text-center">
-                  <span className="mr-2">Apply to be a member by filling out this form:</span>
+                <div className="flex justify-center">
                   <Button
                     asChild
                     variant="outline"
-                    size="sm"
-                    className="inline-flex items-center space-x-2"
+                    size="lg"
+                    className="flex items-center space-x-2"
                   >
                     <a href="#" onClick={(e) => e.preventDefault()}>
                       <FileText className="h-4 w-4" />
