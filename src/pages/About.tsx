@@ -191,27 +191,27 @@ const About = () => {
               <h2 className="text-3xl font-bold text-foreground mb-6">Is skydiving expensive?</h2>
               <div className="prose prose-lg max-w-none text-foreground">
                 <p className="mb-4">
-                  The cost of skydiving varies depending on your level of involvement and location. Here's a breakdown of typical expenses:
+                  Unfortunately, yes. Here are the approximate prices that you will have to pay when you start skydiving:
                 </p>
-                <h3 className="text-xl font-semibold mt-6 mb-3">Getting Started</h3>
-                <ul className="list-disc pl-6 mb-4 space-y-2">
-                  <li><strong>Tandem Jump:</strong> £200-400 per jump</li>
-                  <li><strong>AFF Course:</strong> £1,200-2,000 for complete training</li>
-                  <li><strong>Equipment Rental:</strong> £30-50 per jump while learning</li>
-                </ul>
                 <h3 className="text-xl font-semibold mt-6 mb-3">Licensed Skydiver Costs</h3>
                 <ul className="list-disc pl-6 mb-4 space-y-2">
-                  <li><strong>Jump Tickets:</strong> £25-35 per jump</li>
-                  <li><strong>Equipment Purchase:</strong> £3,000-8,000 for complete gear</li>
-                  <li><strong>Annual Expenses:</strong> £500-2,000+ depending on jump frequency</li>
+                  <li><strong>Regular jump ticket:</strong> £30 per jump</li>
+                  <li><strong>Gear rental:</strong> £20 per jump including the repack</li>
                 </ul>
-                <h3 className="text-xl font-semibold mt-6 mb-3">Ways to Save Money</h3>
+                <h3 className="text-xl font-semibold mt-6 mb-3">Training costs</h3>
                 <ul className="list-disc pl-6 mb-4 space-y-2">
-                  <li>Join a club or group for discounted rates</li>
-                  <li>Buy used equipment in good condition</li>
-                  <li>Jump frequently to take advantage of bulk pricing</li>
-                  <li>Consider used gear maintenance and training</li>
+                  <li><strong>Shared car to get to the airfield:</strong> around £20-£30</li>
+                  <li><strong>AFF Level 1 (ground school plus your first jump):</strong> £380</li>
+                  <li><strong>Remaining AFF levels:</strong> £50-£210 depending on the jump (getting lower as you progress)</li>
+                  <li><strong>Total cost to get your A license:</strong> around £2000 (pay-as-you-go, not all at once)</li>
                 </ul>
+                <h3 className="text-xl font-semibold mt-6 mb-3">Own gear</h3>
+                <p className="mb-4">
+                  After you get your license, you may also consider getting your own gear.
+                  Basic gear like altimeters and helmets will cost you around £100-£400 each.
+                  A full parachuting rig will set you back around £2000-£8000 depending on the make and model.
+                  You can always keep renting gear until you feel ready to purchase your own.
+                </p>
               </div>
             </div>
           </section>
@@ -222,24 +222,41 @@ const About = () => {
               <h2 className="text-3xl font-bold text-foreground mb-6">FAQs</h2>
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">What's the minimum age to skydive?</h3>
-                  <p className="text-foreground">In the UK, the minimum age is 16 with parental consent, or 18 without. Some drop zones may have different age restrictions.</p>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Is skydiving awesome?</h3>
+                  <p className="text-foreground">Hell yeah it is</p>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">What happens if the parachute doesn't open?</h3>
-                  <p className="text-foreground">Every skydiver wears two parachutes - a main and a reserve. If the main parachute malfunctions, the reserve parachute is deployed. Additionally, an Automatic Activation Device (AAD) will automatically deploy the reserve at a predetermined altitude.</p>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Do I have to do any tandem jumps?</h3>
+                  <p className="text-foreground">Nope! At the uni club, you will start jumping on your own from day 1. Tandem jumps (where you are strapped to an instructor) are usually experiences for tourists, you won't actually learn to skydive very much by doing one.</p>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Can I skydive if I'm afraid of heights?</h3>
-                  <p className="text-foreground">Many people with a fear of heights successfully skydive. The experience of freefall is quite different from standing on a tall building, as you don't have the same visual reference points.</p>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Where do we skydive?</h3>
+                  <p className="text-foreground">
+                    Usually, we will go to Skydive Hinton, which is a parachuting club and airfield around 45 minutes away by car from Oxford.
+                    We can also visit other dropzones around the UK, and go on international trips outside of term time.
+                  </p>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">What's the weather like for skydiving?</h3>
-                  <p className="text-foreground">Skydiving requires good weather conditions - clear skies, low winds, and good visibility. Jumps are cancelled in rain, high winds, or low cloud cover for safety reasons.</p>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">How many jumps do I need to get my license?</h3>
+                  <p className="text-foreground">
+                    The minimum number of jumps for the AFF course is 18.
+                    You may have to do more jumps if you end up having to re-do a certain AFF level. However, the more frequently you jump, the better your muscle memory will be and the more likely you are to pass the jumps!
+                  </p>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">How long does the whole experience take?</h3>
-                  <p className="text-foreground">For a tandem jump, expect to spend 2-4 hours at the drop zone, including training, gearing up, the plane ride, and the jump itself. The freefall typically lasts 45-60 seconds, followed by a 5-7 minute parachute ride.</p>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">How long does it take to get my license?</h3>
+                  <p className="text-foreground">
+                    This depends on your motivation and availability.
+                    Usually, people will complete the AFF in 2-3 months.
+                    However, it's also possible to complete in a week if you're super motivated and the weather cooperates!
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Can I get videos for my instagram?</h3>
+                  <p className="text-foreground">
+                    Your instructor will film your whole training course with their camera and send the videos to you!
+                    (You won't be able to bring your own camera until you have 200 jumps and a C license)
+                  </p>
                 </div>
               </div>
             </div>
