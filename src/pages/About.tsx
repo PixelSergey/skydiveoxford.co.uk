@@ -113,6 +113,13 @@ const About = () => {
                     (You won't be able to bring your own camera until you have 200 jumps and a C license)
                   </p>
                 </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Are there any health and weight requirements?</h3>
+                  <p className="text-foreground">
+                    The maximum weight for all courses is 95 kilograms (15 stone).
+                    Otherwise, being generally healthy should be enough!
+                  </p>
+                </div>
               </div>
             </div>
           </section>
