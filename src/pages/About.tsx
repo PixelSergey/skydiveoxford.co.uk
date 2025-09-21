@@ -34,6 +34,14 @@ const About = () => {
               <ul className="list-disc list-inside space-y-2 ml-4">
                 <li>
                   <button 
+                    onClick={() => document.getElementById('faqs')?.scrollIntoView({ behavior: 'smooth' })}
+                    className="text-foreground hover:text-foreground/80 transition-colors underline"
+                  >
+                    FAQs
+                  </button>
+                </li>
+                <li>
+                  <button 
                     onClick={() => document.getElementById('learn-to-skydive')?.scrollIntoView({ behavior: 'smooth' })}
                     className="text-foreground hover:text-foreground/80 transition-colors underline"
                   >
@@ -56,17 +64,58 @@ const About = () => {
                     Is skydiving expensive?
                   </button>
                 </li>
-                <li>
-                  <button 
-                    onClick={() => document.getElementById('faqs')?.scrollIntoView({ behavior: 'smooth' })}
-                    className="text-foreground hover:text-foreground/80 transition-colors underline"
-                  >
-                    FAQs
-                  </button>
-                </li>
               </ul>
             </nav>
           </div>
+
+          {/* FAQs */}
+          <section id="faqs" className="mb-16">
+            <div className="bg-card/80 backdrop-blur-sm rounded-lg p-8 border border-border/50">
+              <h2 className="text-3xl font-bold text-foreground mb-6">FAQs</h2>
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Is skydiving awesome?</h3>
+                  <p className="text-foreground">Hell yeah it is</p>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Do I have to do any tandem jumps?</h3>
+                  <p className="text-foreground">
+                    Nope! At our club, you will start jumping on your own from day 1.
+                    Tandem jumps (where you are strapped to an instructor) are usually one-off experiences for tourists, you won't actually learn very much by doing one.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Where do we skydive?</h3>
+                  <p className="text-foreground">
+                    Usually, we will go to Skydive Hinton, which is a parachuting club and airfield around 45 minutes away by car from Oxford.
+                    We can also visit other dropzones around the UK, and go on international trips outside of term time.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">How many jumps do I need to get my license?</h3>
+                  <p className="text-foreground">
+                    The minimum number of jumps for the AFF course is 18.
+                    You may have to do more jumps if you end up having to re-do a certain AFF level. However, the more frequently you jump, the better your muscle memory will be and the more likely you are to pass the jumps!
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">How long does it take to get my license?</h3>
+                  <p className="text-foreground">
+                    This depends on your motivation and availability.
+                    Usually, people will complete the AFF in 2-3 months.
+                    However, it's also possible to complete in a week if you're super motivated and the weather cooperates!
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Can I get videos for my instagram?</h3>
+                  <p className="text-foreground">
+                    Your instructor will film your whole training course with their camera and send the videos to you!
+                    (You won't be able to bring your own camera until you have 200 jumps and a C license)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
 
           {/* How do I learn to skydive? */}
           <section id="learn-to-skydive" className="mb-16">
@@ -216,54 +265,6 @@ const About = () => {
             </div>
           </section>
 
-          {/* FAQs */}
-          <section id="faqs" className="mb-16">
-            <div className="bg-card/80 backdrop-blur-sm rounded-lg p-8 border border-border/50">
-              <h2 className="text-3xl font-bold text-foreground mb-6">FAQs</h2>
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Is skydiving awesome?</h3>
-                  <p className="text-foreground">Hell yeah it is</p>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Do I have to do any tandem jumps?</h3>
-                  <p className="text-foreground">
-                    Nope! At our club, you will start jumping on your own from day 1.
-                    Tandem jumps (where you are strapped to an instructor) are usually one-off experiences for tourists, you won't actually learn very much by doing one.
-                  </p>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Where do we skydive?</h3>
-                  <p className="text-foreground">
-                    Usually, we will go to Skydive Hinton, which is a parachuting club and airfield around 45 minutes away by car from Oxford.
-                    We can also visit other dropzones around the UK, and go on international trips outside of term time.
-                  </p>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">How many jumps do I need to get my license?</h3>
-                  <p className="text-foreground">
-                    The minimum number of jumps for the AFF course is 18.
-                    You may have to do more jumps if you end up having to re-do a certain AFF level. However, the more frequently you jump, the better your muscle memory will be and the more likely you are to pass the jumps!
-                  </p>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">How long does it take to get my license?</h3>
-                  <p className="text-foreground">
-                    This depends on your motivation and availability.
-                    Usually, people will complete the AFF in 2-3 months.
-                    However, it's also possible to complete in a week if you're super motivated and the weather cooperates!
-                  </p>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Can I get videos for my instagram?</h3>
-                  <p className="text-foreground">
-                    Your instructor will film your whole training course with their camera and send the videos to you!
-                    (You won't be able to bring your own camera until you have 200 jumps and a C license)
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
         </div>
       </main>
     </div>
