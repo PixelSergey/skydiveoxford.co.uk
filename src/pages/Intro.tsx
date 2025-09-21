@@ -1,8 +1,8 @@
 import Navigation from "@/components/Navigation";
 import CloudBackground from "@/components/CloudBackground";
 import { Button } from "@/components/ui/button";
-import { CircleArrowDown } from "lucide-react";
 import skyBackground from "@/assets/sky-background.jpg";
+import parachuteIcon from "@/assets/parachute-icon.png";
 
 const Intro = () => {
   return (
@@ -35,7 +35,7 @@ const Intro = () => {
               <h2 className="text-3xl font-bold text-foreground mb-4">Next Intro Day</h2>
               <p className="text-xl text-foreground mb-6">Friday, December 15th, 2024</p>
               <Button variant="outline" size="lg" className="mb-6 px-8 py-4 text-lg">
-                <CircleArrowDown className="mr-2 h-5 w-5" />
+                <img src={parachuteIcon} alt="Parachute" className="mr-2 h-5 w-5" />
                 Sign up now
               </Button>
               <p className="text-sm text-muted-foreground">
