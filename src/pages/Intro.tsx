@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import CloudBackground from "@/components/CloudBackground";
 import { Button } from "@/components/ui/button";
 import skyBackground from "@/assets/sky-background.jpg";
-import parachuteIcon from "@/assets/parachute-icon.png";
+import parachuteIcon from "@/assets/parachute.png";
 
 const Intro = () => {
   return (
