@@ -140,23 +140,47 @@ const About = () => {
               <h2 className="text-3xl font-bold text-foreground mb-6">Is skydiving safe?</h2>
               <div className="prose prose-lg max-w-none text-foreground">
                 <p className="mb-4">
-                  Modern skydiving is remarkably safe when proper procedures are followed and quality equipment is used. Here are the key safety facts:
+                  Modern skydiving is super duper safe! Here's some facts about how we got here:
                 </p>
                 <h3 className="text-xl font-semibold mt-6 mb-3">Safety Statistics</h3>
                 <p className="mb-4">
-                  According to the United States Parachute Association (USPA), the fatality rate for skydiving is approximately 0.39 per 100,000 jumps. To put this in perspective, you're statistically more likely to be struck by lightning.
+                  For the last 20 years, the fatality rate in skydiving has been around 0.7 per 100,000 jumps.
+                  Light injuries, such as spraining an ankle, occur at a rate of less than 1 in 2500 jumps.
                 </p>
-                <h3 className="text-xl font-semibold mt-6 mb-3">Safety Measures</h3>
+                <p className="mb-4">
+                  This means that you're more likely to die driving a car or being struck by lightning than jumping out of a plane!
+                  Remember this quote: "Once you've driven to the airport, the most dangerous part of your skydiving day is already done".
+                </p>
+                <h3 className="text-xl font-semibold mt-6 mb-3">What if my parachute doesn't open?</h3>
+                <p className="mb-4">
+                  When skydiving, you always have two parachutes: the main and the reserve.
+                  Most routine opening problems (line twists, closed end cells, slider remaining up) can be dealt with easily by yourself, and you will learn to do so in ground school.
+                  However, if you have a full parachute malfunction, you will always be able to cut away your main canopy and deploy your reserve canopy using two emergency handles on the front of your parachute.
+                  You will train to do this and other emergency drills very thoroughly during your ground school.
+                </p>
+                <p className="mb-4">
+                  During your training, your parachutes will be packed by professional packers, making any malfunctions very unlikely.
+                </p>
+                <h3 className="text-xl font-semibold mt-6 mb-3">What if my reserve doesn't open?</h3>
+                <p className="mb-4">
+                  This is almost impossible: reserve parachutes are packed in a special way by a professional parachute rigger that ensures their opening.
+                  When you deploy your reserve, a large spring pushes the parachute out into the airflow, making it open way quicker and more reliably than your main.
+                  There have been no double malfunctions for solo parachutists in the UK for the last 20 years.
+                </p>
+                <h3 className="text-xl font-semibold mt-6 mb-3">What if I faint?</h3>
+                <p className="mb-4">
+                  If you faint or are otherwise unable to open your parachute, there is a final safety feature: the Automatic Activation Device (AAD).
+                  This is a small explosive placed in your parachute that will physically open your reserve parachute if you do not do it yourself in time.
+                  The CYPRES AAD devices we use have never failed since they were invented in 1991.
+                </p>
+                <h3 className="text-xl font-semibold mt-6 mb-3">Other safety details:</h3>
+                <p> Here are some other facts which make skydiving as safe as it is: </p>
                 <ul className="list-disc pl-6 mb-4 space-y-2">
-                  <li>Rigorous equipment inspection and maintenance protocols</li>
-                  <li>Mandatory reserve parachutes packed by certified riggers</li>
-                  <li>Automatic Activation Devices (AADs) that deploy reserves automatically</li>
-                  <li>Comprehensive training programs and instructor certification</li>
-                  <li>Weather monitoring and jump restrictions</li>
+                  <li>Training: before you are allowed to jump, you will need to pass all the relevant theoretical and practical tests as well as malfunction drills during your ground school</li>
+                  <li>Gear and packing: all of the gear is thoroughly inspected by professional riggers and packed by professional packers. The gear is high-quality and designed with student jumpers in mind</li>
+                  <li>Instructors: your instructors have to have hundreds (if not thousands) of jumps and are both able to open your parachute and save you if anything goes wrong</li>
+                  <li>Safety checks: before your jump, your gear will be thorougly checked three times - once before you put it on, again when you have equipped it, and one final time in the airplane before your jump</li>
                 </ul>
-                <p>
-                  The key to safe skydiving is choosing a reputable drop zone with certified instructors and well-maintained equipment.
-                </p>
               </div>
             </div>
           </section>
