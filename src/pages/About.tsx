@@ -174,7 +174,7 @@ const About = () => {
                   The CYPRES AAD devices we use have never failed since they were invented in 1991.
                 </p>
                 <h3 className="text-xl font-semibold mt-6 mb-3">Other safety details:</h3>
-                <p> Here are some other facts which make skydiving as safe as it is: </p>
+                <p>Here are some other facts which show why skydiving as safe as it is:</p>
                 <ul className="list-disc pl-6 mb-4 space-y-2">
                   <li>Training: before you are allowed to jump, you will need to pass all the relevant theoretical and practical tests as well as malfunction drills during your ground school</li>
                   <li>Gear and packing: all of the gear is thoroughly inspected by professional riggers and packed by professional packers. The gear is high-quality and designed with student jumpers in mind</li>
@@ -227,7 +227,10 @@ const About = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-foreground mb-2">Do I have to do any tandem jumps?</h3>
-                  <p className="text-foreground">Nope! At the uni club, you will start jumping on your own from day 1. Tandem jumps (where you are strapped to an instructor) are usually experiences for tourists, you won't actually learn to skydive very much by doing one.</p>
+                  <p className="text-foreground">
+                    Nope! At our club, you will start jumping on your own from day 1.
+                    Tandem jumps (where you are strapped to an instructor) are usually one-off experiences for tourists, you won't actually learn very much by doing one.
+                  </p>
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-foreground mb-2">Where do we skydive?</h3>
