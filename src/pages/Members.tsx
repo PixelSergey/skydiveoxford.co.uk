@@ -39,7 +39,7 @@ const Members = () => {
               <h2 className="text-2xl font-bold text-foreground mb-6 text-center">📝 Membership Application</h2>
                <div className="flex flex-col md:flex-row items-center gap-8">
                 {/* Left side - Text and Button */}
-                <div className="flex-1 space-y-6">
+                <div className="flex-1 space-y-4">
                   <p className="text-foreground">
                     Memberships for the 2025-2026 academic year are currently free. You must be a current student or a member of faculty at the University of Oxford to apply. Apply to be a member by filling out this form:
                   </p>
