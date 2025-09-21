@@ -100,7 +100,7 @@ const Contact = () => {
                   </Avatar>
                   <div>
                     <h3 className="text-xl font-semibold text-foreground">President</h3>
-                    <p className="text-lg text-foreground">Sergey Ichtchenko</p>
+                    <p className="text-lg text-foreground">Sergey Ichtchenko (DPhil CS)</p>
                     <a 
                       href="mailto:president@skydiveoxford.co.uk" 
                       className="text-blue-700 hover:text-blue-800 hover:underline break-all"
