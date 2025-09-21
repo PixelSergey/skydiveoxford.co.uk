@@ -43,26 +43,29 @@ const Members = () => {
                 </p>
                 
                 <div className="flex flex-col md:flex-row items-center justify-center gap-8">
-                  <div className="flex justify-center">
-                    <Button
-                      asChild
-                      variant="outline"
-                      size="lg"
-                      className="flex items-center space-x-2"
-                    >
-                      <a 
-                        href={applicationFormUrl} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
+                  <div className="flex flex-col items-center space-y-2">
+                    <div className="bg-background/50 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-border/20 min-w-[200px] flex flex-col items-center justify-center">
+                      <Button
+                        asChild
+                        variant="outline"
+                        size="lg"
+                        className="flex items-center space-x-2 w-full"
                       >
-                        <FileText className="h-4 w-4" />
-                        <span>Application form</span>
-                      </a>
-                    </Button>
+                        <a 
+                          href={applicationFormUrl} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                        >
+                          <FileText className="h-4 w-4" />
+                          <span>Application form</span>
+                        </a>
+                      </Button>
+                    </div>
+                    <p className="text-sm text-muted-foreground">Click to apply online</p>
                   </div>
                   
                   <div className="flex flex-col items-center space-y-2">
-                    <div className="bg-white p-4 rounded-2xl shadow-lg">
+                    <div className="bg-white p-4 rounded-2xl shadow-lg min-w-[200px] flex justify-center">
                       <QRCode
                         size={128}
                         style={{ height: "auto", maxWidth: "100%", width: "100%" }}
