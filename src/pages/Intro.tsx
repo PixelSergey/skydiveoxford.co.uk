@@ -60,9 +60,10 @@ const Intro = () => {
                         Sign up now
                       </Button>
                     ) : (
-                      <div className="px-8 py-4 text-lg text-red-600 font-medium">
-                        ❌ Sold out
-                      </div>
+                      <Button variant="outline" size="lg" className="px-8 py-4 text-lg opacity-50 cursor-not-allowed" disabled>
+                        <span className="mr-2">❌</span>
+                        Sold out
+                      </Button>
                     )}
                   </div>
                 ))}
