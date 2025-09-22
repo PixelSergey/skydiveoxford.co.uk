@@ -120,6 +120,13 @@ const About = () => {
                     Otherwise, being generally healthy should be enough!
                   </p>
                 </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">What are the parachutes like?</h3>
+                  <p className="text-foreground">
+                    Skydivers always use modern sports parachutes: they're fully controllable, and you can land gently and smoothly with them.
+                    Nothing like those big round military parachutes that you see in movies!
+                  </p>
+                </div>
               </div>
             </div>
           </section>
