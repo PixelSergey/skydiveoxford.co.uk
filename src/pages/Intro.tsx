@@ -29,18 +29,33 @@ const Intro = () => {
             Intro Days
           </h1>
           
-          {/* Next Intro Day Section */}
+          {/* Next Intro Days Section */}
           <section className="mb-16">
-            <div className="bg-card/80 backdrop-blur-sm rounded-lg p-8 border border-border/50 text-center">
-              <h2 className="text-3xl font-bold text-foreground mb-4">Next Intro Day</h2>
-              <p className="text-xl text-foreground mb-6">Friday, December 15th, 2024</p>
-              <Button variant="outline" size="lg" className="mb-6 px-8 py-4 text-lg">
-                <img src={parachuteIcon} alt="Parachute" className="mr-2 h-5 w-5" />
-                Sign up now
-              </Button>
-              <p className="text-sm text-muted-foreground">
+            <div className="bg-card/80 backdrop-blur-sm rounded-lg p-8 border border-border/50">
+              <h2 className="text-3xl font-bold text-foreground mb-4 text-center">Next intro days</h2>
+              <p className="text-sm text-muted-foreground text-center mb-6">
                 Please read the information below before signing up to the intro day
               </p>
+              
+              <div className="space-y-6">
+                {/* First Intro Day */}
+                <div className="text-center p-6 bg-background/50 rounded-lg border border-border/30">
+                  <p className="text-xl text-foreground mb-4">Friday, December 15th, 2024</p>
+                  <Button variant="outline" size="lg" className="px-8 py-4 text-lg">
+                    <img src={parachuteIcon} alt="Parachute" className="mr-2 h-5 w-5" />
+                    Sign up now
+                  </Button>
+                </div>
+                
+                {/* Second Intro Day */}
+                <div className="text-center p-6 bg-background/50 rounded-lg border border-border/30">
+                  <p className="text-xl text-foreground mb-4">Friday, January 12th, 2025</p>
+                  <Button variant="outline" size="lg" className="px-8 py-4 text-lg">
+                    <img src={parachuteIcon} alt="Parachute" className="mr-2 h-5 w-5" />
+                    Sign up now
+                  </Button>
+                </div>
+              </div>
             </div>
           </section>
 
