@@ -8,19 +8,19 @@ const introDays = [
   {
     date: "Friday, 26.09.2025",
     link: "#",
-    active: true,
+    state: "active",
     totalPlaces: 2
   },
   {
     date: "Friday, 03.10.2025", 
     link: "#",
-    active: true,
+    state: "not yet active",
     totalPlaces: 2
   },
   {
     date: "Friday, 10.10.2025", 
     link: "#",
-    active: true,
+    state: "sold out",
     totalPlaces: 4
   }
 ];
@@ -62,17 +62,22 @@ const Intro = () => {
                  {introDays.map((introDay, index) => (
                    <div key={index} className="text-center p-6 bg-background/50 rounded-lg border border-border/30">
                      <p className="text-xl text-foreground mb-4">{introDay.date}</p>
-                     {introDay.active ? (
-                       <Button variant="outline" size="lg" className="px-8 py-4 text-lg mb-3">
-                         <img src={parachuteIcon} alt="Parachute" className="mr-2 h-5 w-5" />
-                         Sign up now
-                       </Button>
-                     ) : (
-                       <Button variant="outline" size="lg" className="px-8 py-4 text-lg opacity-50 cursor-not-allowed mb-3" disabled>
-                         <span className="mr-2">❌</span>
-                         Sold out
-                       </Button>
-                     )}
+                      {introDay.state === "active" ? (
+                        <Button variant="outline" size="lg" className="px-8 py-4 text-lg mb-3">
+                          <img src={parachuteIcon} alt="Parachute" className="mr-2 h-5 w-5" />
+                          Sign up now
+                        </Button>
+                      ) : introDay.state === "not yet active" ? (
+                        <Button variant="outline" size="lg" className="px-8 py-4 text-lg opacity-50 cursor-not-allowed mb-3" disabled>
+                          <span className="mr-2">⏳</span>
+                          Signups not available yet
+                        </Button>
+                      ) : (
+                        <Button variant="outline" size="lg" className="px-8 py-4 text-lg opacity-50 cursor-not-allowed mb-3" disabled>
+                          <span className="mr-2">❌</span>
+                          Sold out
+                        </Button>
+                      )}
                      <p className="text-sm text-muted-foreground">
                        Total places available: {introDay.totalPlaces}
                      </p>
