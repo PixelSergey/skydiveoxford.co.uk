@@ -58,7 +58,7 @@ const Intro = () => {
                 Please read the information below before signing up to the intro day
               </p>
               
-              <div className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                  {introDays.map((introDay, index) => (
                    <div key={index} className="text-center p-6 bg-background/50 rounded-lg border border-border/30">
                      <p className="text-xl text-foreground mb-4">{introDay.date}</p>
