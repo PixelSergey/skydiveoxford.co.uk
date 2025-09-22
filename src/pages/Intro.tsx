@@ -8,7 +8,7 @@ const introDays = [
   {
     date: "Friday, 26.09.2025",
     link: "#",
-    state: "active",
+    state: "not yet active",
     totalPlaces: 2
   },
   {
@@ -20,7 +20,7 @@ const introDays = [
   {
     date: "Friday, 10.10.2025", 
     link: "#",
-    state: "sold out",
+    state: "not yet active",
     totalPlaces: 4
   }
 ];
