@@ -7,8 +7,8 @@ import parachuteIcon from "@/assets/parachute.png";
 const introDays = [
   {
     date: "MT Friday week -1, 26.09.2025",
-    link: "#",
-    state: "not yet active",
+    link: "https://luma.com/cxfllwsq",
+    state: "active",
     totalPlaces: 2
   },
   {
