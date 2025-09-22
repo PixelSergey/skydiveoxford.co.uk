@@ -6,19 +6,19 @@ import parachuteIcon from "@/assets/parachute.png";
 
 const introDays = [
   {
-    date: "Friday, 26.09.2025",
+    date: "MT Friday week -1, 26.09.2025",
     link: "#",
     state: "not yet active",
     totalPlaces: 2
   },
   {
-    date: "Friday, 03.10.2025", 
+    date: "MT Friday week 0, 03.10.2025", 
     link: "#",
     state: "not yet active",
     totalPlaces: 2
   },
   {
-    date: "Friday, 10.10.2025", 
+    date: "MT Friday week 1, 10.10.2025", 
     link: "#",
     state: "not yet active",
     totalPlaces: 4
