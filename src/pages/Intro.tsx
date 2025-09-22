@@ -72,7 +72,7 @@ const Intro = () => {
                     The second part, held on a separate day, will be your first skydive out of an airplane with 2 instructors by your side.
                   </p>
                   <p className="text-foreground">
-                    For more information on training, see the <a href="/about" className="text-primary hover:text-primary/80 underline underline-offset-4 transition-colors">About Skydiving</a> page.
+                    For more information on training, see the <a href="/about" className="text-primary-foreground hover:text-primary-foreground/80 underline underline-offset-4 transition-colors font-medium">About Skydiving</a> page.
                   </p>
                 </div>
                 <div>
