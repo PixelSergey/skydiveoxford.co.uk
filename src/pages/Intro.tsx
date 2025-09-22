@@ -50,41 +50,55 @@ const Intro = () => {
               <h2 className="text-3xl font-bold text-foreground mb-6">About Intro Days</h2>
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">What is an intro day?</h3>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">How do the intro days work?</h3>
                   <p className="text-foreground">
-                    An intro day is a full-day ground school course where you'll learn everything you need to know before your first skydive. 
-                    It covers theory, safety procedures, emergency drills, and hands-on practice with equipment.
+                    Intro days are a 2-part course which culminate in your first solo jump!
+                    The first part is a full-day ground school on a Friday, where you will learn everything you need and complete all the practical drills.
+                    The second part, held on a separate day, will be your first skydive out of an airplane with 2 instructors by your side.
+                  </p>
+                  <p className="text-foreground">
+                    For more information on training, see the <a href="/about">About Skydiving</a> page.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">When are intro days held?</h3>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">What is the schedule like?</h3>
                   <p className="text-foreground">
-                    Intro days are typically held on Fridays at the dropzone. They run from 9 AM to 5 PM, so make sure you have the whole day available.
+                    Here is a typical schedule for a Friday groundschool.
+                    Note that the times here are approximate: the groundschools typically end earlier, but may stretch for some reason.
+                    It's not recommended to book anything else for the same day or you may miss it.
+                  </p>
+                  <ul className="list-disc pl-6 mb-4 space-y-2">
+                    <li>07:30 a.m. - Leave Oxford by car</li>
+                    <li>08:30 a.m. - Groundschool at Hinton starts</li>
+                    <li>12 p.m. - Break for lunch</li>
+                    <li>5 p.m. - Groundschool ends</li>
+                    <li>6 p.m. - Back in Oxford</li>
+                  </ul>
+                  <p className="text-foreground">
+                    Once you are done with the groundschool, you can come back any day for your first jump.
+                    It takes about 45 minutes per direction to drive to hinton, and you can expect to spend a few hours briefing, jumping, and debriefing your AFF jumps each time.
                   </p>
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-foreground mb-2">What should I bring?</h3>
                   <p className="text-foreground">
-                    Just bring yourself, comfortable clothes, and enthusiasm! All equipment and training materials are provided. 
-                    We recommend wearing closed-toe shoes and layers as the weather can change.
+                    Sporty clothes and good shoes (any sneakers will do, but shoes with ankle support are ideal) are required.
+                    All of the gear is provided by the dropzone.
+                    You can also bring some food and water, but there is a cafe at the dropzone if you want to get lunch there.
                   </p>
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-foreground mb-2">Do I need any prior experience?</h3>
                   <p className="text-foreground">
-                    Not at all! The intro day is designed for complete beginners. Our experienced instructors will guide you through everything step by step.
-                  </p>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">What happens after the intro day?</h3>
-                  <p className="text-foreground">
-                    After completing your intro day, you'll be ready for your first AFF Level 1 jump, which can typically be scheduled for the following weekend.
+                    Not at all! The intro day is designed for complete beginners.
+                    The Friday groundschool will teach you everything you need to know about parachuting from the ground up.
                   </p>
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-foreground mb-2">How much does it cost?</h3>
                   <p className="text-foreground">
-                    The intro day is included in your AFF Level 1 package, which costs £380 total. This covers both the ground school and your first solo jump.
+                    The total cost for the AFF Level 1 is £400.
+                    You will need to pay a £220 deposit via a bank transfer when you book the course, and then pay the remaining £180 on the day of the groundschool.
                   </p>
                 </div>
               </div>
