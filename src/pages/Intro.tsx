@@ -63,17 +63,17 @@ const Intro = () => {
                    <div key={index} className="text-center p-6 bg-background/50 rounded-lg border border-border/30">
                      <p className="text-xl text-foreground mb-4">{introDay.date}</p>
                        {introDay.state === "active" ? (
-                         <Button variant="outline" size="lg" className="px-8 py-4 text-lg mb-3 whitespace-normal">
+                         <Button variant="outline" size="lg" className="px-8 py-4 text-lg mb-3 whitespace-normal h-auto min-h-11">
                            <img src={parachuteIcon} alt="Parachute" className="mr-2 h-5 w-5" />
                            Sign up now
                          </Button>
                        ) : introDay.state === "not yet active" ? (
-                         <Button variant="outline" size="lg" className="px-8 py-4 text-lg opacity-50 cursor-not-allowed mb-3 whitespace-normal" disabled>
+                         <Button variant="outline" size="lg" className="px-8 py-4 text-lg opacity-50 cursor-not-allowed mb-3 whitespace-normal h-auto min-h-11" disabled>
                            <span className="mr-2">⏳</span>
                            Signups not available yet
                          </Button>
                        ) : (
-                         <Button variant="outline" size="lg" className="px-8 py-4 text-lg opacity-50 cursor-not-allowed mb-3 whitespace-normal" disabled>
+                         <Button variant="outline" size="lg" className="px-8 py-4 text-lg opacity-50 cursor-not-allowed mb-3 whitespace-normal h-auto min-h-11" disabled>
                            <span className="mr-2">❌</span>
                            Sold out
                          </Button>
