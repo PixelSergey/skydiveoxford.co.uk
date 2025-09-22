@@ -268,8 +268,7 @@ const About = () => {
                 </ul>
                 <h3 className="text-xl font-semibold mt-6 mb-3">Training costs</h3>
                 <ul className="list-disc pl-6 mb-4 space-y-2">
-                  <li><strong>Shared car to get to the airfield:</strong> around £20-£30</li>
-                  <li><strong>AFF Level 1 (ground school plus your first jump):</strong> £380</li>
+                  <li><strong>AFF Level 1 (ground school plus your first jump):</strong> £400</li>
                   <li><strong>Remaining AFF levels:</strong> £50-£210 depending on the jump (getting lower as you progress)</li>
                   <li><strong>Total cost to get your A license:</strong> around £2000 (pay-as-you-go, not all at once)</li>
                 </ul>
