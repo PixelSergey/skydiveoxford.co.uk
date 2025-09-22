@@ -4,6 +4,19 @@ import { Button } from "@/components/ui/button";
 import skyBackground from "@/assets/sky-background.jpg";
 import parachuteIcon from "@/assets/parachute.png";
 
+const introDays = [
+  {
+    date: "Friday, December 15th, 2024",
+    link: "#",
+    active: true
+  },
+  {
+    date: "Friday, January 12th, 2025", 
+    link: "#",
+    active: false
+  }
+];
+
 const Intro = () => {
   return (
     <div className="min-h-screen relative overflow-hidden">
@@ -38,23 +51,21 @@ const Intro = () => {
               </p>
               
               <div className="space-y-6">
-                {/* First Intro Day */}
-                <div className="text-center p-6 bg-background/50 rounded-lg border border-border/30">
-                  <p className="text-xl text-foreground mb-4">Friday, December 15th, 2024</p>
-                  <Button variant="outline" size="lg" className="px-8 py-4 text-lg">
-                    <img src={parachuteIcon} alt="Parachute" className="mr-2 h-5 w-5" />
-                    Sign up now
-                  </Button>
-                </div>
-                
-                {/* Second Intro Day */}
-                <div className="text-center p-6 bg-background/50 rounded-lg border border-border/30">
-                  <p className="text-xl text-foreground mb-4">Friday, January 12th, 2025</p>
-                  <Button variant="outline" size="lg" className="px-8 py-4 text-lg">
-                    <img src={parachuteIcon} alt="Parachute" className="mr-2 h-5 w-5" />
-                    Sign up now
-                  </Button>
-                </div>
+                {introDays.map((introDay, index) => (
+                  <div key={index} className="text-center p-6 bg-background/50 rounded-lg border border-border/30">
+                    <p className="text-xl text-foreground mb-4">{introDay.date}</p>
+                    {introDay.active ? (
+                      <Button variant="outline" size="lg" className="px-8 py-4 text-lg">
+                        <img src={parachuteIcon} alt="Parachute" className="mr-2 h-5 w-5" />
+                        Sign up now
+                      </Button>
+                    ) : (
+                      <div className="px-8 py-4 text-lg text-red-600 font-medium">
+                        ❌ Sold out
+                      </div>
+                    )}
+                  </div>
+                ))}
               </div>
             </div>
           </section>
