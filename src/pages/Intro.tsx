@@ -8,12 +8,14 @@ const introDays = [
   {
     date: "Friday, December 15th, 2024",
     link: "#",
-    active: true
+    active: true,
+    totalPlaces: 12
   },
   {
     date: "Friday, January 12th, 2025", 
     link: "#",
-    active: false
+    active: false,
+    totalPlaces: 8
   }
 ];
 
@@ -51,23 +53,26 @@ const Intro = () => {
               </p>
               
               <div className="space-y-6">
-                {introDays.map((introDay, index) => (
-                  <div key={index} className="text-center p-6 bg-background/50 rounded-lg border border-border/30">
-                    <p className="text-xl text-foreground mb-4">{introDay.date}</p>
-                    {introDay.active ? (
-                      <Button variant="outline" size="lg" className="px-8 py-4 text-lg">
-                        <img src={parachuteIcon} alt="Parachute" className="mr-2 h-5 w-5" />
-                        Sign up now
-                      </Button>
-                    ) : (
-                      <Button variant="outline" size="lg" className="px-8 py-4 text-lg opacity-50 cursor-not-allowed" disabled>
-                        <span className="mr-2">❌</span>
-                        Sold out
-                      </Button>
-                    )}
-                  </div>
-                ))}
-              </div>
+                 {introDays.map((introDay, index) => (
+                   <div key={index} className="text-center p-6 bg-background/50 rounded-lg border border-border/30">
+                     <p className="text-xl text-foreground mb-4">{introDay.date}</p>
+                     {introDay.active ? (
+                       <Button variant="outline" size="lg" className="px-8 py-4 text-lg mb-3">
+                         <img src={parachuteIcon} alt="Parachute" className="mr-2 h-5 w-5" />
+                         Sign up now
+                       </Button>
+                     ) : (
+                       <Button variant="outline" size="lg" className="px-8 py-4 text-lg opacity-50 cursor-not-allowed mb-3" disabled>
+                         <span className="mr-2">❌</span>
+                         Sold out
+                       </Button>
+                     )}
+                     <p className="text-sm text-muted-foreground">
+                       Total places available: {introDay.totalPlaces}
+                     </p>
+                   </div>
+                 ))}
+               </div>
             </div>
           </section>
 
