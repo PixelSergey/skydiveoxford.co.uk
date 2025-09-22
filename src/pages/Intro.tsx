@@ -13,8 +13,8 @@ const introDays = [
   },
   {
     date: "MT Friday week 0, 03.10.2025", 
-    link: "https://luma.com/4zb7ifto",
-    state: "active",
+    link: "#",
+    state: "not yet active",
     totalPlaces: 2
   },
   {
@@ -63,10 +63,15 @@ const Intro = () => {
                    <div key={index} className="text-center p-6 bg-background/50 rounded-lg border border-border/30">
                      <p className="text-xl text-foreground mb-4">{introDay.date}</p>
                        {introDay.state === "active" ? (
-                         <Button variant="outline" size="lg" className="px-8 py-4 text-lg mb-3 whitespace-normal h-auto min-h-11">
-                           <img src={parachuteIcon} alt="Parachute" className="mr-2 h-5 w-5" />
-                           Sign up now
-                         </Button>
+                          <a href={introDay.link}
+                             target="_blank" 
+                             rel="noopener noreferrer"
+                          >
+                           <Button variant="outline" size="lg" className="px-8 py-4 text-lg mb-3 whitespace-normal h-auto min-h-11">
+                             <img src={parachuteIcon} alt="Parachute" className="mr-2 h-5 w-5" />
+                             Sign up now
+                           </Button>
+                         </a>
                        ) : introDay.state === "not yet active" ? (
                          <Button variant="outline" size="lg" className="px-8 py-4 text-lg opacity-50 cursor-not-allowed mb-3 whitespace-normal h-auto min-h-11" disabled>
                            <span className="mr-2">⏳</span>
