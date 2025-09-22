@@ -138,6 +138,9 @@ const Intro = () => {
                     The total cost for the AFF Level 1 is £400.
                     You will need to pay a £220 deposit via a bank transfer when you book the course, and then pay the remaining £180 on the day of the groundschool.
                   </p>
+                  <p className="text-foreground">
+                    This price includes the groundschool, all exams and drills, your first real skydive, as well as transportation to and from the airfield.
+                  </p>
                 </div>
               </div>
             </div>
