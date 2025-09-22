@@ -6,16 +6,22 @@ import parachuteIcon from "@/assets/parachute.png";
 
 const introDays = [
   {
-    date: "Friday, December 15th, 2024",
+    date: "Friday, 26.09.2025",
     link: "#",
     active: true,
-    totalPlaces: 12
+    totalPlaces: 2
   },
   {
-    date: "Friday, January 12th, 2025", 
+    date: "Friday, 03.10.2025", 
     link: "#",
-    active: false,
-    totalPlaces: 8
+    active: true,
+    totalPlaces: 2
+  },
+  {
+    date: "Friday, 10.10.2025", 
+    link: "#",
+    active: true,
+    totalPlaces: 4
   }
 ];
 
