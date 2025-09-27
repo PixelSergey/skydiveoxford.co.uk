@@ -6,15 +6,9 @@ import parachuteIcon from "@/assets/parachute.png";
 
 const introDays = [
   {
-    date: "MT Friday week -2, 26.09.2025",
-    link: "https://luma.com/cxfllwsq",
-    state: "sold out",
-    totalPlaces: 2
-  },
-  {
     date: "MT Friday week -1, 03.10.2025", 
     link: "https://luma.com/4zb7ifto",
-    state: "active",
+    state: "sold out",
     totalPlaces: 2
   },
   {
