@@ -8,7 +8,7 @@ const introDays = [
   {
     date: "MT Friday week -1, 03.10.2025", 
     link: "https://luma.com/4zb7ifto",
-    state: "sold out",
+    state: "active",
     totalPlaces: 2
   },
   {
