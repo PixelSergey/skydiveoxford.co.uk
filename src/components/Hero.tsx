@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import CloudBackground from "./CloudBackground";
 import SkydiverAnimation from "./SkydiverAnimation";
 import skyBackground from "@/assets/sky-background.jpg";
-import whatsappLogo from "@/assets/whatsapp-logo.png";
+import whatsappLogo from "@/assets/whatsapp-logo.svg";
 
 const Hero = () => {
   const navigate = useNavigate();
