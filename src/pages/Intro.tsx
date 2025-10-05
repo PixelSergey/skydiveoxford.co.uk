@@ -3,29 +3,23 @@ import CloudBackground from "@/components/CloudBackground";
 import { Button } from "@/components/ui/button";
 import skyBackground from "@/assets/sky-background.jpg";
 import parachuteIcon from "@/assets/parachute.png";
-
-const introDays = [
-  {
-    date: "MT Friday week 0, 10.10.2025", 
-    link: "https://luma.com/xq53gl9n",
-    state: "active",
-    totalPlaces: 2
-  },
-  {
-    date: "MT Friday week 2, 24.10.2025", 
-    link: "#",
-    state: "not yet active",
-    totalPlaces: 4
-  },
-  {
-    date: "MT Friday week 3, 31.10.2025", 
-    link: "#",
-    state: "not yet active",
-    totalPlaces: 4
-  }
-];
+import { supabase } from "@/integrations/supabase/client";
+import { useQuery } from "@tanstack/react-query";
 
 const Intro = () => {
+  const { data: introDays, isLoading } = useQuery({
+    queryKey: ['intro-days'],
+    queryFn: async () => {
+      const { data, error } = await supabase
+        .from('intro_days')
+        .select('*')
+        .order('display_order', { ascending: true });
+      
+      if (error) throw error;
+      return data;
+    }
+  });
+
   return (
     <div className="min-h-screen relative overflow-hidden">
       <Navigation />
@@ -59,36 +53,46 @@ const Intro = () => {
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                 {introDays.map((introDay, index) => (
-                   <div key={index} className="text-center p-6 bg-background/50 rounded-lg border border-border/30">
-                     <p className="text-xl text-foreground mb-4">{introDay.date}</p>
-                       {introDay.state === "active" ? (
-                         <a 
-                           href={introDay.link} 
-                           target="_blank" 
-                           rel="noopener noreferrer"
-                         >
-                           <Button variant="outline" size="lg" className="px-8 py-4 text-lg mb-3 whitespace-normal h-auto min-h-11">
-                             <img src={parachuteIcon} alt="Parachute" className="mr-2 h-5 w-5" />
-                             Sign up now
-                           </Button>
-                         </a>
-                       ) : introDay.state === "not yet active" ? (
-                         <Button variant="outline" size="lg" className="px-8 py-4 text-lg opacity-50 cursor-not-allowed mb-3 whitespace-normal h-auto min-h-11" disabled>
-                           <span className="mr-2">⏳</span>
-                           Signups not available yet
-                         </Button>
-                       ) : (
-                         <Button variant="outline" size="lg" className="px-8 py-4 text-lg opacity-50 cursor-not-allowed mb-3 whitespace-normal h-auto min-h-11" disabled>
-                           <span className="mr-2">❌</span>
-                           Sold out
-                         </Button>
-                       )}
-                     <p className="text-sm text-muted-foreground">
-                       Total places available: {introDay.totalPlaces}
-                     </p>
+                 {isLoading ? (
+                   <div className="col-span-full text-center py-8">
+                     <p className="text-muted-foreground">Loading intro days...</p>
                    </div>
-                 ))}
+                 ) : introDays && introDays.length > 0 ? (
+                   introDays.map((introDay) => (
+                     <div key={introDay.id} className="text-center p-6 bg-background/50 rounded-lg border border-border/30">
+                       <p className="text-xl text-foreground mb-4">{introDay.date}</p>
+                         {introDay.state === "active" ? (
+                           <a 
+                             href={introDay.link} 
+                             target="_blank" 
+                             rel="noopener noreferrer"
+                           >
+                             <Button variant="outline" size="lg" className="px-8 py-4 text-lg mb-3 whitespace-normal h-auto min-h-11">
+                               <img src={parachuteIcon} alt="Parachute" className="mr-2 h-5 w-5" />
+                               Sign up now
+                             </Button>
+                           </a>
+                         ) : introDay.state === "not yet active" ? (
+                           <Button variant="outline" size="lg" className="px-8 py-4 text-lg opacity-50 cursor-not-allowed mb-3 whitespace-normal h-auto min-h-11" disabled>
+                             <span className="mr-2">⏳</span>
+                             Signups not available yet
+                           </Button>
+                         ) : (
+                           <Button variant="outline" size="lg" className="px-8 py-4 text-lg opacity-50 cursor-not-allowed mb-3 whitespace-normal h-auto min-h-11" disabled>
+                             <span className="mr-2">❌</span>
+                             Sold out
+                           </Button>
+                         )}
+                       <p className="text-sm text-muted-foreground">
+                         Total places available: {introDay.total_places}
+                       </p>
+                     </div>
+                   ))
+                 ) : (
+                   <div className="col-span-full text-center py-8">
+                     <p className="text-muted-foreground">No intro days scheduled yet.</p>
+                   </div>
+                 )}
                </div>
             </div>
           </section>
