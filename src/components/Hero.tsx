@@ -37,24 +37,26 @@ const Hero = () => {
           The university's most extreme sports society
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center animate-fade-in-up px-2">
-          <Button 
-            size="lg" 
-            variant="outline"
-            onClick={() => navigate('/intro')}
-            className="border-2 border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold backdrop-blur-sm transition-all duration-300 hover:scale-105"
-          >
-            Learn to skydive
-          </Button>
-          
-          <Button 
-            size="lg" 
-            variant="outline" 
-            onClick={() => navigate('/members')}
-            className="border-2 border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold backdrop-blur-sm transition-all duration-300 hover:scale-105"
-          >
-            Join the club for free
-          </Button>
+        <div className="flex flex-col gap-4 sm:gap-6 justify-center items-center animate-fade-in-up px-2">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center w-full">
+            <Button 
+              size="lg" 
+              variant="outline"
+              onClick={() => navigate('/intro')}
+              className="border-2 border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold backdrop-blur-sm transition-all duration-300 hover:scale-105"
+            >
+              Learn to skydive
+            </Button>
+            
+            <Button 
+              size="lg" 
+              variant="outline" 
+              onClick={() => navigate('/members')}
+              className="border-2 border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold backdrop-blur-sm transition-all duration-300 hover:scale-105"
+            >
+              Join the club for free
+            </Button>
+          </div>
           
           <Button 
             size="lg" 
