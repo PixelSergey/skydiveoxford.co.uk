@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
+import { MessageCircle } from "lucide-react";
 import CloudBackground from "./CloudBackground";
 import SkydiverAnimation from "./SkydiverAnimation";
 import skyBackground from "@/assets/sky-background.jpg";
@@ -53,6 +54,18 @@ const Hero = () => {
             className="border-2 border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold backdrop-blur-sm transition-all duration-300 hover:scale-105"
           >
             Join the club for free
+          </Button>
+          
+          <Button 
+            size="lg" 
+            variant="outline"
+            asChild
+            className="border-2 border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold backdrop-blur-sm transition-all duration-300 hover:scale-105"
+          >
+            <a href="https://chat.whatsapp.com/DQ6C1tD0nqz5g17SwcAqYw" target="_blank" rel="noopener noreferrer">
+              <MessageCircle className="mr-2 h-5 w-5" />
+              Join the WhatsApp group
+            </a>
           </Button>
         </div>
       </div>
