@@ -45,10 +45,10 @@ const Intro = () => {
           </h1>
           
           {/* Beginners' Info Session Section */}
-          <section className="mb-12">
-            <div className="bg-card/80 backdrop-blur-sm rounded-lg p-8 border border-border/50">
-              <h2 className="text-3xl font-bold text-foreground mb-6">Beginners' info session</h2>
-              <div className="space-y-4">
+          <section className="mb-6">
+            <div className="bg-card/80 backdrop-blur-sm rounded-lg p-6 border border-border/50">
+              <h2 className="text-3xl font-bold text-foreground mb-4">Beginners' info session</h2>
+              <div className="space-y-3">
                 <div className="flex flex-col sm:flex-row sm:items-start gap-2">
                   <span className="font-semibold text-foreground">Date:</span>
                   <span className="text-foreground">MT Tuesday week 1, 14.10.2025</span>
@@ -72,21 +72,21 @@ const Intro = () => {
           </section>
           
           {/* Next Intro Days Section */}
-          <section className="mb-16">
-            <div className="bg-card/80 backdrop-blur-sm rounded-lg p-8 border border-border/50">
-              <h2 className="text-3xl font-bold text-foreground mb-4 text-center">Next intro days</h2>
-              <p className="text-sm text-muted-foreground text-center mb-6">
+          <section className="mb-6">
+            <div className="bg-card/80 backdrop-blur-sm rounded-lg p-6 border border-border/50">
+              <h2 className="text-3xl font-bold text-foreground mb-3 text-center">Next intro days</h2>
+              <p className="text-sm text-muted-foreground text-center mb-4">
                 Please read the information below before signing up to the intro day
               </p>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                  {isLoading ? (
                    <div className="col-span-full text-center py-8">
                      <p className="text-muted-foreground">Loading intro days...</p>
                    </div>
                  ) : introDays && introDays.length > 0 ? (
-                   introDays.map((introDay) => (
-                     <div key={introDay.id} className="text-center p-6 bg-background/50 rounded-lg border border-border/30">
+                    introDays.map((introDay) => (
+                      <div key={introDay.id} className="text-center p-4 bg-background/50 rounded-lg border border-border/30">
                        <p className="text-xl text-foreground mb-4">{introDay.date}</p>
                          {introDay.state === "active" ? (
                            <a 
@@ -125,10 +125,10 @@ const Intro = () => {
           </section>
 
           {/* About Intro Days Section */}
-          <section className="mb-16">
-            <div className="bg-card/80 backdrop-blur-sm rounded-lg p-8 border border-border/50">
-              <h2 className="text-3xl font-bold text-foreground mb-6">About Intro Days</h2>
-              <div className="space-y-6">
+          <section className="mb-6">
+            <div className="bg-card/80 backdrop-blur-sm rounded-lg p-6 border border-border/50">
+              <h2 className="text-3xl font-bold text-foreground mb-4">About Intro Days</h2>
+              <div className="space-y-4">
                 <div>
                   <h3 className="text-xl font-semibold text-foreground mb-2">How do the intro days work?</h3>
                   <p className="text-foreground">
