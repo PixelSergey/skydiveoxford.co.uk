@@ -44,6 +44,33 @@ const Intro = () => {
             Intro Days
           </h1>
           
+          {/* Beginners' Info Session Section */}
+          <section className="mb-12">
+            <div className="bg-card/80 backdrop-blur-sm rounded-lg p-8 border border-border/50">
+              <h2 className="text-3xl font-bold text-foreground mb-6">Beginners' info session</h2>
+              <div className="space-y-4">
+                <div className="flex flex-col sm:flex-row sm:items-start gap-2">
+                  <span className="font-semibold text-foreground">Date:</span>
+                  <span className="text-foreground">MT Tuesday week 1, 14.10.2025</span>
+                </div>
+                <div className="flex flex-col sm:flex-row sm:items-start gap-2">
+                  <span className="font-semibold text-foreground">Location:</span>
+                  <span className="text-foreground">Doctorow Hall, St Edmund Hall College</span>
+                </div>
+                <p className="text-foreground leading-relaxed">
+                  Welcome to the freshers' information session! Find out more about skydiving, how it all works, and try on a real parachute here. Signups are optional but encouraged.
+                </p>
+                <div className="pt-2">
+                  <a href="#signup">
+                    <Button variant="default" size="lg">
+                      Sign up to the info session
+                    </Button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+          
           {/* Next Intro Days Section */}
           <section className="mb-16">
             <div className="bg-card/80 backdrop-blur-sm rounded-lg p-8 border border-border/50">
