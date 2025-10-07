@@ -159,8 +159,8 @@ const Intro = () => {
                   <h3 className="text-xl font-semibold text-foreground mb-2">What is the schedule like?</h3>
                   <p className="text-foreground">
                     Here is a typical schedule for a Friday groundschool. Note that the times here are approximate: the
-                    groundschools typically end earlier, but may stretch for some reason. It's not recommended to book
-                    anything else for the same day or you may miss it.
+                    groundschools typically end earlier, but may stretch for some reason. It's not recommended to have
+                    any other important plans on the same day as the intro day.
                   </p>
                   <ul className="list-disc pl-6 mb-4 space-y-2">
                     <li>07:30 a.m. - Leave Oxford by car</li>
