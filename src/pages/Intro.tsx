@@ -171,7 +171,7 @@ const Intro = () => {
                   </ul>
                   <p className="text-foreground">
                     Once you are done with the groundschool, you can come back any day for your first jump. It takes
-                    about 45 minutes per direction to drive to hinton, and you can expect to spend a few hours briefing,
+                    about 45 minutes per direction to drive to Hinton, and you can expect to spend a few hours briefing,
                     jumping, and debriefing your AFF jumps each time.
                   </p>
                 </div>
