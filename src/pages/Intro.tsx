@@ -139,10 +139,10 @@ const Intro = () => {
                 <div>
                   <h3 className="text-xl font-semibold text-foreground mb-2">How do the intro days work?</h3>
                   <p className="text-foreground">
-                    Intro days are a 2-part course which culminate in your first solo jump! The first part is a full-day
-                    ground school on a Friday, where you will learn everything you need and complete all the practical
-                    drills. The second part, held on a separate day, will be your first skydive out of an airplane with
-                    2 instructors by your side.
+                    An intro day is a 2-part course which culminates in your first solo jump! The first part is a
+                    full-day ground school on a Friday, where you will learn everything you need and complete all the
+                    practical drills. The second part, held on a separate day, will be your first skydive out of an
+                    airplane with 2 instructors by your side.
                   </p>
                   <p className="text-foreground">
                     For more information on training, see the{" "}
@@ -166,8 +166,8 @@ const Intro = () => {
                     <li>07:30 a.m. - Leave Oxford by car</li>
                     <li>08:30 a.m. - Groundschool at Hinton starts</li>
                     <li>12 p.m. - Break for lunch</li>
-                    <li>5 p.m. - Groundschool ends</li>
-                    <li>6 p.m. - Back in Oxford</li>
+                    <li>6 p.m. - Groundschool ends</li>
+                    <li>7 p.m. - Back in Oxford</li>
                   </ul>
                   <p className="text-foreground">
                     Once you are done with the groundschool, you can come back any day for your first jump. It takes
