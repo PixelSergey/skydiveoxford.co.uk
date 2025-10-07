@@ -93,8 +93,15 @@ const SkydiverAnimation = () => {
       }, delay);
     };
 
-    // Start the first airplane immediately with its own delay
-    scheduleNextAirplane();
+    // Start the first airplane immediately
+    const firstDirection = Math.random() > 0.5 ? 'left-to-right' : 'right-to-left';
+    setActiveAirplane(firstDirection);
+    
+    // After first animation completes, schedule the next one
+    setTimeout(() => {
+      setActiveAirplane(null);
+      scheduleNextAirplane();
+    }, 8000);
   }, []);
 
   return (
