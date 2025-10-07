@@ -56,9 +56,9 @@ const Intro = () => {
                   Find out more about skydiving, how you can learn to jump out of a plane, and try on a real parachute
                   here!
                 </p>
-                <div className="pt-2">
+                <div className="pt-2 text-center">
                   <a href="https://luma.com/fozm9mg1">
-                    <Button variant="default" size="lg">
+                    <Button variant="outline" size="lg">
                       Sign up to the info session
                     </Button>
                   </a>
