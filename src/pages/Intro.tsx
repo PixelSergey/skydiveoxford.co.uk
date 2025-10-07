@@ -42,7 +42,7 @@ const Intro = () => {
           {/* Beginners' Info Session Section */}
           <section className="mb-6">
             <div className="bg-card/80 backdrop-blur-sm rounded-lg p-6 border border-border/50">
-              <h2 className="text-3xl font-bold text-foreground mb-4">Beginners' info session</h2>
+              <h2 className="text-3xl font-bold text-foreground mb-4">Freshers' info session</h2>
               <div className="space-y-3">
                 <div className="flex flex-col sm:flex-row sm:items-start gap-2">
                   <span className="font-semibold text-foreground">Date:</span>
@@ -53,8 +53,8 @@ const Intro = () => {
                   <span className="text-foreground">Doctorow Hall, St Edmund Hall College</span>
                 </div>
                 <p className="text-foreground leading-relaxed">
-                  Welcome to the freshers' information session! Find out more about skydiving, how it all works, and try
-                  on a real parachute here. Signups are optional but encouraged.
+                  Find out more about skydiving, how you can learn to jump out of a plane, and try on a real parachute
+                  here!
                 </p>
                 <div className="pt-2">
                   <a href="https://luma.com/fozm9mg1">
