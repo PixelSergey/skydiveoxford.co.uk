@@ -4,6 +4,7 @@ import CloudBackground from "./CloudBackground";
 import SkydiverAnimation from "./SkydiverAnimation";
 import skyBackground from "@/assets/sky-background.jpg";
 import whatsappLogo from "@/assets/whatsapp-logo.svg";
+import instagramLogo from "@/assets/instagram-logo.svg";
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -58,22 +59,41 @@ const Hero = () => {
             </Button>
           </div>
 
-          <Button
-            size="lg"
-            variant="outline"
-            asChild
-            className="border-2 border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold backdrop-blur-sm transition-all duration-300 hover:scale-105"
-          >
-            <a
-              href="https://chat.whatsapp.com/DQ6C1tD0nqz5g17SwcAqYw"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center"
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center w-full">
+            <Button
+              size="lg"
+              variant="outline"
+              asChild
+              className="border-2 border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold backdrop-blur-sm transition-all duration-300 hover:scale-105"
             >
-              <img src={whatsappLogo} alt="WhatsApp" className="mr-2 h-5 w-5" />
-              Join the WhatsApp group
-            </a>
-          </Button>
+              <a
+                href="https://chat.whatsapp.com/DQ6C1tD0nqz5g17SwcAqYw"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center"
+              >
+                <img src={whatsappLogo} alt="WhatsApp" className="mr-2 h-5 w-5" />
+                Join the WhatsApp group
+              </a>
+            </Button>
+
+            <Button
+              size="lg"
+              variant="outline"
+              asChild
+              className="border-2 border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold backdrop-blur-sm transition-all duration-300 hover:scale-105"
+            >
+              <a
+                href="https://www.instagram.com/oxfordskydiving/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center"
+              >
+                <img src={instagramLogo} alt="Instagram" className="mr-2 h-5 w-5" />
+                Follow us on Instagram
+              </a>
+            </Button>
+          </div>
         </div>
       </div>
     </section>
