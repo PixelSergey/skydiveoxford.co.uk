@@ -39,34 +39,6 @@ const Intro = () => {
         <div className="py-16">
           <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-12 text-center">Intro Days</h1>
 
-          {/* Beginners' Info Session Section */}
-          <section className="mb-6">
-            <div className="bg-card/80 backdrop-blur-sm rounded-lg p-6 border border-border/50">
-              <h2 className="text-3xl font-bold text-foreground mb-4">Freshers' info</h2>
-              <div className="space-y-3">
-                <div className="flex flex-col sm:flex-row sm:items-start gap-2">
-                  <span className="font-semibold text-foreground">Date:</span>
-                  <span className="text-foreground">MT Tuesday week 1, 14.10.2025, 6pm</span>
-                </div>
-                <div className="flex flex-col sm:flex-row sm:items-start gap-2">
-                  <span className="font-semibold text-foreground">Location:</span>
-                  <span className="text-foreground">Doctorow Hall, St Edmund Hall College</span>
-                </div>
-                <p className="text-foreground leading-relaxed">
-                  Find out more about skydiving, how you can learn to jump out of a plane, and try on a real parachute
-                  here!
-                </p>
-                <div className="pt-2 text-center">
-                  <a href="https://luma.com/fozm9mg1">
-                    <Button variant="outline" size="lg">
-                      Sign up to the info session
-                    </Button>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </section>
-
           {/* Next Intro Days Section */}
           <section className="mb-6">
             <div className="bg-card/80 backdrop-blur-sm rounded-lg p-6 border border-border/50">
