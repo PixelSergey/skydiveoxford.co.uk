@@ -6,7 +6,7 @@ import skyBackground from "@/assets/sky-background.jpg";
 import whatsappLogo from "@/assets/whatsapp-logo.svg";
 import instagramLogo from "@/assets/instagram-logo.svg";
 import vertexLogo from "@/assets/vertex.jpg";
-import aon2Logo from "@/assets/aon2.png";
+import aon2Logo from "@/assets/aon2-2.png";
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -31,7 +31,7 @@ const Hero = () => {
       <SkydiverAnimation />
 
       {/* Content */}
-      <div className="relative z-10 text-center px-6 sm:px-8 max-w-4xl mx-auto w-full -mt-16 sm:-mt-20">
+      <div className="relative z-10 text-center px-6 sm:px-8 max-w-4xl mx-auto w-full">
         <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-primary-foreground mb-4 sm:mb-6 animate-fade-in-up leading-tight">
           Oxford Skydiving Club
         </h1>
@@ -100,34 +100,40 @@ const Hero = () => {
       </div>
 
       {/* Sponsors Section */}
-      <div className="relative z-10 mt-16 sm:mt-20 px-6 sm:px-8 max-w-4xl mx-auto w-full">
-        <h2 className="text-xl sm:text-2xl font-semibold text-primary-foreground mb-6 sm:mb-8 text-center">
+      <div className="relative z-10 mt-32 sm:mt-40 px-6 sm:px-8 max-w-5xl mx-auto w-full">
+        <h2 className="text-xl sm:text-2xl font-semibold text-primary-foreground mb-8 sm:mb-12 text-center">
           In collaboration with
         </h2>
-        <div className="flex flex-wrap justify-center items-center gap-8 sm:gap-12">
+        <div className="flex flex-wrap justify-center items-start gap-12 sm:gap-16">
           <a
             href="https://www.aon2.co.uk/"
             target="_blank"
             rel="noopener noreferrer"
-            className="transition-transform duration-300 hover:scale-110"
+            className="flex flex-col items-center transition-transform duration-300 hover:scale-105 group"
           >
             <img
               src={aon2Logo}
               alt="AON2"
-              className="h-16 sm:h-20 w-auto object-contain bg-white/90 rounded-lg p-3"
+              className="h-20 sm:h-24 w-auto object-contain bg-white/90 rounded-lg p-4 mb-3"
             />
+            <p className="text-primary-foreground/80 text-sm sm:text-base text-center max-w-[200px] group-hover:text-primary-foreground transition-colors">
+              AO(N²) - Advanced Skydiving Technology
+            </p>
           </a>
           <a
             href="https://www.vertexskysports.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="transition-transform duration-300 hover:scale-110"
+            className="flex flex-col items-center transition-transform duration-300 hover:scale-105 group"
           >
             <img
               src={vertexLogo}
               alt="Vertex Sky Sports"
-              className="h-16 sm:h-20 w-auto object-contain bg-white/90 rounded-lg p-3"
+              className="h-20 sm:h-24 w-auto object-contain bg-white/90 rounded-lg p-4 mb-3"
             />
+            <p className="text-primary-foreground/80 text-sm sm:text-base text-center max-w-[200px] group-hover:text-primary-foreground transition-colors">
+              Vertex Sky Sports - Professional Skydiving Suits
+            </p>
           </a>
         </div>
       </div>
