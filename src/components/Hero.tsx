@@ -5,12 +5,14 @@ import SkydiverAnimation from "./SkydiverAnimation";
 import skyBackground from "@/assets/sky-background.jpg";
 import whatsappLogo from "@/assets/whatsapp-logo.svg";
 import instagramLogo from "@/assets/instagram-logo.svg";
+import vertexLogo from "@/assets/vertex.jpg";
+import aon2Logo from "@/assets/aon2.png";
 
 const Hero = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden py-12">
       {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -29,7 +31,7 @@ const Hero = () => {
       <SkydiverAnimation />
 
       {/* Content */}
-      <div className="relative z-10 text-center px-6 sm:px-8 max-w-4xl mx-auto w-full">
+      <div className="relative z-10 text-center px-6 sm:px-8 max-w-4xl mx-auto w-full -mt-16 sm:-mt-20">
         <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-primary-foreground mb-4 sm:mb-6 animate-fade-in-up leading-tight">
           Oxford Skydiving Club
         </h1>
@@ -94,6 +96,39 @@ const Hero = () => {
               </a>
             </Button>
           </div>
+        </div>
+      </div>
+
+      {/* Sponsors Section */}
+      <div className="relative z-10 mt-16 sm:mt-20 px-6 sm:px-8 max-w-4xl mx-auto w-full">
+        <h2 className="text-xl sm:text-2xl font-semibold text-primary-foreground mb-6 sm:mb-8 text-center">
+          In collaboration with
+        </h2>
+        <div className="flex flex-wrap justify-center items-center gap-8 sm:gap-12">
+          <a
+            href="https://www.aon2.co.uk/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-transform duration-300 hover:scale-110"
+          >
+            <img
+              src={aon2Logo}
+              alt="AON2"
+              className="h-16 sm:h-20 w-auto object-contain bg-white/90 rounded-lg p-3"
+            />
+          </a>
+          <a
+            href="https://www.vertexskysports.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-transform duration-300 hover:scale-110"
+          >
+            <img
+              src={vertexLogo}
+              alt="Vertex Sky Sports"
+              className="h-16 sm:h-20 w-auto object-contain bg-white/90 rounded-lg p-3"
+            />
+          </a>
         </div>
       </div>
     </section>
