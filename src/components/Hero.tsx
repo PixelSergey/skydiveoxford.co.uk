@@ -100,8 +100,8 @@ const Hero = () => {
       </div>
 
       {/* Sponsors Section - Below Fold */}
-      <div className="relative z-10 mt-6 sm:mt-8 px-6 sm:px-8 max-w-5xl mx-auto w-full py-6 sm:py-8">
-        <h2 className="text-xl sm:text-2xl font-semibold text-primary-foreground mb-8 sm:mb-12 text-center">
+      <div className="relative z-10 mt-1 sm:mt-2 px-6 sm:px-8 max-w-5xl mx-auto w-full py-3 sm:py-4">
+        <h2 className="text-xl sm:text-2xl font-semibold text-primary-foreground mb-2 sm:mb-3 text-center">
           In collaboration with
         </h2>
         <div className="flex flex-wrap justify-center items-start gap-12 sm:gap-16">
@@ -114,7 +114,7 @@ const Hero = () => {
             <img
               src={aon2Logo}
               alt="AON2"
-              className="h-20 sm:h-24 w-auto object-contain bg-white/90 rounded-lg p-4 mb-3"
+              className="h-16 sm:h-20 w-auto object-contain bg-white/90 rounded-lg p-3 mb-2"
             />
             <p className="text-primary-foreground/80 text-sm sm:text-base text-center max-w-[200px] group-hover:text-primary-foreground transition-colors">
               AO(N²) - Advanced Skydiving Technology
@@ -129,7 +129,7 @@ const Hero = () => {
             <img
               src={vertexLogo}
               alt="Vertex Sky Sports"
-              className="h-20 sm:h-24 w-auto object-contain bg-white/90 rounded-lg p-4 mb-3"
+              className="h-16 sm:h-20 w-auto object-contain bg-white/90 rounded-lg p-3 mb-2"
             />
             <p className="text-primary-foreground/80 text-sm sm:text-base text-center max-w-[200px] group-hover:text-primary-foreground transition-colors">
               Vertex Sky Sports - Professional Skydiving Suits
