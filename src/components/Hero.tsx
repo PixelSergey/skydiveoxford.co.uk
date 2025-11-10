@@ -12,7 +12,7 @@ const Hero = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center overflow-hidden py-12">
+    <section className="relative flex flex-col items-center overflow-y-auto">
       {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -30,8 +30,8 @@ const Hero = () => {
       {/* Animated skydivers */}
       <SkydiverAnimation />
 
-      {/* Content */}
-      <div className="relative z-10 text-center px-6 sm:px-8 max-w-4xl mx-auto w-full flex-1 flex flex-col justify-center">
+      {/* Main Content - Full Screen */}
+      <div className="relative z-10 text-center px-6 sm:px-8 max-w-4xl mx-auto w-full min-h-screen flex flex-col justify-center">
         <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-primary-foreground mb-4 sm:mb-6 animate-fade-in-up leading-tight">
           Oxford Skydiving Club
         </h1>
@@ -99,8 +99,8 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Sponsors Section */}
-      <div className="relative z-10 mt-16 sm:mt-20 px-6 sm:px-8 max-w-5xl mx-auto w-full pb-12">
+      {/* Sponsors Section - Below Fold */}
+      <div className="relative z-10 px-6 sm:px-8 max-w-5xl mx-auto w-full py-16 sm:py-20">
         <h2 className="text-xl sm:text-2xl font-semibold text-primary-foreground mb-8 sm:mb-12 text-center">
           In collaboration with
         </h2>
