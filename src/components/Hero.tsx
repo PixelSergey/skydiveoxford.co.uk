@@ -100,7 +100,7 @@ const Hero = () => {
       </div>
 
       {/* Sponsors Section - Below Fold */}
-      <div className="relative z-10 mt-1 sm:mt-2 px-6 sm:px-8 max-w-5xl mx-auto w-full py-3 sm:py-4">
+      <div className="relative z-10 mt-1 sm:mt-2 px-6 sm:px-8 max-w-5xl mx-auto w-full py-3 sm:py-4 pb-12 sm:pb-16">
         <h2 className="text-xl sm:text-2xl font-semibold text-primary-foreground mb-2 sm:mb-3 text-center">
           In collaboration with
         </h2>
