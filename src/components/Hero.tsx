@@ -132,7 +132,7 @@ const Hero = () => {
               className="h-16 sm:h-20 w-auto object-contain bg-white/90 rounded-lg p-3 mb-2"
             />
             <p className="text-primary-foreground/80 text-sm sm:text-base text-center max-w-[200px] group-hover:text-primary-foreground transition-colors">
-              Jedi Air Wear - Custom made Skydiving suits & gear store
+              Jedi Air Wear - Custom made Skydiving suits
             </p>
           </a>
         </div>
