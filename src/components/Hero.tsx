@@ -5,7 +5,7 @@ import SkydiverAnimation from "./SkydiverAnimation";
 import skyBackground from "@/assets/sky-background.jpg";
 import whatsappLogo from "@/assets/whatsapp-logo.svg";
 import instagramLogo from "@/assets/instagram-logo.svg";
-import vertexLogo from "@/assets/vertex.jpg";
+import jediLogo from "@/assets/jedi-logo.png";
 import aon2Logo from "@/assets/aon2-2.png";
 
 const Hero = () => {
@@ -121,18 +121,18 @@ const Hero = () => {
             </p>
           </a>
           <a
-            href="https://www.vertexskysports.com/"
+            href="https://jediairwear.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex flex-col items-center transition-transform duration-300 hover:scale-105 group"
           >
             <img
-              src={vertexLogo}
-              alt="Vertex Sky Sports"
+              src={jediLogo}
+              alt="Jedi Air Wear"
               className="h-16 sm:h-20 w-auto object-contain bg-white/90 rounded-lg p-3 mb-2"
             />
             <p className="text-primary-foreground/80 text-sm sm:text-base text-center max-w-[200px] group-hover:text-primary-foreground transition-colors">
-              Vertex Sky Sports - Professional Skydiving Suits
+              Jedi Air Wear - Custom made Skydiving suits & gear store
             </p>
           </a>
         </div>
