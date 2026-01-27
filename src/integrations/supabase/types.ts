@@ -14,6 +14,36 @@ export type Database = {
   }
   public: {
     Tables: {
+      gallery_items: {
+        Row: {
+          caption: string
+          created_at: string
+          display_order: number
+          filename: string
+          id: string
+          is_featured: boolean
+          media_type: string
+        }
+        Insert: {
+          caption: string
+          created_at?: string
+          display_order: number
+          filename: string
+          id?: string
+          is_featured?: boolean
+          media_type?: string
+        }
+        Update: {
+          caption?: string
+          created_at?: string
+          display_order?: number
+          filename?: string
+          id?: string
+          is_featured?: boolean
+          media_type?: string
+        }
+        Relationships: []
+      }
       intro_days: {
         Row: {
           created_at: string | null
