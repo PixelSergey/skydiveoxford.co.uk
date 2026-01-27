@@ -100,7 +100,7 @@ const Hero = () => {
       </div>
 
       {/* Sponsors Section - Below Fold */}
-      <div className="relative z-10 mt-1 sm:mt-2 px-6 sm:px-8 max-w-5xl mx-auto w-full py-3 sm:py-4 pb-12 sm:pb-16">
+      <div className="relative z-10 mt-1 sm:mt-2 px-6 sm:px-8 max-w-5xl mx-auto w-full py-3 sm:py-4">
         <h2 className="text-xl sm:text-2xl font-semibold text-primary-foreground mb-2 sm:mb-3 text-center">
           In collaboration with
         </h2>
@@ -135,6 +135,94 @@ const Hero = () => {
               Jedi Air Wear - Custom made Skydiving suits
             </p>
           </a>
+        </div>
+      </div>
+
+      {/* Gallery Section */}
+      <div className="relative z-10 px-6 sm:px-8 max-w-6xl mx-auto w-full py-8 sm:py-12 pb-16 sm:pb-24">
+        <h2 className="text-xl sm:text-2xl font-semibold text-primary-foreground mb-6 sm:mb-8 text-center">
+          Gallery
+        </h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+          {/* Large featured video placeholder */}
+          <div className="col-span-2 row-span-2 aspect-video bg-white/20 backdrop-blur-sm rounded-xl border-2 border-primary-foreground/20 flex items-center justify-center transition-all duration-300 hover:bg-white/30 hover:scale-[1.02]">
+            <div className="text-center">
+              <div className="w-16 h-16 mx-auto mb-2 rounded-full bg-primary-foreground/20 flex items-center justify-center">
+                <svg className="w-8 h-8 text-primary-foreground" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+              <span className="text-primary-foreground/60 text-sm">Video</span>
+            </div>
+          </div>
+          
+          {/* Photo placeholders */}
+          <div className="aspect-square bg-white/20 backdrop-blur-sm rounded-xl border-2 border-primary-foreground/20 flex items-center justify-center transition-all duration-300 hover:bg-white/30 hover:scale-[1.02]">
+            <div className="text-center">
+              <div className="w-10 h-10 mx-auto mb-1 rounded-full bg-primary-foreground/20 flex items-center justify-center">
+                <svg className="w-5 h-5 text-primary-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <span className="text-primary-foreground/60 text-xs">Photo</span>
+            </div>
+          </div>
+          
+          <div className="aspect-square bg-white/20 backdrop-blur-sm rounded-xl border-2 border-primary-foreground/20 flex items-center justify-center transition-all duration-300 hover:bg-white/30 hover:scale-[1.02]">
+            <div className="text-center">
+              <div className="w-10 h-10 mx-auto mb-1 rounded-full bg-primary-foreground/20 flex items-center justify-center">
+                <svg className="w-5 h-5 text-primary-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <span className="text-primary-foreground/60 text-xs">Photo</span>
+            </div>
+          </div>
+          
+          <div className="aspect-square bg-white/20 backdrop-blur-sm rounded-xl border-2 border-primary-foreground/20 flex items-center justify-center transition-all duration-300 hover:bg-white/30 hover:scale-[1.02]">
+            <div className="text-center">
+              <div className="w-10 h-10 mx-auto mb-1 rounded-full bg-primary-foreground/20 flex items-center justify-center">
+                <svg className="w-5 h-5 text-primary-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <span className="text-primary-foreground/60 text-xs">Photo</span>
+            </div>
+          </div>
+          
+          <div className="aspect-square bg-white/20 backdrop-blur-sm rounded-xl border-2 border-primary-foreground/20 flex items-center justify-center transition-all duration-300 hover:bg-white/30 hover:scale-[1.02]">
+            <div className="text-center">
+              <div className="w-10 h-10 mx-auto mb-1 rounded-full bg-primary-foreground/20 flex items-center justify-center">
+                <svg className="w-5 h-5 text-primary-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <span className="text-primary-foreground/60 text-xs">Photo</span>
+            </div>
+          </div>
+          
+          {/* Video placeholder */}
+          <div className="aspect-square bg-white/20 backdrop-blur-sm rounded-xl border-2 border-primary-foreground/20 flex items-center justify-center transition-all duration-300 hover:bg-white/30 hover:scale-[1.02]">
+            <div className="text-center">
+              <div className="w-10 h-10 mx-auto mb-1 rounded-full bg-primary-foreground/20 flex items-center justify-center">
+                <svg className="w-5 h-5 text-primary-foreground" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+              <span className="text-primary-foreground/60 text-xs">Video</span>
+            </div>
+          </div>
+          
+          <div className="aspect-square bg-white/20 backdrop-blur-sm rounded-xl border-2 border-primary-foreground/20 flex items-center justify-center transition-all duration-300 hover:bg-white/30 hover:scale-[1.02]">
+            <div className="text-center">
+              <div className="w-10 h-10 mx-auto mb-1 rounded-full bg-primary-foreground/20 flex items-center justify-center">
+                <svg className="w-5 h-5 text-primary-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <span className="text-primary-foreground/60 text-xs">Photo</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
