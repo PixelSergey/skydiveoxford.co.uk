@@ -134,6 +134,11 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Standard blue link color for in-text links */
+  a {
+    color: hsl(217, 91%, 60%);
+  }
 }
 
 @layer components {
