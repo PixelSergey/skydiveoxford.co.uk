@@ -134,7 +134,13 @@ const About = () => {
                   <p className="text-foreground">
                     When signing up for your intro day, you will automatically get a British Skydiving membership which includes insurance for third party legal liability and critical injury.
                     If you want, you may get your own insurance to also cover other personal accidents, but this is not necessary and most people find the British Skydiving insurance to be enough.
-                    Find out more about your cover <a href="https://britishskydiving.org/insurance-travel/">here</a>.
+                    Find out more about your cover{" "}
+                    <a
+                      href="https://britishskydiving.org/insurance-travel/"
+                      className="text-primary-foreground hover:text-primary-foreground/80 underline underline-offset-4 transition-colors font-medium"
+                    >
+                      here
+                    </a>.
                   </p>
                 </div>
                 <div>
