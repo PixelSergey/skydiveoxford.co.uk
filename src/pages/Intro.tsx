@@ -128,6 +128,13 @@ const Intro = () => {
                   </p>
                 </div>
                 <div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">How do we get there?</h3>
+                  <p className="text-foreground">
+                    We will take a car together from Oxford, no need to get there on your own!
+                    The transportation for your intro day is included in the price of the ground school.
+                  </p>
+                </div>
+                <div>
                   <h3 className="text-xl font-semibold text-foreground mb-2">What is the schedule like?</h3>
                   <p className="text-foreground">
                     Here is a typical schedule for a Friday groundschool. Note that the times here are approximate: the
@@ -171,6 +178,21 @@ const Intro = () => {
                   <p className="text-foreground">
                     This price includes the groundschool, all exams and drills, your first real skydive, as well as
                     transportation to and from the airfield.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">How do I learn to skydive after the intro day?</h3>
+                  <p className="text-foreground">
+                    Once you've completed your ground school, you will get "student skydiver" status and will be able to come back any day of the week (weather-permitting) to do your student jumps.
+                    At the Oxford Skydiving Club, we coordinate and go to the dropzone together once or twice a week, so you'll be in good company!
+                    For more information about skydiving training, check out the{" "}
+                    <a
+                      href="/about"
+                      className="text-primary-foreground hover:text-primary-foreground/80 underline underline-offset-4 transition-colors font-medium"
+                    >
+                      About Skydiving
+                    </a>{" "}
+                    page.
                   </p>
                 </div>
               </div>
