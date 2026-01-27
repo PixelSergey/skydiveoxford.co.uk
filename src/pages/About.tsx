@@ -95,7 +95,9 @@ const About = () => {
                   <h3 className="text-xl font-semibold text-foreground mb-2">How many jumps do I need to get my license?</h3>
                   <p className="text-foreground">
                     The minimum number of jumps for the AFF course is 18.
-                    You may have to do more jumps if you end up having to re-do a certain AFF level. However, the more frequently you jump, the better your muscle memory will be and the more likely you are to pass the jumps!
+                    These contain 8 AFF "levels" where you jump with one or two instructors, followed by 10 "consolidation jumps" where you jump fully solo under supervision.
+                    You may have to do more jumps if you end up having to re-do a certain AFF level.
+                    However, the more frequently you jump, the better your muscle memory will be and the more likely you are to pass the jumps!
                   </p>
                 </div>
                 <div>
@@ -125,6 +127,23 @@ const About = () => {
                   <p className="text-foreground">
                     Skydivers always use modern sports parachutes: they're fully controllable, and you can land gently and smoothly with them.
                     Nothing like those big round military parachutes that you see in movies!
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Am I insured?</h3>
+                  <p className="text-foreground">
+                    When signing up for your intro day, you will automatically get a British Skydiving membership which includes insurance for third party legal liability and critical injury.
+                    If you want, you may get your own insurance to also cover other personal accidents, but this is not necessary and most people find the British Skydiving insurance to be enough.
+                    Find out more about your cover <a href="https://britishskydiving.org/insurance-travel/">here</a>.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Do I have to go frequently?</h3>
+                  <p className="text-foreground">
+                    Once you do your first jump, it is recommended that you do the next level at most one month afterwards.
+                    If you take a break that's longer than one month but less than 3 months, you will have to do some revision before your next jump (which isn't that big of a deal).
+                    However, if your break is 3 months or longer, you may have to attend a refresher ground school, which is more difficult to do.
+                    Of course, if you don't end up liking skydiving (which has never happened to our knowledge!) you can always quit with the amazing knowledge that you have jumped out of an airplane totally on your own!
                   </p>
                 </div>
               </div>
@@ -191,7 +210,7 @@ const About = () => {
                 <h3 className="text-xl font-semibold mt-6 mb-3">A license</h3>
                 <p className="mb-4">
                   Congrats, now you've got your license!
-                  The fun doesn't end here, though: now you can go onto advanced courses and learn to do Formation Skydiving (jumping with friends), advanced canopy training, learn to be a jumpmaster, and many other things.
+                  The fun doesn't end here, though: now you can go onto advanced courses and learn to do Formation Skydiving (jumping with friends), Freeflying (doing acrobatics in the air), advanced canopy training, learn to be a jumpmaster, and many other things.
                 </p>
               </div>
             </div>
@@ -259,7 +278,9 @@ const About = () => {
               <h2 className="text-3xl font-bold text-foreground mb-6">Is skydiving expensive?</h2>
               <div className="prose prose-lg max-w-none text-foreground">
                 <p className="mb-4">
-                  Unfortunately, yes. Here are the approximate prices that you will have to pay when you start skydiving:
+                  Unfortunately, yes.
+                  Skydiving is actually relatively affordable once you have a license, but getting your license in the first place is quite expensive. 
+                  Here are the approximate prices for skydiving:
                 </p>
                 <h3 className="text-xl font-semibold mt-6 mb-3">Licensed Skydiver Costs</h3>
                 <ul className="list-disc pl-6 mb-4 space-y-2">
@@ -267,16 +288,25 @@ const About = () => {
                   <li><strong>Gear rental:</strong> £20 per jump including the repack</li>
                 </ul>
                 <h3 className="text-xl font-semibold mt-6 mb-3">Training costs</h3>
+                <p className="mb-4">
+                  Note: these are the prices if you are starting out for the first time. You do not pay them all at once, but each jump is charged separately on the day.
+                  To get an A-license, you must complete all 8 AFF levels (one jump per level) and 10 solo consolidation jumps.
+                  After this, you will be a licensed skydiver and will be able to jump on your own with the above pricing.
+                </p>
                 <ul className="list-disc pl-6 mb-4 space-y-2">
                   <li><strong>AFF Level 1 (ground school plus your first jump):</strong> £400</li>
-                  <li><strong>Remaining AFF levels:</strong> £50-£210 depending on the jump (getting lower as you progress)</li>
-                  <li><strong>Total cost to get your A license:</strong> around £2000 (pay-as-you-go, not all at once)</li>
+                  <li><strong>AFF levels 2 and 3:</strong> £230 each</li>
+                  <li><strong>AFF levels 4, 5, 6, and 7:</strong> £140 each</li>
+                  <li><strong>AFF level 8:</strong> £100</li>
+                  <li><strong>10 consolidation jumps:</strong> £60 each</li>
+                  <li><strong>Total cost to get your A license:</strong> around £2100</li>
                 </ul>
                 <h3 className="text-xl font-semibold mt-6 mb-3">Own gear</h3>
                 <p className="mb-4">
                   After you get your license, you may also consider getting your own gear.
                   Basic gear like altimeters and helmets will cost you around £100-£400 each.
                   A full parachuting rig will set you back around £2000-£8000 depending on the make and model.
+                  However, the Oxford Skydiving Club is planning on getting rigs that university students will be able to use for free!
                   You can always keep renting gear until you feel ready to purchase your own.
                 </p>
               </div>
