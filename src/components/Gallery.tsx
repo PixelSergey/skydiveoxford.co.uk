@@ -73,7 +73,7 @@ const Gallery = () => {
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
         {/* Featured item - large */}
         {featuredItem && (
-          <div className="col-span-2 row-span-2 flex flex-col">
+          <div className="col-span-2 sm:col-span-3 lg:col-span-4 flex flex-col">
             <div className="flex-1 aspect-video bg-white/20 backdrop-blur-sm rounded-xl border-2 border-primary-foreground/20 overflow-hidden transition-all duration-300 hover:bg-white/30 hover:scale-[1.02]">
               {isVideo(featuredItem.filename) ? (
                 <video
