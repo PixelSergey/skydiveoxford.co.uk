@@ -69,7 +69,7 @@ const Gallery = () => {
   }
 
   return (
-    <div className="relative z-10 px-6 sm:px-8 max-w-6xl mx-auto w-full py-8 sm:py-12 pb-16 sm:pb-24">
+    <div id="gallery" className="relative z-10 px-6 sm:px-8 max-w-6xl mx-auto w-full py-8 sm:py-12 pb-16 sm:pb-24">
       <h2 className="text-xl sm:text-2xl font-semibold text-primary-foreground mb-6 sm:mb-8 text-center">
         Gallery
       </h2>
@@ -78,12 +78,12 @@ const Gallery = () => {
           // Check if this is a featured item
           if (item.is_featured) {
             return (
-              <div key={item.id} className="flex flex-col -mx-6 sm:-mx-8" style={{ width: 'calc(100% + 3rem)' }}>
-                <div className="w-full aspect-video bg-black overflow-hidden">
+              <div key={item.id} className="flex flex-col items-center">
+                <div className="w-full max-w-[75%] aspect-video bg-white/20 backdrop-blur-sm rounded-xl border-2 border-primary-foreground/20 overflow-hidden">
                   {isVideo(item.filename) ? (
                     <video
                       src={getMediaUrl(item.filename)}
-                      className="w-full h-full object-contain"
+                      className="w-full h-full object-contain bg-black"
                       controls
                       preload="metadata"
                     />
@@ -96,7 +96,7 @@ const Gallery = () => {
                     />
                   )}
                 </div>
-                <p className="text-primary-foreground/80 text-sm mt-2 text-center px-6">{item.caption}</p>
+                <p className="text-primary-foreground/80 text-sm mt-2 text-center">{item.caption}</p>
               </div>
             );
           }
