@@ -294,11 +294,6 @@ const About = () => {
                   <li><strong>Gear rental:</strong> £20 per jump including the repack</li>
                 </ul>
                 <h3 className="text-xl font-semibold mt-6 mb-3">Training costs</h3>
-                <p className="mb-4">
-                  Note: these are the prices if you are starting out for the first time. You do not pay them all at once, but each jump is charged separately on the day.
-                  To get an A-license, you must complete all 8 AFF levels (one jump per level) and 10 solo consolidation jumps.
-                  After this, you will be a licensed skydiver and will be able to jump on your own with the above pricing.
-                </p>
                 <ul className="list-disc pl-6 mb-4 space-y-2">
                   <li><strong>AFF Level 1 (ground school plus your first jump):</strong> £400</li>
                   <li><strong>AFF levels 2 and 3:</strong> £230 each</li>
@@ -307,6 +302,11 @@ const About = () => {
                   <li><strong>10 consolidation jumps:</strong> £60 each</li>
                   <li><strong>Total cost to get your A license:</strong> around £2100</li>
                 </ul>
+                <p className="mb-4">
+                  Note: these are the prices if you are starting out for the first time. You do not pay them all at once, but each jump is charged separately on the day.
+                  To get an A-license, you must complete all 8 AFF levels (one jump per level) and 10 solo consolidation jumps.
+                  After this, you will be a licensed skydiver and will be able to jump on your own with the "Licensed Skydiver" pricing.
+                </p>
                 <h3 className="text-xl font-semibold mt-6 mb-3">Own gear</h3>
                 <p className="mb-4">
                   After you get your license, you may also consider getting your own gear.
