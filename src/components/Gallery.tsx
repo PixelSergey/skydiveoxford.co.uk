@@ -68,7 +68,7 @@ const Gallery = () => {
     );
   }
 
-  const featuredItem = galleryItems?.find(item => item.is_featured);
+  const featuredItems = galleryItems?.filter(item => item.is_featured) || [];
   const regularItems = galleryItems?.filter(item => !item.is_featured) || [];
 
   return (
@@ -77,31 +77,29 @@ const Gallery = () => {
         Gallery
       </h2>
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
-        {/* Featured item - large */}
-        {featuredItem && (
-          <div className="col-span-2 sm:col-span-3 lg:col-span-4 flex flex-col">
-            <div 
-              className="flex-1 aspect-video bg-white/20 backdrop-blur-sm rounded-xl border-2 border-primary-foreground/20 overflow-hidden transition-all duration-300 hover:bg-white/30 hover:scale-[1.02] cursor-pointer"
-              onClick={() => setSelectedItem(featuredItem)}
-            >
-              {isVideo(featuredItem.filename) ? (
+        {/* Featured items - full width, playable inline, no modal */}
+        {featuredItems.map((item) => (
+          <div key={item.id} className="col-span-2 sm:col-span-3 lg:col-span-4 flex flex-col -mx-6 sm:-mx-8 px-0" style={{ width: 'calc(100% + 3rem)', marginLeft: '-1.5rem' }}>
+            <div className="w-full aspect-video bg-black overflow-hidden">
+              {isVideo(item.filename) ? (
                 <video
-                  src={getMediaUrl(featuredItem.filename)}
-                  className="w-full h-full object-cover"
+                  src={getMediaUrl(item.filename)}
+                  className="w-full h-full object-contain"
+                  controls
                   preload="metadata"
                 />
               ) : (
                 <img
-                  src={getMediaUrl(featuredItem.filename)}
-                  alt={featuredItem.caption}
+                  src={getMediaUrl(item.filename)}
+                  alt={item.caption}
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
               )}
             </div>
-            <p className="text-primary-foreground/80 text-sm mt-2 text-center">{featuredItem.caption}</p>
+            <p className="text-primary-foreground/80 text-sm mt-2 text-center px-6">{item.caption}</p>
           </div>
-        )}
+        ))}
 
         {/* Regular items */}
         {regularItems.map((item) => (
