@@ -1,5 +1,10 @@
+import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
+import {
+  Dialog,
+  DialogContent,
+} from "@/components/ui/dialog";
 
 interface GalleryItem {
   id: string;
@@ -13,6 +18,7 @@ interface GalleryItem {
 const STORAGE_URL = `${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/media`;
 
 const Gallery = () => {
+  const [selectedItem, setSelectedItem] = useState<GalleryItem | null>(null);
   const { data: galleryItems, isLoading, error } = useQuery({
     queryKey: ["gallery-items"],
     queryFn: async () => {
@@ -74,12 +80,14 @@ const Gallery = () => {
         {/* Featured item - large */}
         {featuredItem && (
           <div className="col-span-2 sm:col-span-3 lg:col-span-4 flex flex-col">
-            <div className="flex-1 aspect-video bg-white/20 backdrop-blur-sm rounded-xl border-2 border-primary-foreground/20 overflow-hidden transition-all duration-300 hover:bg-white/30 hover:scale-[1.02]">
+            <div 
+              className="flex-1 aspect-video bg-white/20 backdrop-blur-sm rounded-xl border-2 border-primary-foreground/20 overflow-hidden transition-all duration-300 hover:bg-white/30 hover:scale-[1.02] cursor-pointer"
+              onClick={() => setSelectedItem(featuredItem)}
+            >
               {isVideo(featuredItem.filename) ? (
                 <video
                   src={getMediaUrl(featuredItem.filename)}
                   className="w-full h-full object-cover"
-                  controls
                   preload="metadata"
                 />
               ) : (
@@ -98,12 +106,14 @@ const Gallery = () => {
         {/* Regular items */}
         {regularItems.map((item) => (
           <div key={item.id} className="flex flex-col">
-            <div className="aspect-square bg-white/20 backdrop-blur-sm rounded-xl border-2 border-primary-foreground/20 overflow-hidden transition-all duration-300 hover:bg-white/30 hover:scale-[1.02]">
+            <div 
+              className="aspect-square bg-white/20 backdrop-blur-sm rounded-xl border-2 border-primary-foreground/20 overflow-hidden transition-all duration-300 hover:bg-white/30 hover:scale-[1.02] cursor-pointer"
+              onClick={() => setSelectedItem(item)}
+            >
               {isVideo(item.filename) ? (
                 <video
                   src={getMediaUrl(item.filename)}
                   className="w-full h-full object-cover"
-                  controls
                   preload="metadata"
                 />
               ) : (
@@ -119,6 +129,31 @@ const Gallery = () => {
           </div>
         ))}
       </div>
+
+      {/* Lightbox Modal */}
+      <Dialog open={!!selectedItem} onOpenChange={(open) => !open && setSelectedItem(null)}>
+        <DialogContent className="max-w-[90vw] max-h-[90vh] w-auto p-0 bg-black/90 border-none overflow-hidden">
+          {selectedItem && (
+            <div className="flex flex-col items-center">
+              {isVideo(selectedItem.filename) ? (
+                <video
+                  src={getMediaUrl(selectedItem.filename)}
+                  className="max-w-full max-h-[80vh] object-contain"
+                  controls
+                  autoPlay
+                />
+              ) : (
+                <img
+                  src={getMediaUrl(selectedItem.filename)}
+                  alt={selectedItem.caption}
+                  className="max-w-full max-h-[80vh] object-contain"
+                />
+              )}
+              <p className="text-white/80 text-sm py-3 px-4 text-center">{selectedItem.caption}</p>
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };
