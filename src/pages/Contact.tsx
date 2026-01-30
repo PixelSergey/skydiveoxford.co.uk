@@ -140,23 +140,23 @@ const Contact = () => {
           <Card className="bg-background/90 backdrop-blur-sm">
             <CardContent className="p-8">
               <h2 className="text-2xl font-bold text-foreground mb-8 text-center">👥 Committee</h2>
-              <div className="grid gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {committeeMembers.map((member) => (
-                  <div key={member.role} className="flex items-center space-x-6">
-                    <Avatar className="h-20 w-20">
+                  <div key={member.role} className="flex items-center space-x-4">
+                    <Avatar className="h-16 w-16 flex-shrink-0">
                       {member.image ? (
-                        <AvatarImage src={member.image} alt={member.name} />
+                        <AvatarImage src={member.image} alt={member.name} className="object-cover" />
                       ) : null}
                       <AvatarFallback>{member.initials}</AvatarFallback>
                     </Avatar>
-                    <div>
-                      <h3 className="text-xl font-semibold text-foreground">{member.role}</h3>
-                      <p className="text-lg text-foreground">
+                    <div className="min-w-0">
+                      <h3 className="text-lg font-semibold text-foreground">{member.role}</h3>
+                      <p className="text-foreground">
                         {member.name}{member.details ? ` (${member.details})` : ""}
                       </p>
                       <a 
                         href={`mailto:${member.email}`}
-                        className="text-blue-700 hover:text-blue-800 hover:underline break-all"
+                        className="text-blue-700 hover:text-blue-800 hover:underline break-all text-sm"
                       >
                         {member.email}
                       </a>
