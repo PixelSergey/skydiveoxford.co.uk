@@ -6,6 +6,55 @@ import { Button } from "@/components/ui/button";
 import { Instagram, Mail, Users } from "lucide-react";
 import skyBackground from "@/assets/sky-background.jpg";
 import sergeyImage from "@/assets/sergey.jpg";
+import daisyImage from "@/assets/daisy.jpeg";
+import mariImage from "@/assets/mari.jpeg";
+import miaImage from "@/assets/mia.jpeg";
+
+const committeeMembers = [
+  {
+    role: "President",
+    name: "Sergey Ichtchenko",
+    details: "DPhil CS",
+    email: "president@skydiveoxford.co.uk",
+    image: sergeyImage,
+    initials: "SI",
+  },
+  {
+    role: "Vice President",
+    name: "Daisy Pritzker",
+    email: "vp@skydiveoxford.co.uk",
+    image: daisyImage,
+    initials: "DP",
+  },
+  {
+    role: "Secretary",
+    name: "Mari Managadze",
+    email: "secretary@skydiveoxford.co.uk",
+    image: mariImage,
+    initials: "MM",
+  },
+  {
+    role: "Treasurer",
+    name: "Sophie Kendall",
+    email: "treasurer@skydiveoxford.co.uk",
+    image: null,
+    initials: "SK",
+  },
+  {
+    role: "Social Secretary",
+    name: "Bob Sira",
+    email: "social@skydiveoxford.co.uk",
+    image: null,
+    initials: "BS",
+  },
+  {
+    role: "Committee Member",
+    name: "Mia Yu",
+    email: "committee@skydiveoxford.co.uk",
+    image: miaImage,
+    initials: "MY",
+  },
+];
 
 const Contact = () => {
   return (
@@ -92,23 +141,28 @@ const Contact = () => {
             <CardContent className="p-8">
               <h2 className="text-2xl font-bold text-foreground mb-8 text-center">👥 Committee</h2>
               <div className="grid gap-6">
-                {/* President */}
-                <div className="flex items-center space-x-6">
-                  <Avatar className="h-20 w-20">
-                    <AvatarImage src={sergeyImage} alt="Sergey Ichtchenko" />
-                    <AvatarFallback>SI</AvatarFallback>
-                  </Avatar>
-                  <div>
-                    <h3 className="text-xl font-semibold text-foreground">President</h3>
-                    <p className="text-lg text-foreground">Sergey Ichtchenko (DPhil CS)</p>
-                    <a 
-                      href="mailto:president@skydiveoxford.co.uk" 
-                      className="text-blue-700 hover:text-blue-800 hover:underline break-all"
-                    >
-                      president@skydiveoxford.co.uk
-                    </a>
+                {committeeMembers.map((member) => (
+                  <div key={member.role} className="flex items-center space-x-6">
+                    <Avatar className="h-20 w-20">
+                      {member.image ? (
+                        <AvatarImage src={member.image} alt={member.name} />
+                      ) : null}
+                      <AvatarFallback>{member.initials}</AvatarFallback>
+                    </Avatar>
+                    <div>
+                      <h3 className="text-xl font-semibold text-foreground">{member.role}</h3>
+                      <p className="text-lg text-foreground">
+                        {member.name}{member.details ? ` (${member.details})` : ""}
+                      </p>
+                      <a 
+                        href={`mailto:${member.email}`}
+                        className="text-blue-700 hover:text-blue-800 hover:underline break-all"
+                      >
+                        {member.email}
+                      </a>
+                    </div>
                   </div>
-                </div>
+                ))}
               </div>
             </CardContent>
           </Card>
