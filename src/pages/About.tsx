@@ -317,6 +317,9 @@ const About = () => {
                   </Table>
                 </div>
                 <h3 className="text-xl font-semibold mt-6 mb-3">Training costs</h3>
+                <p className="mb-4">
+                  Each AFF level is one jump.
+                </p>
                 <div className="overflow-x-auto mb-6 rounded-lg border-2 border-border bg-card/60 backdrop-blur-sm md:w-3/4 mx-auto">
                   <Table>
                     <TableHeader>
@@ -354,8 +357,8 @@ const About = () => {
                   </Table>
                 </div>
                 <p className="mb-4">
-                  Note: these are the prices if you are starting out for the first time. You do not pay them all at once, but each jump is charged separately on the day.
-                  To get an A-license, you must complete all 8 AFF levels (one jump per level) and 10 solo consolidation jumps.
+                  To get an A-license with no prior experience, you must complete all 8 AFF levels and 10 solo consolidation jumps.
+                  You do not pay them all at once, but each jump is charged separately on the day.
                   After this, you will be a licensed skydiver and will be able to jump on your own with the "Licensed Skydiver" pricing.
                 </p>
                 <h3 className="text-xl font-semibold mt-6 mb-3">Own gear</h3>
