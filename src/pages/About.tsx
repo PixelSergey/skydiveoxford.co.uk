@@ -296,59 +296,59 @@ const About = () => {
                   Here are the approximate prices for skydiving:
                 </p>
                 <h3 className="text-xl font-semibold mt-6 mb-3">Licensed Skydiver Costs</h3>
-                <div className="overflow-x-auto mb-6">
+                <div className="overflow-x-auto mb-6 rounded-lg border-2 border-border bg-card/60 backdrop-blur-sm">
                   <Table>
                     <TableHeader>
-                      <TableRow>
-                        <TableHead className="text-foreground">Item</TableHead>
-                        <TableHead className="text-foreground text-right">Cost</TableHead>
+                      <TableRow className="border-b-2 border-border">
+                        <TableHead className="text-foreground text-base">Item</TableHead>
+                        <TableHead className="text-foreground text-base text-right">Cost</TableHead>
                       </TableRow>
                     </TableHeader>
                     <TableBody>
-                      <TableRow>
-                        <TableCell className="text-foreground">Regular jump ticket</TableCell>
-                        <TableCell className="text-foreground text-right">£30 per jump</TableCell>
+                      <TableRow className="border-b-2 border-border/50">
+                        <TableCell className="text-foreground text-base">Regular jump ticket</TableCell>
+                        <TableCell className="text-foreground text-base text-right">£30 per jump</TableCell>
                       </TableRow>
                       <TableRow>
-                        <TableCell className="text-foreground">Gear rental (including repack)</TableCell>
-                        <TableCell className="text-foreground text-right">£20 per jump</TableCell>
+                        <TableCell className="text-foreground text-base">Gear rental (including repack)</TableCell>
+                        <TableCell className="text-foreground text-base text-right">£20 per jump</TableCell>
                       </TableRow>
                     </TableBody>
                   </Table>
                 </div>
                 <h3 className="text-xl font-semibold mt-6 mb-3">Training costs</h3>
-                <div className="overflow-x-auto mb-6">
+                <div className="overflow-x-auto mb-6 rounded-lg border-2 border-border bg-card/60 backdrop-blur-sm">
                   <Table>
                     <TableHeader>
-                      <TableRow>
-                        <TableHead className="text-foreground">Stage</TableHead>
-                        <TableHead className="text-foreground text-right">Cost</TableHead>
+                      <TableRow className="border-b-2 border-border">
+                        <TableHead className="text-foreground text-base">Stage</TableHead>
+                        <TableHead className="text-foreground text-base text-right">Cost</TableHead>
                       </TableRow>
                     </TableHeader>
                     <TableBody>
-                      <TableRow>
-                        <TableCell className="text-foreground">AFF Level 1 (ground school + first jump)</TableCell>
-                        <TableCell className="text-foreground text-right">£400</TableCell>
+                      <TableRow className="border-b-2 border-border/50">
+                        <TableCell className="text-foreground text-base">AFF Level 1 (ground school + first jump)</TableCell>
+                        <TableCell className="text-foreground text-base text-right">£400</TableCell>
                       </TableRow>
-                      <TableRow>
-                        <TableCell className="text-foreground">AFF levels 2 and 3</TableCell>
-                        <TableCell className="text-foreground text-right">£230 each</TableCell>
+                      <TableRow className="border-b-2 border-border/50">
+                        <TableCell className="text-foreground text-base">AFF levels 2 and 3</TableCell>
+                        <TableCell className="text-foreground text-base text-right">£230 each</TableCell>
                       </TableRow>
-                      <TableRow>
-                        <TableCell className="text-foreground">AFF levels 4, 5, 6, and 7</TableCell>
-                        <TableCell className="text-foreground text-right">£140 each</TableCell>
+                      <TableRow className="border-b-2 border-border/50">
+                        <TableCell className="text-foreground text-base">AFF levels 4, 5, 6, and 7</TableCell>
+                        <TableCell className="text-foreground text-base text-right">£140 each</TableCell>
                       </TableRow>
-                      <TableRow>
-                        <TableCell className="text-foreground">AFF level 8</TableCell>
-                        <TableCell className="text-foreground text-right">£100</TableCell>
+                      <TableRow className="border-b-2 border-border/50">
+                        <TableCell className="text-foreground text-base">AFF level 8</TableCell>
+                        <TableCell className="text-foreground text-base text-right">£100</TableCell>
                       </TableRow>
-                      <TableRow>
-                        <TableCell className="text-foreground">10 consolidation jumps</TableCell>
-                        <TableCell className="text-foreground text-right">£60 each</TableCell>
+                      <TableRow className="border-b-2 border-border/50">
+                        <TableCell className="text-foreground text-base">10 consolidation jumps</TableCell>
+                        <TableCell className="text-foreground text-base text-right">£60 each</TableCell>
                       </TableRow>
-                      <TableRow className="font-semibold bg-muted/30">
-                        <TableCell className="text-foreground">Total cost to get your A license</TableCell>
-                        <TableCell className="text-foreground text-right">~£2100</TableCell>
+                      <TableRow className="font-semibold bg-muted/40">
+                        <TableCell className="text-foreground text-base">Total cost to get your A license</TableCell>
+                        <TableCell className="text-foreground text-base text-right">~£2100</TableCell>
                       </TableRow>
                     </TableBody>
                   </Table>
