@@ -1,7 +1,14 @@
 import Navigation from "@/components/Navigation";
 import CloudBackground from "@/components/CloudBackground";
 import skyBackground from "@/assets/sky-background.jpg";
-
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 const About = () => {
   return (
     <div className="min-h-screen relative overflow-hidden">
@@ -289,19 +296,63 @@ const About = () => {
                   Here are the approximate prices for skydiving:
                 </p>
                 <h3 className="text-xl font-semibold mt-6 mb-3">Licensed Skydiver Costs</h3>
-                <ul className="list-disc pl-6 mb-4 space-y-2">
-                  <li><strong>Regular jump ticket:</strong> £30 per jump</li>
-                  <li><strong>Gear rental:</strong> £20 per jump including the repack</li>
-                </ul>
+                <div className="overflow-x-auto mb-6">
+                  <Table>
+                    <TableHeader>
+                      <TableRow>
+                        <TableHead className="text-foreground">Item</TableHead>
+                        <TableHead className="text-foreground text-right">Cost</TableHead>
+                      </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                      <TableRow>
+                        <TableCell className="text-foreground">Regular jump ticket</TableCell>
+                        <TableCell className="text-foreground text-right">£30 per jump</TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="text-foreground">Gear rental (including repack)</TableCell>
+                        <TableCell className="text-foreground text-right">£20 per jump</TableCell>
+                      </TableRow>
+                    </TableBody>
+                  </Table>
+                </div>
                 <h3 className="text-xl font-semibold mt-6 mb-3">Training costs</h3>
-                <ul className="list-disc pl-6 mb-4 space-y-2">
-                  <li><strong>AFF Level 1 (ground school plus your first jump):</strong> £400</li>
-                  <li><strong>AFF levels 2 and 3:</strong> £230 each</li>
-                  <li><strong>AFF levels 4, 5, 6, and 7:</strong> £140 each</li>
-                  <li><strong>AFF level 8:</strong> £100</li>
-                  <li><strong>10 consolidation jumps:</strong> £60 each</li>
-                  <li><strong>Total cost to get your A license:</strong> around £2100</li>
-                </ul>
+                <div className="overflow-x-auto mb-6">
+                  <Table>
+                    <TableHeader>
+                      <TableRow>
+                        <TableHead className="text-foreground">Stage</TableHead>
+                        <TableHead className="text-foreground text-right">Cost</TableHead>
+                      </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                      <TableRow>
+                        <TableCell className="text-foreground">AFF Level 1 (ground school + first jump)</TableCell>
+                        <TableCell className="text-foreground text-right">£400</TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="text-foreground">AFF levels 2 and 3</TableCell>
+                        <TableCell className="text-foreground text-right">£230 each</TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="text-foreground">AFF levels 4, 5, 6, and 7</TableCell>
+                        <TableCell className="text-foreground text-right">£140 each</TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="text-foreground">AFF level 8</TableCell>
+                        <TableCell className="text-foreground text-right">£100</TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="text-foreground">10 consolidation jumps</TableCell>
+                        <TableCell className="text-foreground text-right">£60 each</TableCell>
+                      </TableRow>
+                      <TableRow className="font-semibold bg-muted/30">
+                        <TableCell className="text-foreground">Total cost to get your A license</TableCell>
+                        <TableCell className="text-foreground text-right">~£2100</TableCell>
+                      </TableRow>
+                    </TableBody>
+                  </Table>
+                </div>
                 <p className="mb-4">
                   Note: these are the prices if you are starting out for the first time. You do not pay them all at once, but each jump is charged separately on the day.
                   To get an A-license, you must complete all 8 AFF levels (one jump per level) and 10 solo consolidation jumps.
