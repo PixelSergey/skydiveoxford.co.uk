@@ -296,7 +296,7 @@ const About = () => {
                   Here are the approximate prices for skydiving:
                 </p>
                 <h3 className="text-xl font-semibold mt-6 mb-3">Licensed Skydiver Costs</h3>
-                <div className="overflow-x-auto mb-6 rounded-lg border-2 border-border bg-card/60 backdrop-blur-sm md:px-8">
+                <div className="overflow-x-auto mb-6 rounded-lg border-2 border-border bg-card/60 backdrop-blur-sm">
                   <Table>
                     <TableHeader>
                       <TableRow className="border-b-2 border-border">
@@ -317,7 +317,7 @@ const About = () => {
                   </Table>
                 </div>
                 <h3 className="text-xl font-semibold mt-6 mb-3">Training costs</h3>
-                <div className="overflow-x-auto mb-6 rounded-lg border-2 border-border bg-card/60 backdrop-blur-sm md:px-8">
+                <div className="overflow-x-auto mb-6 rounded-lg border-2 border-border bg-card/60 backdrop-blur-sm">
                   <Table>
                     <TableHeader>
                       <TableRow className="border-b-2 border-border">
