@@ -351,9 +351,9 @@ const About = () => {
                         <TableCell className="text-foreground text-base">10 consolidation jumps</TableCell>
                         <TableCell className="text-foreground text-base text-right">£60 each</TableCell>
                       </TableRow>
-                      <TableRow className="font-semibold bg-muted/40">
-                        <TableCell className="text-foreground text-base">Total cost to get your A license</TableCell>
-                        <TableCell className="text-foreground text-base text-right">~£2100</TableCell>
+                      <TableRow className="border-t-2 border-foreground/30 bg-foreground/10">
+                        <TableCell className="text-foreground text-base font-black italic" style={{ fontFamily: "'Roboto', sans-serif" }}>Total cost to get your A license</TableCell>
+                        <TableCell className="text-foreground text-base text-right font-black italic" style={{ fontFamily: "'Roboto', sans-serif" }}>~£2100</TableCell>
                       </TableRow>
                     </TableBody>
                   </Table>
