@@ -301,9 +301,9 @@ const About = () => {
                 <div className="overflow-x-auto mb-6 rounded-lg border-2 border-border bg-card/60 backdrop-blur-sm md:w-3/4 mx-auto">
                   <Table>
                     <TableHeader>
-                      <TableRow className="border-b-2 border-border">
-                        <TableHead className="text-foreground text-base">Item</TableHead>
-                        <TableHead className="text-foreground text-base text-right">Cost</TableHead>
+                      <TableRow className="border-b-2 border-border bg-foreground/10">
+                        <TableHead className="text-foreground text-base font-black italic" style={{ fontFamily: "'Roboto', sans-serif" }}>Item</TableHead>
+                        <TableHead className="text-foreground text-base text-right font-black italic" style={{ fontFamily: "'Roboto', sans-serif" }}>Cost</TableHead>
                       </TableRow>
                     </TableHeader>
                     <TableBody>
@@ -325,9 +325,9 @@ const About = () => {
                 <div className="overflow-x-auto mb-6 rounded-lg border-2 border-border bg-card/60 backdrop-blur-sm md:w-3/4 mx-auto">
                   <Table>
                     <TableHeader>
-                      <TableRow className="border-b-2 border-border">
-                        <TableHead className="text-foreground text-base">Stage</TableHead>
-                        <TableHead className="text-foreground text-base text-right">Cost</TableHead>
+                      <TableRow className="border-b-2 border-border bg-foreground/10">
+                        <TableHead className="text-foreground text-base font-black italic" style={{ fontFamily: "'Roboto', sans-serif" }}>Stage</TableHead>
+                        <TableHead className="text-foreground text-base text-right font-black italic" style={{ fontFamily: "'Roboto', sans-serif" }}>Cost</TableHead>
                       </TableRow>
                     </TableHeader>
                     <TableBody>
