@@ -99,7 +99,7 @@ const About = () => {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">How many jumps do I need to get my license?</h3>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">How many jumps do I need to get my licence?</h3>
                   <p className="text-foreground">
                     The minimum number of jumps for the AFF course is 18.
                     These contain 8 AFF "levels" where you jump with one or two instructors, followed by 10 "consolidation jumps" where you jump fully solo under supervision.
@@ -108,7 +108,7 @@ const About = () => {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">How long does it take to get my license?</h3>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">How long does it take to get my licence?</h3>
                   <p className="text-foreground">
                     This depends on your motivation and availability.
                     Usually, people will complete the AFF in 2-3 months.
@@ -119,7 +119,7 @@ const About = () => {
                   <h3 className="text-xl font-semibold text-foreground mb-2">Can I get videos for my instagram?</h3>
                   <p className="text-foreground">
                     Your instructor will film your whole training course with their camera and send the videos to you!
-                    (You won't be able to bring your own camera until you have 200 jumps and a C license)
+                    (You won't be able to bring your own camera until you have 200 jumps and a C licence)
                   </p>
                 </div>
                 <div>
@@ -156,7 +156,7 @@ const About = () => {
                     Once you do your first jump, it is recommended that you do the next level at most one month afterwards.
                     If you take a break that's longer than one month but less than 3 months, you will have to do some revision before your next jump (which isn't that big of a deal).
                     However, if your break is 3 months or longer, you may have to attend a refresher ground school, which is more difficult to do.
-                    Of course, if you don't end up liking skydiving (which has never happened to our knowledge!) you can always quit with the amazing knowledge that you have jumped out of an airplane totally on your own!
+                    Of course, if you don't end up liking skydiving (which has never happened to our knowledge!) you can always quit with the amazing knowledge that you have jumped out of an aeroplane totally on your own!
                   </p>
                 </div>
               </div>
@@ -169,14 +169,14 @@ const About = () => {
               <h2 className="text-3xl font-bold text-foreground mb-6">How do I learn to skydive?</h2>
               <div className="prose prose-lg max-w-none text-foreground">
                 <p className="mb-4">
-                  At the Oxford Skydiving Club, we use the Accelerated Freefall (AFF) course program to teach you to skydive safely and efficiently.
+                  At the Oxford Skydiving Club, we use the Accelerated Freefall (AFF) course programme to teach you to skydive safely and efficiently.
                 </p>
                 <h3 className="text-xl font-semibold mt-6 mb-3">1. Ground School</h3>
                 <p className="mb-4">
                   When you sign up for a Friday intro day, you will get to go to the dropzone (the airport where we skydive) for a full-day theory course and get introduced to how skydiving works from the ground up.
                   You will cover how to jump out of the plane, how to control your body in freefall, and how to deploy and fly the parachute yourself.
                   Then, you will go through all of the emergency drills to get you prepared for anything that could ever go wrong while skydiving.
-                  You will also practice all of these skills on the ground with a dummy parachute and airplane.
+                  You will also practise all of these skills on the ground with a dummy parachute and aeroplane.
                   After the ground school, you will be fully ready for your first jump!
                 </p>
                 <p className="mb-4">
@@ -201,14 +201,14 @@ const About = () => {
                 </p>
                 <h3 className="text-xl font-semibold mt-6 mb-3">4. AFF Levels 4 and 5</h3>
                 <p className="mb-4">
-                  You will now be accompanied by only one instructor, who will let go of you after exiting the airplane and let you do drills under their supervision.
+                  You will now be accompanied by only one instructor, who will let go of you after exiting the aeroplane and let you do drills under their supervision.
                   You will learn to turn left and right in a stable way.
                   From these levels onward, you are "freed" from the radio and can fly the canopy on your own.
                 </p>
                 <h3 className="text-xl font-semibold mt-6 mb-3">5. AFF Levels 6 and 7</h3>
                 <p className="mb-4">
                   Now, you're already pretty skilled, and will get to have some fun in the air!
-                  You will get to exit the airplane on your own, and learn to do backflips, tracks, and dive exits.
+                  You will get to exit the aeroplane on your own, and learn to do backflips, tracks, and dive exits.
                 </p>
                 <h3 className="text-xl font-semibold mt-6 mb-3">6. AFF Level 8</h3>
                 <p className="mb-4">
@@ -217,12 +217,12 @@ const About = () => {
                 <h3 className="text-xl font-semibold mt-6 mb-3">7. Consolidation jumps</h3>
                 <p className="mb-4">
                   That's the end of your training!
-                  Now, you only have to do 10 jumps on your own in order to get your license.
+                  Now, you only have to do 10 jumps on your own in order to get your licence.
                   You will still need to do your pre-jump checks with an instructor, but now you can choose what to do on your own and go experience the real freedom of the air.
                 </p>
-                <h3 className="text-xl font-semibold mt-6 mb-3">A license</h3>
+                <h3 className="text-xl font-semibold mt-6 mb-3">A-licence</h3>
                 <p className="mb-4">
-                  Congrats, now you've got your license!
+                  Congrats, now you've got your licence!
                   The fun doesn't end here, though: now you can go onto advanced courses and learn to do Formation Skydiving (jumping with friends), Freeflying (doing acrobatics in the air), advanced canopy training, learn to be a jumpmaster, and many other things.
                 </p>
               </div>
@@ -281,7 +281,7 @@ const About = () => {
                   <li>Training: before you are allowed to jump, you will need to pass all the relevant theoretical and practical tests as well as malfunction drills during your ground school</li>
                   <li>Gear and packing: all of the gear is thoroughly inspected by professional riggers and packed by professional packers. The gear is high-quality and designed with student jumpers in mind</li>
                   <li>Instructors: your instructors have to have hundreds (if not thousands) of jumps and are both able to open your parachute and save you if anything goes wrong</li>
-                  <li>Safety checks: before your jump, your gear will be thorougly checked three times - once before you put it on, again when you have equipped it, and one final time in the airplane before your jump</li>
+                  <li>Safety checks: before your jump, your gear will be thoroughly checked three times - once before you put it on, again when you have equipped it, and one final time in the aeroplane before your jump</li>
                 </ul>
               </div>
             </div>
@@ -294,7 +294,7 @@ const About = () => {
               <div className="prose prose-lg max-w-none text-foreground">
                 <p className="mb-4">
                   Unfortunately, yes.
-                  Skydiving is actually relatively affordable once you have a license, but getting your license in the first place is quite expensive. 
+                  Skydiving is actually relatively affordable once you have a licence, but getting your licence in the first place is quite expensive. 
                   Here are the approximate prices for skydiving:
                 </p>
                 <h3 className="text-xl font-semibold mt-6 mb-3">Licensed Skydiver Costs</h3>
@@ -352,20 +352,20 @@ const About = () => {
                         <TableCell className="text-foreground text-base text-right">£60 each</TableCell>
                       </TableRow>
                       <TableRow className="border-t-2 border-foreground/30 bg-foreground/10">
-                        <TableCell className="text-foreground text-base font-black italic" style={{ fontFamily: "'Roboto', sans-serif" }}>Total cost to get your A license</TableCell>
+                        <TableCell className="text-foreground text-base font-black italic" style={{ fontFamily: "'Roboto', sans-serif" }}>Total cost to get your A-licence</TableCell>
                         <TableCell className="text-foreground text-base text-right font-black italic" style={{ fontFamily: "'Roboto', sans-serif" }}>~£2100</TableCell>
                       </TableRow>
                     </TableBody>
                   </Table>
                 </div>
                 <p className="mb-4">
-                  To get an A-license with no prior experience, you must complete all 8 AFF levels and 10 solo consolidation jumps.
+                  To get an A-licence with no prior experience, you must complete all 8 AFF levels and 10 solo consolidation jumps.
                   You do not pay them all at once, but each jump is charged separately on the day.
                   After this, you will be a licensed skydiver and will be able to jump on your own with the "Licensed Skydiver" pricing.
                 </p>
                 <h3 className="text-xl font-semibold mt-6 mb-3">Own gear</h3>
                 <p className="mb-4">
-                  After you get your license, you may also consider getting your own gear.
+                  After you get your licence, you may also consider getting your own gear.
                   Basic gear like altimeters and helmets will cost you around £100-£400 each.
                   A full parachuting rig will set you back around £2000-£8000 depending on the make and model.
                   However, the Oxford Skydiving Club is planning on getting rigs that university students will be able to use for free!
