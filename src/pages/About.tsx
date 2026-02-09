@@ -126,7 +126,11 @@ const About = () => {
                   <h3 className="text-xl font-semibold text-foreground mb-2">Are there any health and weight requirements?</h3>
                   <p className="text-foreground">
                     The maximum weight for all courses is 95 kilograms (15 stone).
-                    Otherwise, being generally healthy should be enough!
+                    Before jumping, you will also have to sign a medical declaration form, which you can find on <a
+                      href="https://rmafeajj.elementor.cloud/wp-content/uploads/2022/11/Form-115C-Solo-Student-Skydiver-Self-Declaration-issue-6.pdf"
+                      className="text-primary-foreground hover:text-primary-foreground/80 underline underline-offset-4 transition-colors font-medium"
+                    >British Skydiving Form 115C</a>.
+                    Make sure that you are fit to skydive before signing up!
                   </p>
                 </div>
                 <div>
