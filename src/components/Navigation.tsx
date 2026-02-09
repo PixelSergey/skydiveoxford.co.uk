@@ -36,7 +36,8 @@ const Navigation = () => {
           {/* Logo */}
           <Link 
             to="/" 
-            className="text-lg sm:text-xl font-semibold text-primary-foreground truncate hover:text-foreground transition-colors duration-200"
+            className="text-lg sm:text-xl font-black italic text-primary-foreground truncate hover:text-foreground transition-colors duration-200"
+            style={{ fontFamily: "'Roboto', sans-serif" }}
           >
             Oxford Skydiving Club
           </Link>
