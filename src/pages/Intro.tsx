@@ -114,7 +114,7 @@ const Intro = () => {
                     An intro day is a 2-part course which culminates in your first solo jump! The first part is a
                     full-day ground school on a Friday, where you will learn everything you need and complete all the
                     practical drills. The second part, held on a separate day, will be your first skydive out of an
-                    airplane with 2 instructors by your side.
+                    aeroplane with 2 instructors by your side.
                   </p>
                   <p className="text-foreground">
                     For more information on training, see the{" "}
@@ -157,7 +157,7 @@ const Intro = () => {
                 <div>
                   <h3 className="text-xl font-semibold text-foreground mb-2">What should I bring?</h3>
                   <p className="text-foreground">
-                    Sporty clothes and good shoes (any sneakers will do, but shoes with ankle support are ideal) are
+                    Sporty clothes and good shoes (any trainers will do, but shoes with ankle support are ideal) are
                     required. All of the gear is provided by the dropzone. You can also bring some food and water, but
                     there is a cafe at the dropzone if you want to get lunch there.
                   </p>
