@@ -119,7 +119,7 @@ const About = () => {
                   <h3 className="text-xl font-semibold text-foreground mb-2">Can I get videos for my instagram?</h3>
                   <p className="text-foreground">
                     Your instructor will film your whole training course with their camera and send the videos to you!
-                    (You won't be able to bring your own camera until you have 200 jumps and a C licence)
+                    (You won't be able to bring your own camera until you have 200 jumps and a C-licence)
                   </p>
                 </div>
                 <div>
