@@ -235,7 +235,7 @@ const About = () => {
               <h2 className="text-3xl font-bold text-foreground mb-6">Is skydiving safe?</h2>
               <div className="prose prose-lg max-w-none text-foreground">
                 <p className="mb-4">
-                  Modern skydiving is super duper safe! Here's some facts about how we got here:
+                  Modern skydiving is super duper safe! Here are some safety facts that you might find interesting:
                 </p>
                 <h3 className="text-xl font-semibold mt-6 mb-3">Safety Statistics</h3>
                 <p className="mb-4">
@@ -261,15 +261,17 @@ const About = () => {
                 <p className="mb-4">
                   During your training, your parachutes will be packed by professional packers, making any malfunctions very unlikely.
                 </p>
-                <h3 className="text-xl font-semibold mt-6 mb-3">What if my reserve doesn't open?</h3>
+                <h3 className="text-xl font-semibold mt-6 mb-3">How reliable is the reserve parachute?</h3>
                 <p className="mb-4">
-                  This is almost impossible: reserve parachutes are packed in a special way by a professional parachute rigger that ensures their opening.
+                  Reserves are extremely reliable, and they will always save you if you have a main parachute malfunction.
+                  Reserve parachutes are packed in a special way by professional parachute riggers that ensures their opening correctly every time.
                   When you deploy your reserve, a large spring pushes the parachute out into the airflow, making it open way quicker and more reliably than your main.
                   There have been no double malfunctions for solo parachutists in the UK for the last 20 years.
                 </p>
                 <h3 className="text-xl font-semibold mt-6 mb-3">What if I faint?</h3>
                 <p className="mb-4">
-                  If you faint or are otherwise unable to open your parachute, there is a final safety feature: the Automatic Activation Device (AAD).
+                  Your instructors will open your parachute for you.
+                  Also, even if everything goes wrong, there is a final safety feature: the Automatic Activation Device (AAD).
                   This is a small explosive placed in your rig that will physically open your reserve parachute if you do not do it yourself in time.
                   The CYPRES AAD devices we use have never failed since they were invented in 1991.
                 </p>
