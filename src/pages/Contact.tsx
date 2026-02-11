@@ -8,7 +8,7 @@ import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import skyBackground from "@/assets/sky-background.jpg";
 
-const STORAGE_BASE_URL = `${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/media/committee`;
+const STORAGE_BASE_URL = `${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/committee-photos`;
 
 const Contact = () => {
   const { data: committeeMembers = [], isLoading } = useQuery({
