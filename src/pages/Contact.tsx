@@ -48,9 +48,9 @@ const committeeMembers = [
     initials: "BS",
   },
   {
-    role: "Committee Member",
+    role: "Welfare Officer",
     name: "Mia Yu",
-    email: "committee@skydiveoxford.co.uk",
+    email: "welfare@skydiveoxford.co.uk",
     image: miaImage,
     initials: "MY",
   },
