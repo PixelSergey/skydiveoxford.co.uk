@@ -14,6 +14,42 @@ export type Database = {
   }
   public: {
     Tables: {
+      committee_members: {
+        Row: {
+          created_at: string
+          details: string | null
+          display_order: number
+          email: string
+          id: string
+          initials: string
+          name: string
+          photo_filename: string | null
+          role: string
+        }
+        Insert: {
+          created_at?: string
+          details?: string | null
+          display_order?: number
+          email: string
+          id?: string
+          initials: string
+          name: string
+          photo_filename?: string | null
+          role: string
+        }
+        Update: {
+          created_at?: string
+          details?: string | null
+          display_order?: number
+          email?: string
+          id?: string
+          initials?: string
+          name?: string
+          photo_filename?: string | null
+          role?: string
+        }
+        Relationships: []
+      }
       gallery_items: {
         Row: {
           caption: string
