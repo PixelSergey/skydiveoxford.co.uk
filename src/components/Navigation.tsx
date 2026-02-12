@@ -1,26 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X, Instagram } from "lucide-react";
 import { useState } from "react";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const navigate = useNavigate();
-  const location = useLocation();
-
-  const handleGalleryClick = () => {
-    setIsOpen(false);
-    if (location.pathname === "/") {
-      // Already on homepage, just scroll
-      document.getElementById("gallery")?.scrollIntoView({ behavior: "smooth" });
-    } else {
-      // Navigate to homepage then scroll
-      navigate("/");
-      setTimeout(() => {
-        document.getElementById("gallery")?.scrollIntoView({ behavior: "smooth" });
-      }, 100);
-    }
-  };
 
   const navItems = [
     { name: "Intro days", href: "/intro" },
@@ -52,12 +36,12 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
-            <button
-              onClick={handleGalleryClick}
+            <Link
+              to="/#gallery"
               className="text-muted-foreground hover:text-primary-foreground transition-colors duration-200 font-medium"
             >
               Gallery
-            </button>
+            </Link>
             <a 
               href="https://instagram.com/skydiveoxford" 
               target="_blank" 
@@ -93,12 +77,13 @@ const Navigation = () => {
                   {item.name}
                 </Link>
               ))}
-              <button
-                onClick={handleGalleryClick}
-                className="text-muted-foreground hover:text-primary-foreground transition-colors duration-200 font-medium py-2 text-left"
+              <Link
+                to="/#gallery"
+                className="text-muted-foreground hover:text-primary-foreground transition-colors duration-200 font-medium py-2"
+                onClick={() => setIsOpen(false)}
               >
                 Gallery
-              </button>
+              </Link>
               <a 
                 href="https://instagram.com/skydiveoxford" 
                 target="_blank" 

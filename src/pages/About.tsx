@@ -40,43 +40,43 @@ const About = () => {
             <nav>
               <ul className="list-disc list-inside space-y-2 ml-4">
                 <li>
-                  <button 
-                    onClick={() => document.getElementById('faqs')?.scrollIntoView({ behavior: 'smooth' })}
+                  <a 
+                    href="#faqs"
                     className="text-foreground hover:text-foreground/80 transition-colors underline"
                   >
                     FAQs
-                  </button>
+                  </a>
                 </li>
                 <li>
-                  <button 
-                    onClick={() => document.getElementById('learn-to-skydive')?.scrollIntoView({ behavior: 'smooth' })}
+                  <a 
+                    href="#learn-to-skydive"
                     className="text-foreground hover:text-foreground/80 transition-colors underline"
                   >
                     How do I learn to skydive?
-                  </button>
+                  </a>
                 </li>
                 <li>
-                  <button 
-                    onClick={() => document.getElementById('is-skydiving-safe')?.scrollIntoView({ behavior: 'smooth' })}
+                  <a 
+                    href="#is-skydiving-safe"
                     className="text-foreground hover:text-foreground/80 transition-colors underline"
                   >
                     Is skydiving safe?
-                  </button>
+                  </a>
                 </li>
                 <li>
-                  <button 
-                    onClick={() => document.getElementById('is-skydiving-expensive')?.scrollIntoView({ behavior: 'smooth' })}
+                  <a 
+                    href="#is-skydiving-expensive"
                     className="text-foreground hover:text-foreground/80 transition-colors underline"
                   >
                     Is skydiving expensive?
-                  </button>
+                  </a>
                 </li>
               </ul>
             </nav>
           </div>
 
           {/* FAQs */}
-          <section id="faqs" className="mb-16">
+          <section id="faqs" className="mb-16 scroll-mt-20">
             <div className="bg-card/80 backdrop-blur-sm rounded-lg p-8 border border-border/50">
               <h2 className="text-3xl font-bold text-foreground mb-6">FAQs</h2>
               <div className="space-y-6">
@@ -168,7 +168,7 @@ const About = () => {
           </section>
 
           {/* How do I learn to skydive? */}
-          <section id="learn-to-skydive" className="mb-16">
+          <section id="learn-to-skydive" className="mb-16 scroll-mt-20">
             <div className="bg-card/80 backdrop-blur-sm rounded-lg p-8 border border-border/50">
               <h2 className="text-3xl font-bold text-foreground mb-6">How do I learn to skydive?</h2>
               <div className="prose prose-lg max-w-none text-foreground">
@@ -234,7 +234,7 @@ const About = () => {
           </section>
 
           {/* Is skydiving safe? */}
-          <section id="is-skydiving-safe" className="mb-16">
+          <section id="is-skydiving-safe" className="mb-16 scroll-mt-20">
             <div className="bg-card/80 backdrop-blur-sm rounded-lg p-8 border border-border/50">
               <h2 className="text-3xl font-bold text-foreground mb-6">Is skydiving safe?</h2>
               <div className="prose prose-lg max-w-none text-foreground">
@@ -292,7 +292,7 @@ const About = () => {
           </section>
 
           {/* Is skydiving expensive? */}
-          <section id="is-skydiving-expensive" className="mb-16">
+          <section id="is-skydiving-expensive" className="mb-16 scroll-mt-20">
             <div className="bg-card/80 backdrop-blur-sm rounded-lg p-8 border border-border/50">
               <h2 className="text-3xl font-bold text-foreground mb-6">Is skydiving expensive?</h2>
               <div className="prose prose-lg max-w-none text-foreground">
