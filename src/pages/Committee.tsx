@@ -80,7 +80,7 @@ const Committee = () => {
                         </p>
                         <a 
                           href={`mailto:${member.email}`}
-                          className="text-primary hover:text-primary/80 hover:underline break-all text-sm"
+                          className="text-foreground hover:text-primary hover:underline break-all text-sm font-medium"
                         >
                           {member.email}
                         </a>
