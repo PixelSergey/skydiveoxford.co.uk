@@ -110,6 +110,30 @@ export type Database = {
         }
         Relationships: []
       }
+      public_documents: {
+        Row: {
+          created_at: string
+          display_order: number
+          filename: string
+          id: string
+          label: string
+        }
+        Insert: {
+          created_at?: string
+          display_order?: number
+          filename: string
+          id?: string
+          label: string
+        }
+        Update: {
+          created_at?: string
+          display_order?: number
+          filename?: string
+          id?: string
+          label?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

@@ -3,15 +3,16 @@ import CloudBackground from "@/components/CloudBackground";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Instagram, Mail, Users } from "lucide-react";
+import { FileDown } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import skyBackground from "@/assets/sky-background.jpg";
 
 const STORAGE_BASE_URL = `${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/committee-photos`;
+const DOCS_BASE_URL = `${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/admin-documents`;
 
-const Contact = () => {
-  const { data: committeeMembers = [], isLoading } = useQuery({
+const Committee = () => {
+  const { data: committeeMembers = [], isLoading: membersLoading } = useQuery({
     queryKey: ["committee-members"],
     queryFn: async () => {
       const { data, error } = await supabase
@@ -23,90 +24,40 @@ const Contact = () => {
     },
   });
 
+  const { data: documents = [], isLoading: docsLoading } = useQuery({
+    queryKey: ["public-documents"],
+    queryFn: async () => {
+      const { data, error } = await supabase
+        .from("public_documents")
+        .select("*")
+        .order("display_order", { ascending: true });
+      if (error) throw error;
+      return data;
+    },
+  });
+
   return (
     <div className="min-h-screen relative overflow-hidden">
       <Navigation />
       
-      {/* Background image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ 
-          backgroundImage: `url(${skyBackground})`,
-        }}
+        style={{ backgroundImage: `url(${skyBackground})` }}
       />
-      
-      {/* Overlay for better text readability */}
       <div className="absolute inset-0 bg-background/20" />
-      
-      {/* Animated cloud elements */}
       <CloudBackground />
       
       <main className="relative z-10 pt-24 px-4 sm:px-6 max-w-4xl mx-auto">
         <div className="py-16">
           <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-12 text-center">
-            Contact
+            Committee
           </h1>
           
-          {/* Oxford Skydiving Club Section */}
+          {/* Committee Section */}
           <Card className="mb-8 bg-background/90 backdrop-blur-sm">
             <CardContent className="p-8">
-              <h2 className="text-2xl font-bold text-foreground mb-6 text-center">🪂 Oxford Skydiving Club</h2>
-              <div className="space-y-4">
-                <p className="text-foreground text-center">
-                  For general questions and contacts, email{" "}
-                  <Button
-                    asChild
-                    variant="outline"
-                    size="sm"
-                    className="inline-flex items-center space-x-2"
-                  >
-                    <a href="mailto:info@skydiveoxford.co.uk">
-                      <Mail className="h-4 w-4" />
-                      <span>info@skydiveoxford.co.uk</span>
-                    </a>
-                  </Button>
-                </p>
-                <div className="text-foreground text-center">
-                  <span className="mr-2">Follow us on Instagram:</span>
-                  <Button
-                    asChild
-                    variant="outline"
-                    size="sm"
-                    className="inline-flex items-center space-x-2"
-                  >
-                    <a 
-                      href="https://instagram.com/skydiveoxford" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                    >
-                      <Instagram className="h-4 w-4" />
-                      <span>@skydiveoxford</span>
-                    </a>
-                  </Button>
-                </div>
-                <div className="text-foreground text-center">
-                  <span className="mr-2">Join us as a member:</span>
-                  <Button
-                    asChild
-                    variant="outline"
-                    size="sm"
-                    className="inline-flex items-center space-x-2"
-                  >
-                    <a href="/members">
-                      <Users className="h-4 w-4" />
-                      <span>Membership form</span>
-                    </a>
-                  </Button>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* Committee Section */}
-          <Card className="bg-background/90 backdrop-blur-sm">
-            <CardContent className="p-8">
               <h2 className="text-2xl font-bold text-foreground mb-8 text-center">👥 Committee</h2>
-              {isLoading ? (
+              {membersLoading ? (
                 <p className="text-foreground text-center">Loading...</p>
               ) : (
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -129,12 +80,43 @@ const Contact = () => {
                         </p>
                         <a 
                           href={`mailto:${member.email}`}
-                          className="text-blue-700 hover:text-blue-800 hover:underline break-all text-sm"
+                          className="text-primary hover:text-primary/80 hover:underline break-all text-sm"
                         >
                           {member.email}
                         </a>
                       </div>
                     </div>
+                  ))}
+                </div>
+              )}
+            </CardContent>
+          </Card>
+
+          {/* Documents Section */}
+          <Card className="bg-background/90 backdrop-blur-sm">
+            <CardContent className="p-8">
+              <h2 className="text-2xl font-bold text-foreground mb-8 text-center">📄 Documents</h2>
+              {docsLoading ? (
+                <p className="text-foreground text-center">Loading...</p>
+              ) : (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {documents.map((doc) => (
+                    <Button
+                      key={doc.id}
+                      asChild
+                      variant="outline"
+                      className="h-auto py-4 px-6 justify-start gap-3 text-left"
+                    >
+                      <a
+                        href={`${DOCS_BASE_URL}/${doc.filename}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        download
+                      >
+                        <FileDown className="h-5 w-5 flex-shrink-0" />
+                        <span className="whitespace-normal">{doc.label}</span>
+                      </a>
+                    </Button>
                   ))}
                 </div>
               )}
@@ -146,4 +128,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Committee;
