@@ -26,7 +26,7 @@ const Navigation = () => {
     { name: "Intro days", href: "/intro" },
     { name: "About skydiving", href: "/about" },
     { name: "Membership", href: "/members" },
-    { name: "Contact", href: "/contact" },
+    { name: "Committee", href: "/committee" },
   ];
 
   return (
