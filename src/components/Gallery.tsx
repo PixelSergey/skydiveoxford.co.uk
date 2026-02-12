@@ -69,7 +69,7 @@ const Gallery = () => {
   }
 
   return (
-    <div id="gallery" className="relative z-10 px-6 sm:px-8 max-w-6xl mx-auto w-full py-8 sm:py-12 pb-16 sm:pb-24">
+    <div id="gallery" className="relative z-10 px-6 sm:px-8 max-w-6xl mx-auto w-full py-8 sm:py-12 pb-16 sm:pb-24 scroll-mt-20">
       <h2 className="text-xl sm:text-2xl font-semibold text-primary-foreground mb-6 sm:mb-8 text-center">
         Gallery
       </h2>
