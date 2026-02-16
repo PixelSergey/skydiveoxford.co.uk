@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import CloudBackground from "@/components/CloudBackground";
 import skyBackground from "@/assets/sky-background.jpg";
+import { HelpCircle, GraduationCap, ShieldCheck, PoundSterling } from "lucide-react";
 import {
   Table,
   TableBody,
@@ -37,41 +38,35 @@ const About = () => {
           {/* Table of Contents */}
           <div className="bg-card/80 backdrop-blur-sm rounded-lg p-6 mb-12 border border-border/50">
             <h2 className="text-xl font-semibold text-foreground mb-4">On this page...</h2>
-            <nav>
-              <ul className="list-disc list-inside space-y-2 ml-4">
-                <li>
-                  <a 
-                    href="#faqs"
-                    className="text-foreground hover:text-foreground/80 transition-colors underline"
-                  >
-                    FAQs
-                  </a>
-                </li>
-                <li>
-                  <a 
-                    href="#learn-to-skydive"
-                    className="text-foreground hover:text-foreground/80 transition-colors underline"
-                  >
-                    How do I learn to skydive?
-                  </a>
-                </li>
-                <li>
-                  <a 
-                    href="#is-skydiving-safe"
-                    className="text-foreground hover:text-foreground/80 transition-colors underline"
-                  >
-                    Is skydiving safe?
-                  </a>
-                </li>
-                <li>
-                  <a 
-                    href="#is-skydiving-expensive"
-                    className="text-foreground hover:text-foreground/80 transition-colors underline"
-                  >
-                    Is skydiving expensive?
-                  </a>
-                </li>
-              </ul>
+            <nav className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <a
+                href="#faqs"
+                className="inline-flex items-center gap-3 h-auto min-h-[2.75rem] px-4 py-3 rounded-md border border-border/60 bg-background/60 text-foreground hover:bg-accent hover:text-accent-foreground transition-colors text-sm font-medium"
+              >
+                <HelpCircle className="size-5 shrink-0" />
+                <span>FAQs</span>
+              </a>
+              <a
+                href="#learn-to-skydive"
+                className="inline-flex items-center gap-3 h-auto min-h-[2.75rem] px-4 py-3 rounded-md border border-border/60 bg-background/60 text-foreground hover:bg-accent hover:text-accent-foreground transition-colors text-sm font-medium"
+              >
+                <GraduationCap className="size-5 shrink-0" />
+                <span>How do I learn to skydive?</span>
+              </a>
+              <a
+                href="#is-skydiving-safe"
+                className="inline-flex items-center gap-3 h-auto min-h-[2.75rem] px-4 py-3 rounded-md border border-border/60 bg-background/60 text-foreground hover:bg-accent hover:text-accent-foreground transition-colors text-sm font-medium"
+              >
+                <ShieldCheck className="size-5 shrink-0" />
+                <span>Is skydiving safe?</span>
+              </a>
+              <a
+                href="#is-skydiving-expensive"
+                className="inline-flex items-center gap-3 h-auto min-h-[2.75rem] px-4 py-3 rounded-md border border-border/60 bg-background/60 text-foreground hover:bg-accent hover:text-accent-foreground transition-colors text-sm font-medium"
+              >
+                <PoundSterling className="size-5 shrink-0" />
+                <span>Is skydiving expensive?</span>
+              </a>
             </nav>
           </div>
 
