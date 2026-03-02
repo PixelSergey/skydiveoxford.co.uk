@@ -31,7 +31,7 @@ const About = () => {
       
       <main className="relative z-10 pt-24 px-4 sm:px-6 max-w-4xl mx-auto">
         <div className="py-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-8 text-center">
+          <h1 className="text-5xl md:text-6xl font-bold text-primary-foreground mb-8 text-center">
             About Skydiving
           </h1>
           
