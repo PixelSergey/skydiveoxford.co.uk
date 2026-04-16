@@ -332,7 +332,7 @@ const About = () => {
                     <TableBody>
                       <TableRow className="border-b-2 border-border/50">
                         <TableCell className="text-foreground text-base">AFF Level 1 (ground school + first jump)</TableCell>
-                        <TableCell className="text-foreground text-base text-right">£400</TableCell>
+                        <TableCell className="text-foreground text-base text-right">£430</TableCell>
                       </TableRow>
                       <TableRow className="border-b-2 border-border/50">
                         <TableCell className="text-foreground text-base">AFF levels 2 and 3</TableCell>
