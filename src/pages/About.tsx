@@ -352,7 +352,7 @@ const About = () => {
                       </TableRow>
                       <TableRow className="border-t-2 border-foreground/30 bg-foreground/10">
                         <TableCell className="text-foreground text-base font-black italic" style={{ fontFamily: "'Roboto', sans-serif" }}>Total cost to get your A-licence</TableCell>
-                        <TableCell className="text-foreground text-base text-right font-black italic" style={{ fontFamily: "'Roboto', sans-serif" }}>~£2100</TableCell>
+                        <TableCell className="text-foreground text-base text-right font-black italic" style={{ fontFamily: "'Roboto', sans-serif" }}>~£2130</TableCell>
                       </TableRow>
                     </TableBody>
                   </Table>
