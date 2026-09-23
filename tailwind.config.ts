@@ -108,56 +108,6 @@ export default {
           "40%, 43%": { transform: "translateY(-8px)" },
           "70%": { transform: "translateY(-4px)" },
         },
-        "skydive-left": {
-          "0%": { 
-            transform: "translateY(var(--start-y, -50px)) translateX(var(--start-x, 0px)) rotate(0deg)",
-            opacity: "1"
-          },
-          "100%": { 
-            transform: "translateY(100vh) translateX(-60px) rotate(-15deg)",
-            opacity: "0.3"
-          },
-        },
-        "skydive-right": {
-          "0%": { 
-            transform: "translateY(var(--start-y, -50px)) translateX(var(--start-x, 0px)) rotate(0deg)",
-            opacity: "1"
-          },
-          "100%": { 
-            transform: "translateY(100vh) translateX(60px) rotate(15deg)",
-            opacity: "0.3"
-          },
-        },
-        "skydive-center": {
-          "0%": { 
-            transform: "translateY(var(--start-y, -50px)) translateX(var(--start-x, 0px)) rotate(0deg)",
-            opacity: "1"
-          },
-          "100%": { 
-            transform: "translateY(100vh) translateX(0px) rotate(0deg)",
-            opacity: "0.3"
-          },
-        },
-        "airplane-cross": {
-          "0%": { 
-            transform: "translateX(-120px) translateY(0px)",
-            opacity: "1"
-          },
-          "100%": { 
-            transform: "translateX(calc(100vw + 120px)) translateY(0px)",
-            opacity: "1"
-          },
-        },
-        "airplane-cross-reverse": {
-          "0%": { 
-            transform: "translateX(calc(100vw + 120px)) translateY(0px) scaleX(-1)",
-            opacity: "1"
-          },
-          "100%": { 
-            transform: "translateX(-120px) translateY(0px) scaleX(-1)",
-            opacity: "1"
-          },
-        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -166,11 +116,6 @@ export default {
         "float-delayed": "float-delayed calc(var(--float-duration) * 1.2) var(--gentle-bounce) infinite 2s",
         "fade-in-up": "fade-in-up 0.6s ease-out",
         "gentle-bounce": "gentle-bounce 2s ease-in-out infinite",
-        "skydive-left": "skydive-left var(--duration, var(--skydive-duration)) linear",
-        "skydive-right": "skydive-right var(--duration, var(--skydive-duration)) linear",
-        "skydive-center": "skydive-center var(--duration, var(--skydive-duration)) linear",
-        "airplane-cross": "airplane-cross var(--airplane-duration) linear",
-        "airplane-cross-reverse": "airplane-cross-reverse var(--airplane-duration) linear",
       },
     },
   },
