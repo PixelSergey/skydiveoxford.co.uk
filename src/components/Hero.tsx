@@ -29,7 +29,7 @@ const Hero = () => {
       <CloudBackground />
 
       {/* Main Content - Full Screen */}
-      <div className="relative z-10 text-center px-6 sm:px-8 max-w-4xl mx-auto w-full min-h-[60vh] flex flex-col justify-center pt-16 sm:pt-20">
+      <div className="relative z-10 text-center px-6 sm:px-8 max-w-4xl mx-auto w-full min-h-[60vh] flex flex-col justify-center pt-28 sm:pt-20">
         <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold italic text-primary-foreground mb-4 sm:mb-6 animate-fade-in-up leading-tight">
           Oxford Skydiving Club
         </h1>
