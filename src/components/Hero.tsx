@@ -100,7 +100,7 @@ const Hero = () => {
       {/* Full-width featured photo with gradient fade top & bottom */}
       <div className="relative z-10 w-full mt-6 sm:mt-10">
         <img
-          src={skydiveHeroPhoto.url}
+          src={skydiveHeroPhoto}
           alt="Skydiver in freefall above the Oxfordshire countryside"
           className="w-full object-cover"
           style={{
