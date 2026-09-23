@@ -7,6 +7,7 @@ import whatsappLogo from "@/assets/whatsapp-logo.svg";
 import instagramLogo from "@/assets/instagram-logo.svg";
 import jediLogo from "@/assets/jedi-logo.png";
 import aon2Logo from "@/assets/aon2-2.png";
+import skydiveHeroPhoto from "@/assets/skydive-hero-photo.png.asset.json";
 
 const Hero = () => {
   const navigate = useNavigate();
