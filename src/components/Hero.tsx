@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import CloudBackground from "./CloudBackground";
-import SkydiverAnimation from "./SkydiverAnimation";
 import Gallery from "./Gallery";
 import skyBackground from "@/assets/sky-background.jpg";
 import whatsappLogo from "@/assets/whatsapp-logo.svg";
@@ -26,10 +25,6 @@ const Hero = () => {
       <div className="absolute inset-0 bg-background/10" />
 
       {/* Animated cloud elements */}
-      <CloudBackground />
-
-      {/* Animated skydivers */}
-      <SkydiverAnimation />
 
       {/* Main Content - Full Screen */}
       <div className="relative z-10 text-center px-6 sm:px-8 max-w-4xl mx-auto w-full min-h-[60vh] flex flex-col justify-center pt-16 sm:pt-20">
