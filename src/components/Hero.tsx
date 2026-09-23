@@ -7,6 +7,7 @@ import whatsappLogo from "@/assets/whatsapp-logo.svg";
 import instagramLogo from "@/assets/instagram-logo.svg";
 import jediLogo from "@/assets/jedi-logo.png";
 import aon2Logo from "@/assets/aon2-2.png";
+import skydiveHeroPhoto from "@/assets/skydive-hero-photo.jpg";
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -96,8 +97,26 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Sponsors Section - Below Fold */}
-      <div id="sponsors" className="relative z-10 mt-1 sm:mt-2 px-6 sm:px-8 max-w-5xl mx-auto w-full py-3 sm:py-4 scroll-mt-20">
+      {/* Full-width featured photo with gradient fade top & bottom */}
+      <div className="relative z-10 w-full mt-6 sm:mt-10">
+        <img
+          src={skydiveHeroPhoto}
+          alt="Skydiver in freefall above the Oxfordshire countryside"
+          className="w-full object-cover"
+          style={{
+            maskImage:
+              "linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%)",
+            WebkitMaskImage:
+              "linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%)",
+          }}
+        />
+      </div>
+
+      {/* Gallery Section */}
+      <Gallery />
+
+      {/* Sponsors Section - Bottom of Page */}
+      <div id="sponsors" className="relative z-10 px-6 sm:px-8 max-w-5xl mx-auto w-full py-6 sm:py-8 scroll-mt-20">
         <h2 className="text-xl sm:text-2xl font-semibold text-primary-foreground mb-2 sm:mb-3 text-center">
           In collaboration with
         </h2>
@@ -134,9 +153,6 @@ const Hero = () => {
           </a>
         </div>
       </div>
-
-      {/* Gallery Section */}
-      <Gallery />
     </section>
   );
 };
