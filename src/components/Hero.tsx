@@ -25,6 +25,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-background/10" />
 
       {/* Animated cloud elements */}
+      <CloudBackground />
 
       {/* Main Content - Full Screen */}
       <div className="relative z-10 text-center px-6 sm:px-8 max-w-4xl mx-auto w-full min-h-[60vh] flex flex-col justify-center pt-16 sm:pt-20">
