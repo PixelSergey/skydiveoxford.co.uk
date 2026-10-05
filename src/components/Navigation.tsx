@@ -9,7 +9,6 @@ const Navigation = () => {
   const navItems = [
     { name: "Intro days", href: "/intro" },
     { name: "About skydiving", href: "/about" },
-    { name: "Membership", href: "/members" },
     { name: "Committee", href: "/committee" },
   ];
 
