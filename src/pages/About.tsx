@@ -172,18 +172,18 @@ const About = () => {
                 </p>
                 <h3 className="text-xl font-semibold mt-6 mb-3">1. Ground School</h3>
                 <p className="mb-4">
-                  When you sign up for a Friday intro day, you will get to go to the dropzone (the airport where we skydive) for a full-day theory course and get introduced to how skydiving works from the ground up.
+                  When you sign up for an intro day, you will get to go to the dropzone (the airport where we skydive) for a full-day theory course and get introduced to how skydiving works from the ground up.
                   You will cover how to jump out of the plane, how to control your body in freefall, and how to deploy and fly the parachute yourself.
                   Then, you will go through all of the emergency drills to get you prepared for anything that could ever go wrong while skydiving.
                   You will also practise all of these skills on the ground with a dummy parachute and aeroplane.
                   After the ground school, you will be fully ready for your first jump!
                 </p>
                 <p className="mb-4">
-                  <i>Note: the ground school is always on a Friday and is a full-day commitment.</i>
+                  <i>Note: the ground school is always on a weekday and is a full-day commitment.</i>
                 </p>
                 <h3 className="text-xl font-semibold mt-6 mb-3">2. AFF Level 1</h3>
                 <p className="mb-4">
-                  Either on the weekend following your ground school or on the week afterwards, you will get do your first solo jump.
+                  On any of the days following your ground school, usually the weekend, you will get do your first solo jump.
                   Get ready, 'cause this is going to be the most exciting day of your life!
                 </p>
                 <p className="mb-4">
@@ -202,12 +202,12 @@ const About = () => {
                 <p className="mb-4">
                   You will now be accompanied by only one instructor, who will let go of you after exiting the aeroplane and let you do drills under their supervision.
                   You will learn to turn left and right in a stable way.
-                  From these levels onward, you are "freed" from the radio and can fly the canopy on your own.
                 </p>
                 <h3 className="text-xl font-semibold mt-6 mb-3">5. AFF Levels 6 and 7</h3>
                 <p className="mb-4">
                   Now, you're already pretty skilled, and will get to have some fun in the air!
                   You will get to exit the aeroplane on your own, and learn to do backflips, tracks, and dive exits.
+                  After passing this level, you will be able to fly the parachute on your own without radio assistance from the instructors.
                 </p>
                 <h3 className="text-xl font-semibold mt-6 mb-3">6. AFF Level 8</h3>
                 <p className="mb-4">
@@ -253,8 +253,8 @@ const About = () => {
                 <h3 className="text-xl font-semibold mt-6 mb-3">What if my parachute doesn't open?</h3>
                 <p className="mb-4">
                   When skydiving, you always have two parachutes: the main and the reserve.
-                  Most routine opening problems (line twists, closed end cells, slider remaining up) can be dealt with easily by yourself, and you will learn to do so in ground school.
-                  However, if you have a full parachute malfunction, you will always be able to cut away your main canopy and deploy your reserve canopy using two emergency handles on the front of your parachute.
+                  Most small issues (like line twists) can be dealt with easily by yourself, and you will learn to do so in ground school.
+                  However, in a real emergency, you can also deploy your reserve parachute.
                   You will also train to do this and other emergency drills very thoroughly during your ground school.
                 </p>
                 <p className="mb-4">
@@ -264,8 +264,7 @@ const About = () => {
                 <p className="mb-4">
                   Reserves are extremely reliable, and they will always save you if you have a main parachute malfunction.
                   Reserve parachutes are packed in a special way by professional parachute riggers that ensures their opening correctly every time.
-                  When you deploy your reserve, a large spring pushes the parachute out into the airflow, making it open way quicker and more reliably than your main.
-                  There have been no double malfunctions for solo parachutists in the UK for the last 20 years.
+                  They're designed as a one-time-use system and use a different system that ensures their reliability in an emergency.
                 </p>
                 <h3 className="text-xl font-semibold mt-6 mb-3">What if I faint?</h3>
                 <p className="mb-4">
