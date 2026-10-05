@@ -29,85 +29,70 @@ const Hero = () => {
       <CloudBackground />
 
       {/* Main Content */}
-      <div className="relative z-10 text-center px-6 sm:px-8 max-w-4xl mx-auto w-full flex flex-col justify-center pt-28 sm:pt-24">
-        <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold italic text-primary-foreground mb-4 sm:mb-6 animate-fade-in-up leading-tight">
+      <div className="relative z-10 text-center px-6 sm:px-8 max-w-3xl mx-auto w-full flex flex-col items-center pt-28 sm:pt-32">
+        <h1 className="text-[2.75rem] sm:text-6xl md:text-7xl font-bold italic tracking-tight text-foreground leading-[1.05] animate-fade-in-up">
           Oxford Skydiving Club
         </h1>
 
-        <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-6 sm:mb-8 animate-fade-in-up max-w-2xl mx-auto font-light px-2">
+        <p className="mt-4 sm:mt-5 text-base sm:text-xl text-foreground/70 max-w-md sm:max-w-xl animate-fade-in-up">
           The most extreme sports society in Oxford
         </p>
 
-        <div className="flex flex-col gap-4 sm:gap-6 justify-center items-center animate-fade-in-up px-2">
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center w-full">
-            <Button
-              size="lg"
-              variant="outline"
-              onClick={() => navigate("/intro")}
-              className="border-2 border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold backdrop-blur-sm transition-all duration-300 hover:scale-105"
-            >
-              Intro days
-            </Button>
+        {/* Primary actions */}
+        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3 w-full max-w-sm sm:max-w-lg animate-fade-in-up">
+          <Button
+            size="lg"
+            onClick={() => navigate("/intro")}
+            className="h-12 rounded-full bg-foreground text-background hover:bg-foreground/90 text-base font-semibold shadow-lg transition-all duration-300 hover:-translate-y-0.5"
+          >
+            Intro days
+          </Button>
+          <Button
+            size="lg"
+            variant="outline"
+            onClick={() => navigate("/members")}
+            className="h-12 rounded-full border-foreground/10 bg-background/80 text-foreground hover:bg-background text-base font-semibold shadow-lg backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5"
+          >
+            Join the club for free
+          </Button>
+        </div>
 
-            <Button
-              size="lg"
-              variant="outline"
-              onClick={() => navigate("/members")}
-              className="border-2 border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold backdrop-blur-sm transition-all duration-300 hover:scale-105"
-            >
-              Join the club for free
-            </Button>
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center w-full">
-            <Button
-              size="lg"
-              variant="outline"
-              asChild
-              className="border-2 border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold backdrop-blur-sm transition-all duration-300 hover:scale-105"
-            >
-              <a
-                href="https://chat.whatsapp.com/GsVGYHq90fK0yeLDmINVEv"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center"
-              >
-                <img src={whatsappLogo} alt="WhatsApp" className="mr-2 h-5 w-5" />
-                Join the WhatsApp group
-              </a>
-            </Button>
-
-            <Button
-              size="lg"
-              variant="outline"
-              asChild
-              className="border-2 border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold backdrop-blur-sm transition-all duration-300 hover:scale-105"
-            >
-              <a
-                href="https://www.instagram.com/oxfordskydiving/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center"
-              >
-                <img src={instagramLogo} alt="Instagram" className="mr-2 h-5 w-5" />
-                Follow us on Instagram
-              </a>
-            </Button>
-          </div>
+        {/* Community links */}
+        <div className="mt-3 grid grid-cols-2 gap-3 w-full max-w-sm sm:max-w-lg animate-fade-in-up">
+          <a
+            href="https://chat.whatsapp.com/GsVGYHq90fK0yeLDmINVEv"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="h-11 inline-flex items-center justify-center gap-2 rounded-full bg-background/60 border border-foreground/10 backdrop-blur-md text-sm font-medium text-foreground hover:bg-background/90 transition-all duration-300 hover:-translate-y-0.5"
+          >
+            <img src={whatsappLogo} alt="" className="h-4 w-4" />
+            <span className="sm:hidden">WhatsApp</span>
+            <span className="hidden sm:inline">Join the WhatsApp group</span>
+          </a>
+          <a
+            href="https://www.instagram.com/oxfordskydiving/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="h-11 inline-flex items-center justify-center gap-2 rounded-full bg-background/60 border border-foreground/10 backdrop-blur-md text-sm font-medium text-foreground hover:bg-background/90 transition-all duration-300 hover:-translate-y-0.5"
+          >
+            <img src={instagramLogo} alt="" className="h-4 w-4" />
+            <span className="sm:hidden">Instagram</span>
+            <span className="hidden sm:inline">Follow us on Instagram</span>
+          </a>
         </div>
       </div>
 
       {/* Full-width featured photo with gradient fade top & bottom — sits behind the buttons */}
-      <div className="relative z-0 w-full -mt-32 sm:-mt-48 pointer-events-none">
+      <div className="relative z-0 w-full -mt-20 sm:-mt-36 pointer-events-none">
         <img
           src={skydiveHeroPhoto}
           alt="Skydiver in freefall above the Oxfordshire countryside"
-          className="w-full object-cover"
+          className="w-full h-[70vw] min-h-[340px] sm:h-auto sm:min-h-0 max-h-[760px] object-cover object-center"
           style={{
             maskImage:
-              "linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%)",
+              "linear-gradient(to bottom, transparent 0%, black 22%, black 78%, transparent 100%)",
             WebkitMaskImage:
-              "linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%)",
+              "linear-gradient(to bottom, transparent 0%, black 22%, black 78%, transparent 100%)",
           }}
         />
       </div>
@@ -116,41 +101,30 @@ const Hero = () => {
       <Gallery />
 
       {/* Sponsors Section - Bottom of Page */}
-      <div id="sponsors" className="relative z-10 px-6 sm:px-8 max-w-5xl mx-auto w-full py-6 sm:py-8 scroll-mt-20">
-        <h2 className="text-xl sm:text-2xl font-semibold text-primary-foreground mb-2 sm:mb-3 text-center">
+      <div id="sponsors" className="relative z-10 px-6 sm:px-8 max-w-4xl mx-auto w-full py-12 sm:py-16 scroll-mt-20">
+        <p className="text-xs sm:text-sm font-semibold uppercase tracking-[0.2em] text-foreground/60 text-center mb-6 sm:mb-8">
           In collaboration with
-        </h2>
-        <div className="flex flex-wrap justify-center items-start gap-12 sm:gap-16">
-          <a
-            href="https://www.aon2.co.uk/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex flex-col items-center transition-transform duration-300 hover:scale-105 group"
-          >
-            <img
-              src={aon2Logo}
-              alt="AON2"
-              className="h-16 sm:h-20 w-auto object-contain bg-white/90 rounded-lg p-3 mb-2"
-            />
-            <p className="text-primary-foreground/80 text-sm sm:text-base text-center max-w-[200px] group-hover:text-primary-foreground transition-colors">
-              AO(N²) - Advanced Skydiving Technology
-            </p>
-          </a>
-          <a
-            href="https://jediairwear.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex flex-col items-center transition-transform duration-300 hover:scale-105 group"
-          >
-            <img
-              src={jediLogo}
-              alt="Jedi Air Wear"
-              className="h-16 sm:h-20 w-auto object-contain bg-white/90 rounded-lg p-3 mb-2"
-            />
-            <p className="text-primary-foreground/80 text-sm sm:text-base text-center max-w-[200px] group-hover:text-primary-foreground transition-colors">
-              Jedi Air Wear - Custom made Skydiving suits
-            </p>
-          </a>
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+          {[
+            { href: "https://www.aon2.co.uk/", logo: aon2Logo, name: "AON2", desc: "AO(N²) – Advanced Skydiving Technology" },
+            { href: "https://jediairwear.com/", logo: jediLogo, name: "Jedi Air Wear", desc: "Jedi Air Wear – Custom-made skydiving suits" },
+          ].map((s) => (
+            <a
+              key={s.name}
+              href={s.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-4 rounded-2xl bg-background/70 border border-foreground/10 backdrop-blur-md p-4 sm:p-5 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+            >
+              <div className="flex h-16 w-24 shrink-0 items-center justify-center rounded-xl bg-background p-2">
+                <img src={s.logo} alt={s.name} className="max-h-full max-w-full object-contain" />
+              </div>
+              <p className="text-sm sm:text-base text-left text-foreground/80 group-hover:text-foreground transition-colors">
+                {s.desc}
+              </p>
+            </a>
+          ))}
         </div>
       </div>
     </section>
