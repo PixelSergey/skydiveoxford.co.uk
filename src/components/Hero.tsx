@@ -28,13 +28,13 @@ const Hero = () => {
       {/* Animated cloud elements */}
       <CloudBackground />
 
-      {/* Main Content - Full Screen */}
-      <div className="relative z-10 text-center px-6 sm:px-8 max-w-4xl mx-auto w-full min-h-[60vh] flex flex-col justify-center pt-28 sm:pt-20">
+      {/* Main Content */}
+      <div className="relative z-10 text-center px-6 sm:px-8 max-w-4xl mx-auto w-full flex flex-col justify-center pt-28 sm:pt-24">
         <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold italic text-primary-foreground mb-4 sm:mb-6 animate-fade-in-up leading-tight">
           Oxford Skydiving Club
         </h1>
 
-        <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 sm:mb-12 animate-fade-in-up max-w-2xl mx-auto font-light px-2">
+        <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-6 sm:mb-8 animate-fade-in-up max-w-2xl mx-auto font-light px-2">
           The most extreme sports society in Oxford
         </p>
 
@@ -98,7 +98,7 @@ const Hero = () => {
       </div>
 
       {/* Full-width featured photo with gradient fade top & bottom */}
-      <div className="relative z-10 w-full mt-6 sm:mt-10">
+      <div className="relative z-10 w-full mt-1 sm:mt-2">
         <img
           src={skydiveHeroPhoto}
           alt="Skydiver in freefall above the Oxfordshire countryside"
