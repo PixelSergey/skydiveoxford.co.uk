@@ -97,8 +97,8 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Full-width featured photo with gradient fade top & bottom */}
-      <div className="relative z-10 w-full mt-1 sm:mt-2">
+      {/* Full-width featured photo with gradient fade top & bottom — sits behind the buttons */}
+      <div className="relative z-0 w-full -mt-32 sm:-mt-48 pointer-events-none">
         <img
           src={skydiveHeroPhoto}
           alt="Skydiver in freefall above the Oxfordshire countryside"
