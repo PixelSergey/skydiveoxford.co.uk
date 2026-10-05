@@ -7,7 +7,6 @@ import useScrollToHash from "@/hooks/use-scroll-to-hash";
 import Index from "./pages/Index";
 import Intro from "./pages/Intro";
 import About from "./pages/About";
-import Members from "./pages/Members";
 import Committee from "./pages/Committee";
 import NotFound from "./pages/NotFound";
 
@@ -29,7 +28,6 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/intro" element={<Intro />} />
           <Route path="/about" element={<About />} />
-          <Route path="/members" element={<Members />} />
           <Route path="/committee" element={<Committee />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

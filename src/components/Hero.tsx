@@ -52,10 +52,16 @@ const Hero = () => {
             <Button
               size="lg"
               variant="outline"
-              onClick={() => navigate("/members")}
+              asChild
               className="border-2 border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold backdrop-blur-sm transition-all duration-300 hover:scale-105"
             >
-              Join the club for free
+              <a
+                href="https://forms.gle/m5TbcwELexCESAZD7"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Mailing list
+              </a>
             </Button>
           </div>
 
