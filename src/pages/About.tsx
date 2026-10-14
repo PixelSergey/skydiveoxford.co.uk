@@ -80,6 +80,13 @@ const About = () => {
                   <p className="text-foreground">Hell yeah it is 🔥🔥🔥</p>
                 </div>
                 <div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Who is this club for?</h3>
+                  <p className="text-foreground">
+                    We are a university sports club for students studying for any degree at the University of Oxford.
+                    We can also accept Oxford University staff and alumni or students at Oxford Brookes University.
+                  </p>
+                </div>
+                <div>
                   <h3 className="text-xl font-semibold text-foreground mb-2">Do I have to do any tandem jumps?</h3>
                   <p className="text-foreground">
                     Nope! At our club, you will start jumping on your own from day 1.
