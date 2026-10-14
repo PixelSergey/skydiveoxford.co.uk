@@ -154,11 +154,11 @@ const Gallery = () => {
         <DialogContent className="fixed left-0 top-0 z-50 grid h-[100dvh] w-full max-w-none translate-x-0 translate-y-0 gap-0 overflow-hidden border-none bg-black/95 p-0 sm:left-[50%] sm:top-[50%] sm:h-[90vh] sm:w-[90vw] sm:translate-x-[-50%] sm:translate-y-[-50%] sm:rounded-lg">
           {selectedItem && (
             <div className="flex h-full w-full flex-col items-center">
-              <div className="min-h-0 w-full flex-1">
+              <div className="relative min-h-0 w-full flex-1">
                 {isVideo(selectedItem.filename) ? (
                   <video
                     src={getMediaUrl(selectedItem.filename)}
-                    className="h-full w-full object-contain"
+                    className="absolute inset-0 h-full w-full object-contain"
                     controls
                     autoPlay
                     playsInline
@@ -167,7 +167,7 @@ const Gallery = () => {
                   <img
                     src={getMediaUrl(selectedItem.filename)}
                     alt={selectedItem.caption}
-                    className="h-full w-full object-contain"
+                    className="absolute inset-0 h-full w-full object-contain"
                   />
                 )}
               </div>
