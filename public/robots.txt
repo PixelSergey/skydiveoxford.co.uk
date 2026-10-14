@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://oxford-skydiving-club.lovable.app/sitemap.xml
+Sitemap: https://skydiveoxford.co.uk/sitemap.xml
