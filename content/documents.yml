@@ -1,0 +1,33 @@
+# Club documents listed on https://skydiveoxford.co.uk/committee, in the order listed.
+#
+# Each document starts with "- " and has these fields:
+#   label: the button text
+#   file:  the file name of a document uploaded to content/documents/
+#
+# If you make a mistake the site will not update, and GitHub will email you
+# an explanation of what went wrong. The previous version stays online.
+# The Documents section is hidden while this list is empty.
+#
+# These are the documents the old site listed. Upload each PDF to
+# content/documents/, then remove the "# " in front of its two lines.
+
+# - label: Constitution
+#   file: constitution.pdf
+
+# - label: By Laws
+#   file: by-laws.pdf
+
+# - label: Code of Conduct
+#   file: code-of-conduct.pdf
+
+# - label: Complaints Procedure
+#   file: complaints-procedure.pdf
+
+# - label: Safety Policy
+#   file: safety-policy.pdf
+
+# - label: Club Risk Assessment
+#   file: club-risk-assessment.pdf
+
+# - label: Skydiving Specific Risk Assessment
+#   file: skydiving-specific-risk-assessment.pdf
