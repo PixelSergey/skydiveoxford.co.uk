@@ -10,59 +10,59 @@
 # If you make a mistake the site will not update, and GitHub will email you
 # an explanation of what went wrong. The previous version stays online.
 # The gallery is hidden while this list is empty.
-#
-# These are the items the old site listed, renamed to web-friendly formats
-# (.heic -> .jpg, .mov -> .mp4). Upload each file to content/gallery/, then
-# remove the "# " in front of its lines.
 
-# - file: MiaL2P.mp4
-#   caption: Mia's Level 2 Progression Jump
-#   featured: true
+- file: Level2_Mia.mp4
+  caption: This is what your first jump will look like
+  featured: true
 
-# - file: beautifulview.jpg
-#   caption: Breathtaking view from above
+- file: beautifulview.jpg
+  caption: Breathtaking view from above
 
-# - file: bob.jpg
-#   caption: Bob ready for takeoff
+- file: bob.jpg
+  caption: Bob ready for takeoff
 
-# - file: bobwalking.jpg
-#   caption: Bob walking to the plane
+- file: Level1_Melika.mp4
+  caption: "First jump course: another POV"
+  featured: true
 
-# - file: daisy-sergey.jpg
-#   caption: Daisy and Sergey post-jump
+- file: bobwalking.jpg
+  caption: Bob walking to the plane
 
-# - file: groundschool.jpg
-#   caption: Ground school training session
+- file: daisy-sergey.jpg
+  caption: Daisy and Sergey post-jump
 
-# - file: jumpcomplete.jpg
-#   caption: Successful jump complete!
+- file: groundschool.jpg
+  caption: Ground school training session
 
-# - file: landing.mp4
-#   caption: Perfect landing sequence
+- file: jumpcomplete.jpg
+  caption: Successful jump complete!
 
-# - file: lvl1done.jpg
-#   caption: Level 1 complete - celebrating!
+- file: landing.mp4
+  caption: (Almost) perfect landing sequence
 
-# - file: melika.jpg
-#   caption: Melika's first solo jump
+- file: lvl1done.jpg
+  caption: Level 1 complete
 
-# - file: miayay.jpg
-#   caption: Mia celebrating after her jump
+- file: melika.jpg
+  caption: Melika's first solo jump
 
-# - file: parachutegs.jpg
-#   caption: Parachute ground school practice
+- file: miayay.jpg
+  caption: Mia celebrating after her jump
 
-# - file: readytofly.mp4
-#   caption: Ready to fly!
+- file: parachutegs.jpg
+  caption: Parachute ground school practice
 
-# - file: rodin.jpg
-#   caption: Rodin in freefall
+- file: readytofly.mp4
+  caption: Ready to fly!
 
-# - file: sergey-haotian.jpg
-#   caption: Sergey and Haotian duo jump
+- file: rodin.jpg
+  caption: Rodin kitting up
 
-# - file: sky.jpg
-#   caption: Blue skies above
+- file: sergey-haotian.jpg
+  caption: Sergey and Haotian ready on the ground
 
-# - file: walkingtoplane.mp4
-#   caption: Walking to the aircraft
+- file: sky.jpg
+  caption: Blue skies above
+
+- file: walkingtoplane.mp4
+  caption: Walking to the aircraft
