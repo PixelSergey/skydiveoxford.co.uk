@@ -7,27 +7,24 @@
 # If you make a mistake the site will not update, and GitHub will email you
 # an explanation of what went wrong. The previous version stays online.
 # The Documents section is hidden while this list is empty.
-#
-# These are the documents the old site listed. Upload each PDF to
-# content/documents/, then remove the "# " in front of its two lines.
 
-# - label: Constitution
-#   file: constitution.pdf
+- label: Constitution
+  file: Oxford_University_Skydiving_Club_Constitution.pdf
 
-# - label: By Laws
-#   file: by-laws.pdf
+- label: By Laws
+  file: Oxford_University_Skydiving_Club_By-Laws.pdf
 
-# - label: Code of Conduct
-#   file: code-of-conduct.pdf
+- label: Code of Conduct
+  file: Oxford_University_Skydiving_Club_Code_of_Conduct.pdf
 
-# - label: Complaints Procedure
-#   file: complaints-procedure.pdf
+- label: Complaints Procedure
+  file: Oxford_University_Skydiving_Club_Complaints_Procedure.pdf
 
-# - label: Safety Policy
-#   file: safety-policy.pdf
+- label: Safety Policy
+  file: Oxford_University_Skydiving_Club_Safety_Policy.pdf
 
-# - label: Club Risk Assessment
-#   file: club-risk-assessment.pdf
+- label: Club Risk Assessment
+  file: Oxford_University_Skydiving_Club_Risk_Assessment.pdf
 
-# - label: Skydiving Specific Risk Assessment
-#   file: skydiving-specific-risk-assessment.pdf
+- label: Skydiving Specific Risk Assessment
+  file: Skydiving-Specific_Risk_Assessment.pdf

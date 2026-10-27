@@ -3,7 +3,7 @@
 # Each member starts with "- " and has these fields:
 #   role:    e.g. "President"
 #   name:    full name; their initials are shown if there is no photo
-#   details: optional, shown in brackets after the name, e.g. "DPhil CS"
+#   details: optional, shown in brackets after the name
 #   email:   contact address
 #   photo:   optional, the file name of a photo uploaded to content/committee-photos/
 #
@@ -12,31 +12,36 @@
 
 - role: President
   name: Sergey Ichtchenko
-  details: DPhil CS
+  details: St Edmund Hall
   email: president@skydiveoxford.co.uk
   photo: sergey.jpg
 
-- role: Vice President
+- role: Treasurer
   name: Daisy Pritzker
-  email: vp@skydiveoxford.co.uk
+  details: Magdalen College
+  email: treasurer@skydiveoxford.co.uk
   photo: daisy.jpeg
 
 - role: Secretary
   name: Mari Managadze
+  details: St Antony's College
   email: secretary@skydiveoxford.co.uk
   photo: mari.jpeg
 
-- role: Treasurer
-  name: Sophie Kendall
-  email: treasurer@skydiveoxford.co.uk
-  # photo: sophie.png  (upload to content/committee-photos/, then remove the "# ")
-
 - role: Social Secretary
   name: Bob Sira
+  details: Kellogg College
   email: social@skydiveoxford.co.uk
-  # photo: bob.png  (upload to content/committee-photos/, then remove the "# ")
+  # photo: bob.png
 
 - role: Welfare Officer
   name: Mia Yu
+  details: Wolfson College
   email: welfare@skydiveoxford.co.uk
   photo: mia.jpeg
+
+- role: General Committee
+  name: Charlie Fane
+  details: Oxford Brookes
+  email: committee@skydiveoxford.co.uk
+  # photo:
