@@ -1,0 +1,68 @@
+# Photos and videos in the gallery on https://skydiveoxford.co.uk/#gallery, in the order listed.
+#
+# Each item starts with "- " and has these fields:
+#   file:     the file name of a photo or video uploaded to content/gallery/
+#             photos: .jpg .jpeg .png .webp .gif .avif   videos: .mp4 .webm .mov
+#             iPhone .heic photos must be converted to .jpg first
+#   caption:  text shown under the item
+#   featured: optional; "featured: true" shows the item full-width on its own row
+#
+# If you make a mistake the site will not update, and GitHub will email you
+# an explanation of what went wrong. The previous version stays online.
+# The gallery is hidden while this list is empty.
+#
+# These are the items the old site listed, renamed to web-friendly formats
+# (.heic -> .jpg, .mov -> .mp4). Upload each file to content/gallery/, then
+# remove the "# " in front of its lines.
+
+# - file: MiaL2P.mp4
+#   caption: Mia's Level 2 Progression Jump
+#   featured: true
+
+# - file: beautifulview.jpg
+#   caption: Breathtaking view from above
+
+# - file: bob.jpg
+#   caption: Bob ready for takeoff
+
+# - file: bobwalking.jpg
+#   caption: Bob walking to the plane
+
+# - file: daisy-sergey.jpg
+#   caption: Daisy and Sergey post-jump
+
+# - file: groundschool.jpg
+#   caption: Ground school training session
+
+# - file: jumpcomplete.jpg
+#   caption: Successful jump complete!
+
+# - file: landing.mp4
+#   caption: Perfect landing sequence
+
+# - file: lvl1done.jpg
+#   caption: Level 1 complete - celebrating!
+
+# - file: melika.jpg
+#   caption: Melika's first solo jump
+
+# - file: miayay.jpg
+#   caption: Mia celebrating after her jump
+
+# - file: parachutegs.jpg
+#   caption: Parachute ground school practice
+
+# - file: readytofly.mp4
+#   caption: Ready to fly!
+
+# - file: rodin.jpg
+#   caption: Rodin in freefall
+
+# - file: sergey-haotian.jpg
+#   caption: Sergey and Haotian duo jump
+
+# - file: sky.jpg
+#   caption: Blue skies above
+
+# - file: walkingtoplane.mp4
+#   caption: Walking to the aircraft
