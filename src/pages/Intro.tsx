@@ -3,20 +3,10 @@ import CloudBackground from "@/components/CloudBackground";
 import { Button } from "@/components/ui/button";
 import skyBackground from "@/assets/sky-background.jpg";
 import parachuteIcon from "@/assets/parachute.png";
-import { supabase } from "@/integrations/supabase/client";
-import { useQuery } from "@tanstack/react-query";
+import { introDays } from "@/content";
+import { Link } from "react-router-dom";
 
 const Intro = () => {
-  const { data: introDays, isLoading } = useQuery({
-    queryKey: ["intro-days"],
-    queryFn: async () => {
-      const { data, error } = await supabase.from("intro_days").select("*").order("display_order", { ascending: true });
-
-      if (error) throw error;
-      return data;
-    },
-  });
-
   return (
     <div className="min-h-screen relative overflow-hidden">
       <Navigation />
@@ -48,14 +38,10 @@ const Intro = () => {
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {isLoading ? (
-                  <div className="col-span-full text-center py-8">
-                    <p className="text-muted-foreground">Loading intro days...</p>
-                  </div>
-                ) : introDays && introDays.length > 0 ? (
+                {introDays.length > 0 ? (
                   introDays.map((introDay) => (
                     <div
-                      key={introDay.id}
+                      key={introDay.date}
                       className="text-center p-4 bg-background/50 rounded-lg border border-border/30"
                     >
                       <p className="text-xl text-foreground mb-4">{introDay.date}</p>
@@ -91,7 +77,7 @@ const Intro = () => {
                           Sold out
                         </Button>
                       )}
-                      <p className="text-sm text-muted-foreground">Total places available: {introDay.total_places}</p>
+                      <p className="text-sm text-muted-foreground">Total places available: {introDay.places}</p>
                     </div>
                   ))
                 ) : (
@@ -118,12 +104,12 @@ const Intro = () => {
                   </p>
                   <p className="text-foreground">
                     For more information on training, see the{" "}
-                    <a
-                      href="/about"
+                    <Link
+                      to="/about"
                       className="text-primary-foreground hover:text-primary-foreground/80 underline underline-offset-4 transition-colors font-medium"
                     >
                       About Skydiving
-                    </a>{" "}
+                    </Link>{" "}
                     page.
                   </p>
                 </div>
@@ -186,12 +172,12 @@ const Intro = () => {
                     Once you've completed your ground school, you will get "student skydiver" status and will be able to come back any day of the week (weather-permitting) to do your student jumps.
                     At the Oxford Skydiving Club, we coordinate and go to the dropzone together once or twice a week, so you'll be in good company!
                     For more information about skydiving training, check out the{" "}
-                    <a
-                      href="/about"
+                    <Link
+                      to="/about"
                       className="text-primary-foreground hover:text-primary-foreground/80 underline underline-offset-4 transition-colors font-medium"
                     >
                       About Skydiving
-                    </a>{" "}
+                    </Link>{" "}
                     page.
                   </p>
                 </div>

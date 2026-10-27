@@ -1,73 +1,50 @@
-# Welcome to your Lovable project
+# Oxford Skydiving Club website
 
-## Project info
+The source for [skydiveoxford.co.uk](https://skydiveoxford.co.uk), built with
+Vite, TypeScript, React, shadcn-ui and Tailwind CSS. It's hosted on GitHub Pages.
 
-**URL**: https://lovable.dev/projects/f80c4a4d-76b4-4bb5-87de-5c001e19583d
+**Committee members:** to update intro days, the committee list, documents or
+the gallery, see [`content/README.md`](content/README.md). No coding needed.
 
-## How can I edit this code?
+## How it works
 
-There are several ways of editing your application.
+- All site content is in [`content/`](content/): YAML files plus the
+  photos, videos and PDFs they refer to. These are bundled into the site at
+  build time. There is no database or backend.
+- The build validates the YAML against [`src/content/schema.ts`](src/content/schema.ts)
+  and checks that every referenced file exists (see the `club-content`
+  plugin in `vite.config.ts`). A bad edit fails the build, so the live site
+  keeps its previous version.
+- [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) builds and
+  deploys to GitHub Pages on every push to `main`. Pull requests are built
+  but not deployed.
+- GitHub Pages has no server-side routing, so the build writes a copy of
+  `index.html` for each route (`intro.html`, `about.html`, `committee.html`)
+  and a `404.html` fallback. When you add a route to `src/App.tsx`, also add
+  it to `ROUTES` in `vite.config.ts` and to `public/sitemap.xml`.
 
-**Use Lovable**
+## Local development
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/f80c4a4d-76b4-4bb5-87de-5c001e19583d) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+Requires Node.js 18+.
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+npm ci
+npm run dev       # dev server on http://localhost:8080
+npm run build     # production build into dist/ (also validates content/)
+npm run preview   # serve the production build
 ```
 
-**Edit a file directly in GitHub**
+## GitHub Pages setup (one-time)
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+1. In the repository go to **Settings → Pages** and set **Source** to
+   **GitHub Actions**.
+2. Under **Custom domain**, enter `skydiveoxford.co.uk`, save, and tick
+   **Enforce HTTPS** once the certificate has been issued.
+3. At the domain registrar, point the domain at GitHub Pages:
+   - `A` records for `skydiveoxford.co.uk`: `185.199.108.153`,
+     `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+   - `AAAA` records: `2606:50c0:8000::153`, `2606:50c0:8001::153`,
+     `2606:50c0:8002::153`, `2606:50c0:8003::153`
+   - `CNAME` record for `www`: `<github-user-or-org>.github.io`
 
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/f80c4a4d-76b4-4bb5-87de-5c001e19583d) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+   See GitHub's [custom domain docs](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
