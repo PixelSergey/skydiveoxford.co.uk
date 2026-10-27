@@ -21,15 +21,15 @@
 - file: bob.png
   caption: Bob ready for takeoff
 
-- file: Level1_Melika.mp4
-  caption: "First jump course: another POV"
-  featured: true
-
 - file: bobwalking.png
   caption: Bob walking to the plane
 
 - file: daisy-sergey.png
   caption: Daisy and Sergey post-jump
+
+- file: Level1_Melika.mp4
+  caption: "First jump course: another POV"
+  featured: true
 
 - file: groundschool.png
   caption: Ground school training session
