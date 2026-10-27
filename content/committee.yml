@@ -1,0 +1,42 @@
+# Committee members shown on https://skydiveoxford.co.uk/committee, in the order listed.
+#
+# Each member starts with "- " and has these fields:
+#   role:    e.g. "President"
+#   name:    full name; their initials are shown if there is no photo
+#   details: optional, shown in brackets after the name, e.g. "DPhil CS"
+#   email:   contact address
+#   photo:   optional, the file name of a photo uploaded to content/committee-photos/
+#
+# If you make a mistake the site will not update, and GitHub will email you
+# an explanation of what went wrong. The previous version stays online.
+
+- role: President
+  name: Sergey Ichtchenko
+  details: DPhil CS
+  email: president@skydiveoxford.co.uk
+  photo: sergey.jpg
+
+- role: Vice President
+  name: Daisy Pritzker
+  email: vp@skydiveoxford.co.uk
+  photo: daisy.jpeg
+
+- role: Secretary
+  name: Mari Managadze
+  email: secretary@skydiveoxford.co.uk
+  photo: mari.jpeg
+
+- role: Treasurer
+  name: Sophie Kendall
+  email: treasurer@skydiveoxford.co.uk
+  # photo: sophie.png  (upload to content/committee-photos/, then remove the "# ")
+
+- role: Social Secretary
+  name: Bob Sira
+  email: social@skydiveoxford.co.uk
+  # photo: bob.png  (upload to content/committee-photos/, then remove the "# ")
+
+- role: Welfare Officer
+  name: Mia Yu
+  email: welfare@skydiveoxford.co.uk
+  photo: mia.jpeg

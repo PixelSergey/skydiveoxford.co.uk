@@ -1,0 +1,27 @@
+# Intro days shown on https://skydiveoxford.co.uk/intro, in the order listed.
+#
+# Each intro day starts with "- " and has these fields:
+#   date:   the text shown on the card, e.g. "MT Friday week 0, 10.10.2025"
+#   state:  one of
+#             active          -> shows a "Sign up now" button linking to `link`
+#             not yet active  -> shows a greyed-out "Signups not available yet" button
+#             sold out        -> shows a greyed-out "Sold out" button
+#   link:   the sign-up page (required when state is "active", optional otherwise)
+#   places: total number of places on that day
+#
+# Wrap text in double quotes if it contains a colon or starts with a symbol.
+# If you make a mistake the site will not update, and GitHub will email you
+# an explanation of what went wrong. The previous version stays online.
+
+- date: "MT Friday week 0, 10.10.2025"
+  state: active
+  link: https://luma.com/xq53gl9n
+  places: 2
+
+- date: "MT Friday week 2, 24.10.2025"
+  state: not yet active
+  places: 4
+
+- date: "MT Friday week 3, 31.10.2025"
+  state: not yet active
+  places: 4
