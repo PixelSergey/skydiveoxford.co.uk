@@ -1,72 +1,14 @@
 import { useState } from "react";
-import { useQuery } from "@tanstack/react-query";
-import { supabase } from "@/integrations/supabase/client";
+import { galleryItems, type GalleryEntry } from "@/content";
 import {
   Dialog,
   DialogContent,
 } from "@/components/ui/dialog";
 
-interface GalleryItem {
-  id: string;
-  filename: string;
-  caption: string;
-  display_order: number;
-  media_type: string;
-  is_featured: boolean;
-}
-
-const STORAGE_URL = `${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/media`;
-
 const Gallery = () => {
-  const [selectedItem, setSelectedItem] = useState<GalleryItem | null>(null);
-  const { data: galleryItems, isLoading, error } = useQuery({
-    queryKey: ["gallery-items"],
-    queryFn: async () => {
-      const { data, error } = await supabase
-        .from("gallery_items")
-        .select("*")
-        .order("display_order", { ascending: true });
+  const [selectedItem, setSelectedItem] = useState<GalleryEntry | null>(null);
 
-      if (error) throw error;
-      return data as GalleryItem[];
-    },
-  });
-
-  const isVideo = (filename: string) => {
-    const ext = filename.toLowerCase().split('.').pop();
-    return ['mp4', 'mov', 'webm', 'avi'].includes(ext || '');
-  };
-
-  const getMediaUrl = (filename: string) => `${STORAGE_URL}/${filename}`;
-
-  if (isLoading) {
-    return (
-      <div className="relative z-10 px-6 sm:px-8 max-w-6xl mx-auto w-full py-8 sm:py-12 pb-16 sm:pb-24">
-        <h2 className="text-xl sm:text-2xl font-semibold text-primary-foreground mb-6 sm:mb-8 text-center">
-          Gallery
-        </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
-          {[...Array(8)].map((_, i) => (
-            <div key={i} className="flex flex-col animate-pulse">
-              <div className="aspect-square bg-white/20 backdrop-blur-sm rounded-xl" />
-              <div className="h-4 bg-white/10 rounded mt-2 w-3/4 mx-auto" />
-            </div>
-          ))}
-        </div>
-      </div>
-    );
-  }
-
-  if (error) {
-    return (
-      <div className="relative z-10 px-6 sm:px-8 max-w-6xl mx-auto w-full py-8 sm:py-12 pb-16 sm:pb-24">
-        <h2 className="text-xl sm:text-2xl font-semibold text-primary-foreground mb-6 sm:mb-8 text-center">
-          Gallery
-        </h2>
-        <p className="text-primary-foreground/60 text-center">Unable to load gallery</p>
-      </div>
-    );
-  }
+  if (galleryItems.length === 0) return null;
 
   return (
     <div id="gallery" className="relative z-10 px-6 sm:px-8 max-w-6xl mx-auto w-full py-8 sm:py-12 pb-16 sm:pb-24 scroll-mt-20">
@@ -74,22 +16,22 @@ const Gallery = () => {
         Gallery
       </h2>
       <div className="flex flex-col gap-6 sm:gap-8">
-        {galleryItems?.map((item, index) => {
+        {galleryItems.map((item, index) => {
           // Check if this is a featured item
-          if (item.is_featured) {
+          if (item.featured) {
             return (
-              <div key={item.id} className="flex flex-col items-center">
+              <div key={item.file} className="flex flex-col items-center">
                 <div className="w-full max-w-[75%] aspect-video bg-white/20 backdrop-blur-sm rounded-xl border-2 border-primary-foreground/20 overflow-hidden">
-                  {isVideo(item.filename) ? (
+                  {item.isVideo ? (
                     <video
-                      src={getMediaUrl(item.filename)}
+                      src={item.url}
                       className="w-full h-full object-contain bg-black"
                       controls
                       preload="metadata"
                     />
                   ) : (
                     <img
-                      src={getMediaUrl(item.filename)}
+                      src={item.url}
                       alt={item.caption}
                       className="w-full h-full object-cover"
                       loading="lazy"
@@ -104,33 +46,33 @@ const Gallery = () => {
           // For regular items, group them into a grid
           // Check if this is the first non-featured item after a featured item or start
           const prevItem = index > 0 ? galleryItems[index - 1] : null;
-          const isFirstInGroup = !prevItem || prevItem.is_featured;
+          const isFirstInGroup = !prevItem || prevItem.featured;
 
           // Collect consecutive non-featured items for this grid
           if (isFirstInGroup) {
-            const gridItems: GalleryItem[] = [];
+            const gridItems: GalleryEntry[] = [];
             for (let i = index; i < galleryItems.length; i++) {
-              if (galleryItems[i].is_featured) break;
+              if (galleryItems[i].featured) break;
               gridItems.push(galleryItems[i]);
             }
 
             return (
-              <div key={`grid-${item.id}`} className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+              <div key={`grid-${item.file}`} className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
                 {gridItems.map((gridItem) => (
-                  <div key={gridItem.id} className="flex flex-col">
+                  <div key={gridItem.file} className="flex flex-col">
                     <div 
                       className="aspect-square bg-white/20 backdrop-blur-sm rounded-xl border-2 border-primary-foreground/20 overflow-hidden transition-all duration-300 hover:bg-white/30 hover:scale-[1.02] cursor-pointer"
                       onClick={() => setSelectedItem(gridItem)}
                     >
-                      {isVideo(gridItem.filename) ? (
+                      {gridItem.isVideo ? (
                         <video
-                          src={getMediaUrl(gridItem.filename)}
+                          src={gridItem.url}
                           className="w-full h-full object-cover"
                           preload="metadata"
                         />
                       ) : (
                         <img
-                          src={getMediaUrl(gridItem.filename)}
+                          src={gridItem.url}
                           alt={gridItem.caption}
                           className="w-full h-full object-cover"
                           loading="lazy"
@@ -155,9 +97,9 @@ const Gallery = () => {
           {selectedItem && (
             <div className="flex h-full w-full flex-col items-center">
               <div className="relative min-h-0 w-full flex-1">
-                {isVideo(selectedItem.filename) ? (
+                {selectedItem.isVideo ? (
                   <video
-                    src={getMediaUrl(selectedItem.filename)}
+                    src={selectedItem.url}
                     className="absolute inset-0 h-full w-full object-contain"
                     controls
                     autoPlay
@@ -165,7 +107,7 @@ const Gallery = () => {
                   />
                 ) : (
                   <img
-                    src={getMediaUrl(selectedItem.filename)}
+                    src={selectedItem.url}
                     alt={selectedItem.caption}
                     className="absolute inset-0 h-full w-full object-contain"
                   />
